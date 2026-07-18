@@ -7,6 +7,7 @@
  */
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import { computeNodeStatus } from "../lib/status";
 
 const prisma = new PrismaClient();
 
@@ -401,7 +402,7 @@ async function main() {
   // Node votes (ratification signal + working-plan ranking)
   await castVotes("NODE", purpose.id, ["ava_quinn", "marcus_w", "priya_s", "dan_oconnell", "lena_ortiz", "jkim"]);
   await castVotes("NODE", gAmend.id, ["ava_quinn", "marcus_w", "dan_oconnell", "lena_ortiz", "sam_delgado"]);
-  await castVotes("NODE", gPublic.id, ["priya_s", "jkim", "ruth_b", "ava_quinn"]);
+  await castVotes("NODE", gPublic.id, ["priya_s", "jkim", "ruth_b", "ava_quinn", "sam_delgado"]);
   await castVotes("NODE", gTransparency.id, ["lena_ortiz", "ruth_b", "jkim"]);
   // Candidate goals: real support, but not yet enough to unseat the top 3.
   await castVotes("NODE", gLobbying.id, ["sam_delgado", "dan_oconnell"], { ageDays: 6 });
@@ -413,9 +414,10 @@ async function main() {
   await castVotes("NODE", sStates.id, ["dan_oconnell", "sam_delgado", "ava_quinn"]);
   await castVotes("NODE", sLitigation.id, ["ruth_b", "lena_ortiz"], { ageDays: 8 });
   await castVotes("NODE", sCourtGame.id, ["marcus_w"], { value: -1, ageDays: 7 });
-  await castVotes("NODE", tAmendment.id, ["marcus_w", "ava_quinn", "lena_ortiz", "priya_s"]);
-  await castVotes("NODE", tConvention.id, ["dan_oconnell", "sam_delgado"]);
-  await castVotes("NODE", tConvention.id, ["ruth_b", "lena_ortiz"], { value: -1, ageDays: 5 });
+  await castVotes("NODE", tAmendment.id, ["marcus_w", "ava_quinn", "lena_ortiz", "priya_s", "dan_oconnell"]);
+  // Genuinely divisive: 3 up, 3 down → the automatic rule marks it CONTESTED.
+  await castVotes("NODE", tConvention.id, ["dan_oconnell", "sam_delgado", "ava_quinn"]);
+  await castVotes("NODE", tConvention.id, ["ruth_b", "lena_ortiz", "priya_s"], { value: -1, ageDays: 5 });
   await castVotes("NODE", tMatching.id, ["priya_s", "jkim", "ava_quinn"]);
   await castVotes("NODE", tVouchers.id, ["jkim", "sam_delgado"]);
 
@@ -667,7 +669,13 @@ async function main() {
         ageDays: p.ageDays,
       });
     }
-    await castVotes("NODE", root.id, ["ava_quinn", "marcus_w"]);
+    await castVotes("NODE", root.id, [
+      "ava_quinn",
+      "marcus_w",
+      "priya_s",
+      "dan_oconnell",
+      "lena_ortiz",
+    ]);
     return board;
   }
 
@@ -1116,6 +1124,29 @@ async function main() {
       },
     ],
   });
+
+  // Statuses are fully automatic in the app (recomputed on every node vote);
+  // apply the same rule to everything just seeded so the data starts honest.
+  console.log("Deriving node statuses from votes...");
+  const allNodes = await prisma.treeNode.findMany({
+    where: { status: { not: "ARCHIVED" } },
+    select: { id: true, status: true },
+  });
+  for (const n of allNodes) {
+    const votes = await prisma.vote.findMany({
+      where: { targetType: "NODE", targetId: n.id },
+      select: { value: true },
+    });
+    const up = votes.filter((v) => v.value > 0).length;
+    const down = votes.filter((v) => v.value < 0).length;
+    const next = computeNodeStatus(up, down);
+    if (next !== n.status) {
+      await prisma.treeNode.update({
+        where: { id: n.id },
+        data: { status: next },
+      });
+    }
+  }
 
   const counts = {
     users: await prisma.user.count(),

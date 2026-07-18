@@ -38,8 +38,14 @@ All seed users have the password `lioness123` (e.g. `ava_quinn`, `marcus_w`,
   News/Trending — all views over the node's attached posts, votable inline);
   expanding promotes it to a full side panel with editing, re-tiering,
   link/unlink management, and the edit log.
-- **Voting** on posts, comments, and nodes (node votes ratify or contest
-  placements).
+- **Voting** on posts, comments, and nodes. Node votes drive everything
+  automatically:
+  - **Working plan**: only each parent's top-N children by score (per-board
+    `slotsPerParent`, default 3) render on the tree; the rest wait in "+N
+    candidates" pools with a ranked, votable leaderboard in the node panel.
+  - **Status**: net +5 → ratified; 3+ downvotes making up ≥40% of votes →
+    contested; otherwise proposed (thresholds in `lib/status.ts`). Archiving
+    is the only manual status action.
 - **Invariants** enforced server-side: no cycles, links flow from higher tier
   to equal-or-lower tier, exactly one Purpose root per board, all tree edits
   logged.

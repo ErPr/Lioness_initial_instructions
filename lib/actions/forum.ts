@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/session";
+import { recomputeNodeStatus } from "@/lib/nodeStatus";
 import { slugify } from "@/lib/format";
 import {
   isContributionType,
@@ -225,5 +226,9 @@ export async function vote(
       create: { userId: user.id, targetType, targetId, value },
     });
   }
+
+  // Node statuses are fully automatic — every vote change re-derives them.
+  if (targetType === "NODE") await recomputeNodeStatus(targetId, user.id);
+
   if (revalidate) revalidatePath(revalidate);
 }

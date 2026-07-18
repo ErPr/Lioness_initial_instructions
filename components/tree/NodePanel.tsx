@@ -5,18 +5,18 @@ import { useRouter } from "next/navigation";
 import VoteWidget from "@/components/VoteWidget";
 import FlyoutTabs from "@/components/tree/FlyoutTabs";
 import {
+  archiveNode,
   createNode,
   linkNodes,
   unlinkNodes,
   updateNode,
 } from "@/lib/actions/tree";
+import { TIER_LABELS, TIER_RANK, TIERS, type Tier } from "@/lib/types";
 import {
-  NODE_STATUSES,
-  TIER_LABELS,
-  TIER_RANK,
-  TIERS,
-  type Tier,
-} from "@/lib/types";
+  CONTEST_DOWN_RATIO,
+  CONTEST_MIN_DOWNVOTES,
+  RATIFY_NET,
+} from "@/lib/status";
 import type { NodeRef, NodeView } from "@/lib/treeQuery";
 
 const inputCls =
@@ -204,6 +204,26 @@ export default function NodePanel({
                   {addingParent ? "Cancel" : "+ Link parent"}
                 </button>
               )}
+              {!isRoot && (
+                <button
+                  type="button"
+                  disabled={isPending}
+                  onClick={() => {
+                    if (
+                      confirm(
+                        `Archive "${node.title}"? It disappears from the tree and its pools; attached posts keep working.`
+                      )
+                    ) {
+                      run(() =>
+                        archiveNode({ nodeId: node.id, revalidate: treePath })
+                      );
+                    }
+                  }}
+                  className="rounded border border-line px-2 py-1 text-muted hover:border-red-400 hover:text-red-600"
+                >
+                  Archive
+                </button>
+              )}
             </div>
 
             {editing && (
@@ -219,7 +239,6 @@ export default function NodePanel({
                         title: String(fd.get("title")),
                         summary: String(fd.get("summary")),
                         tier: String(fd.get("tier")),
-                        status: String(fd.get("status")),
                         revalidate: treePath,
                       }),
                     () => setEditing(false)
@@ -234,29 +253,20 @@ export default function NodePanel({
                   placeholder="Summary"
                   className={inputCls}
                 />
-                <div className="flex gap-2">
-                  <select
-                    name="tier"
-                    defaultValue={node.tier}
-                    disabled={isRoot}
-                    className={inputCls}
-                  >
-                    {TIERS.filter((t) => (isRoot ? true : t !== "PURPOSE")).map(
-                      (t) => (
-                        <option key={t} value={t}>
-                          {TIER_LABELS[t]}
-                        </option>
-                      )
-                    )}
-                  </select>
-                  <select name="status" defaultValue={node.status} className={inputCls}>
-                    {NODE_STATUSES.map((s) => (
-                      <option key={s} value={s}>
-                        {s.toLowerCase()}
+                <select
+                  name="tier"
+                  defaultValue={node.tier}
+                  disabled={isRoot}
+                  className={inputCls}
+                >
+                  {TIERS.filter((t) => (isRoot ? true : t !== "PURPOSE")).map(
+                    (t) => (
+                      <option key={t} value={t}>
+                        {TIER_LABELS[t]}
                       </option>
-                    ))}
-                  </select>
-                </div>
+                    )
+                  )}
+                </select>
                 <button
                   type="submit"
                   disabled={isPending}
@@ -266,8 +276,10 @@ export default function NodePanel({
                 </button>
                 <p className="text-[11px] text-muted">
                   Tiers are soft — re-tiering is allowed whenever it doesn&apos;t
-                  invert an existing parent/child link. Archiving hides the node
-                  from the tree. All edits are logged.
+                  invert an existing parent/child link. Status is automatic:
+                  net +{RATIFY_NET} ratifies; {CONTEST_MIN_DOWNVOTES}+ downvotes
+                  making up {Math.round(CONTEST_DOWN_RATIO * 100)}% of votes
+                  contests. All edits are logged.
                 </p>
               </form>
             )}

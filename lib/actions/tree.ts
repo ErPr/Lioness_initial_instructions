@@ -3,12 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/session";
-import {
-  isNodeStatus,
-  isTier,
-  TIER_RANK,
-  type Tier,
-} from "@/lib/types";
+import { isTier, TIER_RANK, type Tier } from "@/lib/types";
 
 export type TreeActionResult = { error?: string; nodeId?: string };
 
@@ -124,7 +119,6 @@ export async function updateNode(input: {
   title?: string;
   summary?: string;
   tier?: string;
-  status?: string;
   revalidate?: string;
 }): Promise<TreeActionResult> {
   const user = await requireUser();
@@ -182,21 +176,42 @@ export async function updateNode(input: {
     changes.push(`tier ${node.tier} → ${tier}`);
   }
 
-  if (input.status !== undefined && input.status !== node.status) {
-    if (!isNodeStatus(input.status)) return { error: "Invalid status." };
-    data.status = input.status;
-    changes.push(`status ${node.status} → ${input.status}`);
-  }
-
   if (Object.keys(data).length === 0) return { nodeId: node.id };
 
   await prisma.treeNode.update({ where: { id: node.id }, data });
   await logEdit(
     node.id,
     user.id,
-    data.tier ? "RETIER" : data.status ? "STATUS" : "UPDATE",
+    data.tier ? "RETIER" : "UPDATE",
     changes.join("; ")
   );
+  if (input.revalidate) revalidatePath(input.revalidate);
+  return { nodeId: node.id };
+}
+
+/**
+ * Archiving is the one manual status action — proposed/ratified/contested
+ * are computed from votes and can't be assigned by hand.
+ */
+export async function archiveNode(input: {
+  nodeId: string;
+  revalidate?: string;
+}): Promise<TreeActionResult> {
+  const user = await requireUser();
+  const node = await prisma.treeNode.findUnique({
+    where: { id: input.nodeId },
+  });
+  if (!node) return { error: "Node not found." };
+  if (node.tier === "PURPOSE") {
+    return { error: "The Purpose root can't be archived." };
+  }
+  if (node.status === "ARCHIVED") return { nodeId: node.id };
+
+  await prisma.treeNode.update({
+    where: { id: node.id },
+    data: { status: "ARCHIVED" },
+  });
+  await logEdit(node.id, user.id, "STATUS", `Archived (was ${node.status})`);
   if (input.revalidate) revalidatePath(input.revalidate);
   return { nodeId: node.id };
 }
