@@ -20,10 +20,10 @@ export interface MiniMapData {
  */
 export async function getMiniMapData(boardId: string): Promise<MiniMapData> {
   const [board, nodes] = await Promise.all([
-    prisma.board.findUniqueOrThrow({
-      where: { id: boardId },
-      select: { slotsPerParent: true },
-    }),
+    // Full row rather than select: { slotsPerParent } — an explicit select of
+    // a field a stale generated client doesn't know is a hard validation
+    // error, while a full fetch just yields undefined and the ?? 3 fallback.
+    prisma.board.findUniqueOrThrow({ where: { id: boardId } }),
     prisma.treeNode.findMany({
       where: { boardId, status: { not: "ARCHIVED" } },
       include: {
