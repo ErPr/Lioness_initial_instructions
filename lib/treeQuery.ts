@@ -78,7 +78,10 @@ export async function getTreeViewData(
   viewerUserId?: string | null,
   showAll = false
 ): Promise<TreeViewData> {
-  const { id: boardId, slug: boardSlug, slotsPerParent: slots } = board;
+  const { id: boardId, slug: boardSlug } = board;
+  // Defensive default: a stale client/DB missing the column must degrade to
+  // the standard 3 slots, not collapse every branch into the candidate pool.
+  const slots = board.slotsPerParent ?? 3;
   const nodes = await prisma.treeNode.findMany({
     where: { boardId, status: { not: "ARCHIVED" } },
     include: {

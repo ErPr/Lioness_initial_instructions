@@ -71,8 +71,9 @@ export async function getMiniMapData(boardId: string): Promise<MiniMapData> {
           a.title.localeCompare(b.title)
         );
       });
-    const visible = ranked.slice(0, board.slotsPerParent);
-    const hidden = ranked.slice(board.slotsPerParent);
+    const slots = board.slotsPerParent ?? 3;
+    const visible = ranked.slice(0, slots);
+    const hidden = ranked.slice(slots);
     const childIds = visible.map((c) => c.id);
     if (hidden.length > 0) {
       const stubId = `stub:${n.id}`;
