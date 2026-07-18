@@ -1,0 +1,160 @@
+// Lioness schema — the forum and the tree are two views of the same data.
+//
+// SQLite does not support Prisma enums, so enum-like fields are Strings.
+// The allowed values live in lib/types.ts and are validated at the API layer:
+//   TreeNode.tier:            PURPOSE | ROOT_ISSUE | GOAL | STRATEGY | TACTIC | ACTION
+//   TreeNode.status:          PROPOSED | RATIFIED | CONTESTED | ARCHIVED
+//   Post/Comment.contributionType:
+//                             DISCUSSION | PROBLEM | SOLUTION | STRATEGY | TACTIC | RESOURCE | QUESTION
+//   Vote.targetType:          POST | COMMENT | NODE
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  posts        Post[]
+  comments     Comment[]
+  votes        Vote[]
+  treeNodes    TreeNode[]
+  nodeLinks    NodeLink[]
+  nodeEditLogs NodeEditLog[]
+}
+
+model Board {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String
+  createdAt   DateTime @default(now())
+
+  posts Post[]
+  nodes TreeNode[]
+}
+
+model TreeNode {
+  id              String   @id @default(cuid())
+  boardId         String
+  tier            String // PURPOSE | ROOT_ISSUE | GOAL | STRATEGY | TACTIC | ACTION (soft/editable)
+  title           String
+  summary         String   @default("")
+  status          String   @default("PROPOSED") // PROPOSED | RATIFIED | CONTESTED | ARCHIVED
+  createdByUserId String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  board       Board         @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  createdBy   User          @relation(fields: [createdByUserId], references: [id])
+  parentLinks NodeLink[]    @relation("ChildNode") // links where this node is the child
+  childLinks  NodeLink[]    @relation("ParentNode") // links where this node is the parent
+  posts       Post[]
+  comments    Comment[]
+  editLogs    NodeEditLog[]
+
+  @@index([boardId])
+}
+
+// The structure is a DAG, not a strict tree: one node can have multiple
+// parents (a node's parent count is its leverage score). Invariants enforced
+// in the API layer: no cycles, links flow from higher tier to equal-or-lower
+// tier, exactly one PURPOSE root per board with no parents.
+model NodeLink {
+  id              String   @id @default(cuid())
+  parentNodeId    String
+  childNodeId     String
+  createdByUserId String
+  createdAt       DateTime @default(now())
+
+  parentNode TreeNode @relation("ParentNode", fields: [parentNodeId], references: [id], onDelete: Cascade)
+  childNode  TreeNode @relation("ChildNode", fields: [childNodeId], references: [id], onDelete: Cascade)
+  createdBy  User     @relation(fields: [createdByUserId], references: [id])
+
+  @@unique([parentNodeId, childNodeId])
+  @@index([childNodeId])
+}
+
+model Post {
+  id               String   @id @default(cuid())
+  boardId          String
+  authorId         String
+  title            String
+  body             String   @default("")
+  contributionType String   @default("DISCUSSION")
+  treeNodeId       String? // node this post attaches to; nullable, settable later
+  // A post can propose a new node instead of attaching to an existing one:
+  proposesNode     Boolean  @default(false)
+  proposedTier     String?
+  proposedTitle    String?
+  createdAt        DateTime @default(now())
+  deletedAt        DateTime? // author-delete (soft, keeps thread structure)
+
+  board    Board     @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  author   User      @relation(fields: [authorId], references: [id])
+  treeNode TreeNode? @relation(fields: [treeNodeId], references: [id], onDelete: SetNull)
+  comments Comment[]
+
+  @@index([boardId, createdAt])
+  @@index([treeNodeId])
+}
+
+model Comment {
+  id               String   @id @default(cuid())
+  postId           String
+  authorId         String
+  parentCommentId  String? // threading
+  body             String
+  contributionType String   @default("DISCUSSION")
+  treeNodeId       String? // a comment can attach to a different node than its post
+  createdAt        DateTime @default(now())
+  deletedAt        DateTime?
+
+  post     Post      @relation(fields: [postId], references: [id], onDelete: Cascade)
+  author   User      @relation(fields: [authorId], references: [id])
+  parent   Comment?  @relation("Thread", fields: [parentCommentId], references: [id], onDelete: SetNull)
+  replies  Comment[] @relation("Thread")
+  treeNode TreeNode? @relation(fields: [treeNodeId], references: [id], onDelete: SetNull)
+
+  @@index([postId])
+  @@index([treeNodeId])
+}
+
+// Node votes are how the community ratifies or contests placements.
+// targetId is polymorphic (no FK) across Post/Comment/TreeNode.
+model Vote {
+  id         String   @id @default(cuid())
+  userId     String
+  targetType String // POST | COMMENT | NODE
+  targetId   String
+  value      Int // +1 | -1
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, targetType, targetId])
+  @@index([targetType, targetId])
+}
+
+// Audit trail for tree edits (any logged-in user can edit during the pilot).
+model NodeEditLog {
+  id        String   @id @default(cuid())
+  nodeId    String
+  userId    String
+  action    String // CREATE | UPDATE | RETIER | STATUS | LINK | UNLINK | DELETE
+  detail    String   @default("")
+  createdAt DateTime @default(now())
+
+  node TreeNode @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+  user User     @relation(fields: [userId], references: [id])
+
+  @@index([nodeId, createdAt])
+}
