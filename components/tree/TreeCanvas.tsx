@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import NodeFlyout from "@/components/tree/NodeFlyout";
 import NodePanel from "@/components/tree/NodePanel";
-import { TIER_LABELS, type Tier } from "@/lib/types";
+import { TIER_LABELS } from "@/lib/types";
 import type { TreeViewData } from "@/lib/treeQuery";
 import { CARD_H, CARD_W, HEADER_H, type Instance } from "@/lib/treeLayout";
 

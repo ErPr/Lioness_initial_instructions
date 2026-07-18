@@ -147,7 +147,8 @@ export default async function BoardPage({
                       href={`/b/${slug}/post/${p.id}`}
                       className="hover:text-foreground"
                     >
-                      {p._count.comments} comments
+                      {p._count.comments}{" "}
+                      {p._count.comments === 1 ? "comment" : "comments"}
                     </Link>
                   </div>
                 </div>
