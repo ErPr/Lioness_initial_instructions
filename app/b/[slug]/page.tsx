@@ -8,6 +8,8 @@ import { TIER_LABELS, type Tier } from "@/lib/types";
 import PostForm from "@/components/PostForm";
 import TypeBadge from "@/components/TypeBadge";
 import VoteWidget from "@/components/VoteWidget";
+import TreeMiniMap from "@/components/TreeMiniMap";
+import { getMiniMapData } from "@/lib/minimapQuery";
 
 export const dynamic = "force-dynamic";
 
@@ -44,11 +46,14 @@ export default async function BoardPage({
     },
   });
 
-  const scores = await getScores(
-    "POST",
-    posts.map((p) => p.id),
-    user?.id
-  );
+  const [scores, miniMap] = await Promise.all([
+    getScores(
+      "POST",
+      posts.map((p) => p.id),
+      user?.id
+    ),
+    getMiniMapData(board.id),
+  ]);
   const sorted =
     sort === "top"
       ? [...posts].sort(
@@ -69,7 +74,8 @@ export default async function BoardPage({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+      <TreeMiniMap boardSlug={slug} data={miniMap} />
+      <div className="flex flex-wrap items-start justify-between gap-3 md:pr-60">
         <div>
           <h1 className="text-xl font-semibold tracking-tight">{board.name}</h1>
           <p className="text-sm text-muted">{board.description}</p>

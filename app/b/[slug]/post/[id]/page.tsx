@@ -10,6 +10,8 @@ import VoteWidget from "@/components/VoteWidget";
 import CommentForm from "@/components/CommentForm";
 import CommentThread, { type CommentView } from "@/components/CommentThread";
 import DeletePostButton from "@/components/DeletePostButton";
+import TreeMiniMap from "@/components/TreeMiniMap";
+import { getMiniMapData } from "@/lib/minimapQuery";
 
 export const dynamic = "force-dynamic";
 
@@ -46,6 +48,7 @@ export default async function PostPage({
   });
   if (!post || post.board.slug !== slug || post.deletedAt) notFound();
 
+  const miniMap = await getMiniMapData(post.boardId);
   const postScore = (await getScores("POST", [post.id], user?.id)).get(post.id)!;
   const commentScores = await getScores(
     "COMMENT",
@@ -86,6 +89,7 @@ export default async function PostPage({
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-4">
+      <TreeMiniMap boardSlug={slug} data={miniMap} />
       <div className="text-xs text-muted">
         <Link href={`/b/${slug}`} className="hover:text-accent">
           ← {post.board.name}
