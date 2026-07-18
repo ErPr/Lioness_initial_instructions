@@ -12,16 +12,17 @@ export default async function TreePage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ node?: string }>;
+  searchParams: Promise<{ node?: string; all?: string }>;
 }) {
   const { slug } = await params;
-  const { node: initialNodeId } = await searchParams;
+  const { node: initialNodeId, all } = await searchParams;
+  const showAll = all === "1";
   const user = await getCurrentUser();
 
   const board = await prisma.board.findUnique({ where: { slug } });
   if (!board) notFound();
 
-  const data = await getTreeViewData(board.id, slug, user?.id);
+  const data = await getTreeViewData(board, user?.id, showAll);
 
   return (
     <div className="flex flex-col gap-4">
@@ -31,18 +32,31 @@ export default async function TreePage({
             {board.name} — goal tree
           </h1>
           <p className="text-sm text-muted">
-            The same conversation as the forum, rendered as a living roadmap.
+            The working plan: the top-voted ideas hold each branch of the
+            board, and the rest wait in candidate pools.
             {user
               ? " Click any card to open its links and discussion; expand for editing."
               : " Log in to vote and edit the tree."}
           </p>
         </div>
-        <Link
-          href={`/b/${slug}`}
-          className="rounded border border-line bg-surface px-3 py-1.5 text-sm hover:border-accent hover:text-accent"
-        >
-          ← Forum view
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href={showAll ? `/b/${slug}/tree` : `/b/${slug}/tree?all=1`}
+            className={`rounded border px-3 py-1.5 text-sm ${
+              showAll
+                ? "border-accent bg-accent-soft text-accent"
+                : "border-line bg-surface hover:border-accent hover:text-accent"
+            }`}
+          >
+            {showAll ? "✓ Showing all candidates" : "Show all candidates"}
+          </Link>
+          <Link
+            href={`/b/${slug}`}
+            className="rounded border border-line bg-surface px-3 py-1.5 text-sm hover:border-accent hover:text-accent"
+          >
+            ← Forum view
+          </Link>
+        </div>
       </div>
 
       {data.layout.instances.length === 0 ? (

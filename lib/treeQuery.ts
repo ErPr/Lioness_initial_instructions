@@ -22,6 +22,19 @@ export interface NodeRef {
   tier: string;
 }
 
+/** A child in a parent's ranked pool. */
+export interface ChildRank extends NodeRef {
+  score: number;
+  myVote: number;
+  onBoard: boolean; // inside the parent's slot count → rendered on the tree
+}
+
+/** A "+N candidates" stub card rendered under a parent whose pool overflows. */
+export interface StubInfo {
+  parentNodeId: string;
+  count: number;
+}
+
 export interface NodeView {
   id: string;
   title: string;
@@ -33,7 +46,7 @@ export interface NodeView {
   attachedCount: number;
   parentCount: number;
   parents: NodeRef[];
-  children: NodeRef[];
+  children: ChildRank[];
   topLinks: FlyoutRow[];
   support: FlyoutRow[];
   news: FlyoutRow[];
@@ -45,6 +58,10 @@ export interface TreeViewData {
   nodes: Record<string, NodeView>;
   /** all non-archived nodes, for link-management selects */
   allNodes: NodeRef[];
+  /** stub cards keyed by their pseudo layout id ("stub:<parentId>") */
+  stubs: Record<string, StubInfo>;
+  slots: number;
+  showAll: boolean;
 }
 
 const SUPPORT_TYPES = new Set([
@@ -57,10 +74,11 @@ const SUPPORT_TYPES = new Set([
 ]);
 
 export async function getTreeViewData(
-  boardId: string,
-  boardSlug: string,
-  viewerUserId?: string | null
+  board: { id: string; slug: string; slotsPerParent: number },
+  viewerUserId?: string | null,
+  showAll = false
 ): Promise<TreeViewData> {
+  const { id: boardId, slug: boardSlug, slotsPerParent: slots } = board;
   const nodes = await prisma.treeNode.findMany({
     where: { boardId, status: { not: "ARCHIVED" } },
     include: {
@@ -94,6 +112,37 @@ export async function getTreeViewData(
       getRecentVelocity("POST", postIds),
       getRecentVelocity("COMMENT", commentIds),
     ]);
+
+  // The working-plan filter: each parent's children ranked by community vote
+  // (score desc, then age — an established idea keeps its seat on ties, a
+  // newcomer must beat it). Only the top `slots` render on the tree; the rest
+  // wait in the candidate pool behind a "+N candidates" stub.
+  const rankedChildren = new Map<string, ChildRank[]>();
+  for (const n of nodes) {
+    const kids = n.childLinks
+      .map((l) => l.childNode)
+      .filter((c) => c.status !== "ARCHIVED")
+      .sort((a, b) => {
+        const sa = nodeScores.get(a.id)?.score ?? 0;
+        const sb = nodeScores.get(b.id)?.score ?? 0;
+        return (
+          sb - sa ||
+          a.createdAt.getTime() - b.createdAt.getTime() ||
+          a.title.localeCompare(b.title)
+        );
+      });
+    rankedChildren.set(
+      n.id,
+      kids.map((c, i) => ({
+        id: c.id,
+        title: c.title,
+        tier: c.tier,
+        score: nodeScores.get(c.id)?.score ?? 0,
+        myVote: nodeScores.get(c.id)?.myVote ?? 0,
+        onBoard: showAll || i < slots,
+      }))
+    );
+  }
 
   const nodeViews: Record<string, NodeView> = {};
   for (const n of nodes) {
@@ -172,11 +221,7 @@ export async function getTreeViewData(
         title: l.parentNode.title,
         tier: l.parentNode.tier,
       })),
-      children: n.childLinks.map((l) => ({
-        id: l.childNode.id,
-        title: l.childNode.title,
-        tier: l.childNode.tier,
-      })),
+      children: rankedChildren.get(n.id) ?? [],
       topLinks,
       support,
       news,
@@ -189,25 +234,35 @@ export async function getTreeViewData(
     };
   }
 
-  // Display order for children: vote score desc, then title.
-  const layout = layoutTree(
-    nodes.map((n) => ({
+  // Layout over the working plan: visible children plus a stub pseudo-node
+  // per overflowing parent.
+  const stubs: Record<string, StubInfo> = {};
+  const layoutInput = nodes.map((n) => {
+    const ranked = rankedChildren.get(n.id) ?? [];
+    const visible = ranked.filter((c) => c.onBoard);
+    const hidden = ranked.filter((c) => !c.onBoard);
+    const childIds = visible.map((c) => c.id);
+    if (hidden.length > 0) {
+      const stubId = `stub:${n.id}`;
+      stubs[stubId] = { parentNodeId: n.id, count: hidden.length };
+      childIds.push(stubId);
+    }
+    return {
       id: n.id,
       tier: n.tier,
       parentCount: n.parentLinks.filter(
         (l) => l.parentNode.status !== "ARCHIVED"
       ).length,
-      childIds: n.childLinks
-        .map((l) => l.childNode)
-        .filter((c) => c.status !== "ARCHIVED")
-        .sort((a, b) => {
-          const sa = nodeScores.get(a.id)?.score ?? 0;
-          const sb = nodeScores.get(b.id)?.score ?? 0;
-          return sb - sa || a.title.localeCompare(b.title);
-        })
-        .map((c) => c.id),
-    }))
-  );
+      childIds,
+    };
+  });
+  const stubNodes = Object.entries(stubs).map(([stubId, s]) => {
+    const firstHidden = rankedChildren
+      .get(s.parentNodeId)!
+      .find((c) => !c.onBoard)!;
+    return { id: stubId, tier: firstHidden.tier, parentCount: 1, childIds: [] };
+  });
+  const layout = layoutTree([...layoutInput, ...stubNodes]);
 
   return {
     layout,
@@ -215,5 +270,8 @@ export async function getTreeViewData(
     allNodes: nodes
       .map((n) => ({ id: n.id, title: n.title, tier: n.tier }))
       .sort((a, b) => a.title.localeCompare(b.title)),
+    stubs,
+    slots,
+    showAll,
   };
 }

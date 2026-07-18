@@ -225,6 +225,31 @@ async function main() {
   });
   for (const g of [gAmend, gPublic, gTransparency]) await link(purpose, g);
 
+  // Candidate goals still competing for a slot on the board (the working
+  // plan shows the top 3 per parent by votes; these rank 4th and 5th).
+  const gLobbying = await makeNode({
+    boardId: mop.id,
+    tier: "GOAL",
+    title: "End pay-to-play lobbying culture",
+    summary:
+      "Close the revolving door and slow the influence of contract lobbyists over legislation.",
+    status: "PROPOSED",
+    by: "sam_delgado",
+    ageDays: 45,
+  });
+  const gBanPacs = await makeNode({
+    boardId: mop.id,
+    tier: "GOAL",
+    title: "Ban corporate PACs entirely",
+    summary:
+      "More aggressive than disclosure: prohibit corporate PAC contributions to candidates altogether.",
+    status: "PROPOSED",
+    by: "jkim",
+    ageDays: 40,
+  });
+  await link(purpose, gLobbying, "sam_delgado");
+  await link(purpose, gBanPacs, "jkim");
+
   // Strategies
   const sCongress = await makeNode({
     boardId: mop.id,
@@ -275,8 +300,32 @@ async function main() {
     by: "ruth_b",
     status: "PROPOSED",
   });
+  // Candidate strategies under "Overturn Citizens United" (4 children →
+  // the lowest-ranked falls below the 3-slot cutoff into the pool).
+  const sLitigation = await makeNode({
+    boardId: mop.id,
+    tier: "STRATEGY",
+    title: "Litigation to narrow the doctrine",
+    summary:
+      "Bring test cases that give courts room to distinguish or limit Citizens United without a full reversal.",
+    status: "PROPOSED",
+    by: "ruth_b",
+    ageDays: 38,
+  });
+  const sCourtGame = await makeNode({
+    boardId: mop.id,
+    tier: "STRATEGY",
+    title: "Judicial appointments long game",
+    summary:
+      "Wait out the Court's composition. Low agency for a movement — parked as a candidate unless someone makes the case.",
+    status: "PROPOSED",
+    by: "jkim",
+    ageDays: 36,
+  });
   await link(gAmend, sCongress, "marcus_w");
   await link(gAmend, sStates, "dan_oconnell");
+  await link(gAmend, sLitigation, "ruth_b");
+  await link(gAmend, sCourtGame, "jkim");
   await link(gPublic, sFedLeg, "priya_s");
   await link(gPublic, sLocal, "jkim");
   await link(gTransparency, sDisclose, "lena_ortiz");
@@ -349,11 +398,21 @@ async function main() {
   await link(sStates, tLobbyDay, "sam_delgado");
   await link(sLocal, tLobbyDay, "sam_delgado");
 
-  // Node votes (ratification signal)
+  // Node votes (ratification signal + working-plan ranking)
   await castVotes("NODE", purpose.id, ["ava_quinn", "marcus_w", "priya_s", "dan_oconnell", "lena_ortiz", "jkim"]);
   await castVotes("NODE", gAmend.id, ["ava_quinn", "marcus_w", "dan_oconnell", "lena_ortiz", "sam_delgado"]);
   await castVotes("NODE", gPublic.id, ["priya_s", "jkim", "ruth_b", "ava_quinn"]);
   await castVotes("NODE", gTransparency.id, ["lena_ortiz", "ruth_b", "jkim"]);
+  // Candidate goals: real support, but not yet enough to unseat the top 3.
+  await castVotes("NODE", gLobbying.id, ["sam_delgado", "dan_oconnell"], { ageDays: 6 });
+  await castVotes("NODE", gBanPacs.id, ["jkim"], { ageDays: 5 });
+  await castVotes("NODE", gBanPacs.id, ["ruth_b"], { value: -1, ageDays: 4 });
+  // Strategies under Overturn CU, ranked: congressional & state routes seated,
+  // litigation rising, the court long game parked below the cutoff.
+  await castVotes("NODE", sCongress.id, ["marcus_w", "ava_quinn", "lena_ortiz"]);
+  await castVotes("NODE", sStates.id, ["dan_oconnell", "sam_delgado", "ava_quinn"]);
+  await castVotes("NODE", sLitigation.id, ["ruth_b", "lena_ortiz"], { ageDays: 8 });
+  await castVotes("NODE", sCourtGame.id, ["marcus_w"], { value: -1, ageDays: 7 });
   await castVotes("NODE", tAmendment.id, ["marcus_w", "ava_quinn", "lena_ortiz", "priya_s"]);
   await castVotes("NODE", tConvention.id, ["dan_oconnell", "sam_delgado"]);
   await castVotes("NODE", tConvention.id, ["ruth_b", "lena_ortiz"], { value: -1, ageDays: 5 });

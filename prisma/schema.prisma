@@ -36,6 +36,10 @@ model Board {
   slug        String   @unique
   name        String
   description String
+  // Working-plan slots: how many top-voted children per parent appear on the
+  // visible tree; the rest wait in the candidate pool. Admin-configurable
+  // later; per-board from day one.
+  slotsPerParent Int   @default(3)
   createdAt   DateTime @default(now())
 
   posts Post[]

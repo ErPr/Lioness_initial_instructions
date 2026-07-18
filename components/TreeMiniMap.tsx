@@ -118,7 +118,13 @@ export default function TreeMiniMap({
           {layout.instances.map((inst) => {
             const m = meta[inst.nodeId];
             if (!m) return null;
-            const fill = TIER_FILL[m.tier as Tier] ?? "#a8a29e";
+            const isStub = m.status === "STUB";
+            const fill = isStub
+              ? "#d6d3d1"
+              : (TIER_FILL[m.tier as Tier] ?? "#a8a29e");
+            // A stub block represents a parent's overflow candidate pool;
+            // clicking it opens that parent in the tree view.
+            const target = isStub ? inst.nodeId.slice(5) : inst.nodeId;
             return (
               <rect
                 key={inst.key}
@@ -128,12 +134,14 @@ export default function TreeMiniMap({
                 height={Math.max(2.5, CARD_H * scale)}
                 rx={1.5}
                 fill={fill}
-                fillOpacity={m.status === "PROPOSED" ? 0.45 : 0.95}
+                fillOpacity={
+                  isStub ? 0.6 : m.status === "PROPOSED" ? 0.45 : 0.95
+                }
                 stroke={m.status === "CONTESTED" ? "#dc2626" : "none"}
                 strokeWidth={1}
                 onClick={(ev) => {
                   ev.stopPropagation();
-                  router.push(`/b/${boardSlug}/tree?node=${inst.nodeId}`);
+                  router.push(`/b/${boardSlug}/tree?node=${target}`);
                 }}
                 onMouseEnter={() => setHovered(inst.nodeId)}
                 onMouseLeave={() =>

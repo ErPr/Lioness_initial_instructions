@@ -35,6 +35,7 @@ export default function NodePanel({
   boardId,
   boardSlug,
   allNodes,
+  slots,
   loggedIn,
   onClose,
   onOpenNode,
@@ -43,6 +44,7 @@ export default function NodePanel({
   boardId: string;
   boardSlug: string;
   allNodes: NodeRef[];
+  slots: number;
   loggedIn: boolean;
   onClose: () => void;
   onOpenNode: (nodeId: string) => void;
@@ -117,6 +119,62 @@ export default function NodePanel({
           loggedIn={loggedIn}
           onOpenNode={onOpenNode}
         />
+
+        {node.children.length > 0 && (
+          <div className="border-t border-line p-4">
+            <div className="mb-1 text-[11px] font-medium uppercase tracking-wide text-muted">
+              Branch leaderboard — top {slots} make the board
+            </div>
+            <ul className="flex flex-col">
+              {node.children.map((c, i) => (
+                <li key={c.id}>
+                  {i === slots && node.children.some((x) => !x.onBoard) && (
+                    <div className="my-1.5 flex items-center gap-2 text-[10px] uppercase tracking-wide text-muted">
+                      <span className="h-px flex-1 bg-line" />
+                      board cutoff
+                      <span className="h-px flex-1 bg-line" />
+                    </div>
+                  )}
+                  <div className="flex items-center gap-2 py-1 text-sm">
+                    <span className="w-4 text-right text-xs tabular-nums text-muted">
+                      {i + 1}
+                    </span>
+                    <VoteWidget
+                      targetType="NODE"
+                      targetId={c.id}
+                      score={c.score}
+                      myVote={c.myVote}
+                      loggedIn={loggedIn}
+                      revalidate={treePath}
+                      horizontal
+                    />
+                    <button
+                      type="button"
+                      onClick={() => onOpenNode(c.id)}
+                      className="min-w-0 flex-1 truncate text-left hover:text-accent"
+                      title={c.title}
+                    >
+                      {c.title}
+                    </button>
+                    <span
+                      className={`rounded-full px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide ${
+                        c.onBoard
+                          ? "bg-accent-soft text-accent"
+                          : "bg-stone-100 text-stone-500"
+                      }`}
+                    >
+                      {c.onBoard ? "on board" : "candidate"}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-1.5 text-[11px] text-muted">
+              Ranked by community votes — a candidate that overtakes a seated
+              idea swaps onto the board automatically.
+            </p>
+          </div>
+        )}
 
         {loggedIn && (
           <div className="flex flex-col gap-3 border-t border-line p-4">

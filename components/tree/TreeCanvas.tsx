@@ -147,6 +147,26 @@ export default function TreeCanvas({
 
           {/* Node cards (shared nodes render once per parent) */}
           {layout.instances.map((inst) => {
+            const stub = data.stubs[inst.nodeId];
+            if (stub) {
+              // Overflow candidate pool for a parent: the ideas still
+              // competing for a slot on the working plan.
+              return (
+                <button
+                  key={inst.key}
+                  type="button"
+                  data-node-card
+                  onClick={() => openPanel(stub.parentNodeId)}
+                  className="absolute flex flex-col items-center justify-center gap-0.5 rounded-md border border-dashed border-stone-300 bg-stone-50/60 text-muted transition-colors hover:border-accent hover:text-accent"
+                  style={{ left: inst.x, top: inst.y, width: CARD_W, height: CARD_H }}
+                >
+                  <span className="text-[13px] font-medium">
+                    +{stub.count} candidate{stub.count === 1 ? "" : "s"}
+                  </span>
+                  <span className="text-[11px]">vote to promote →</span>
+                </button>
+              );
+            }
             const node = nodes[inst.nodeId];
             if (!node) return null;
             const active =
@@ -228,8 +248,10 @@ export default function TreeCanvas({
           contested
         </span>
         <span>
-          ×N = shared node, appears under N parents · click a card for its
-          links &amp; discussion
+          ×N = shared node, appears under N parents ·{" "}
+          {data.showAll
+            ? "showing every node, including candidates below the cutoff"
+            : `top ${data.slots} per branch by votes make the board; “+N candidates” = ideas still competing`}
         </span>
       </div>
 
@@ -239,6 +261,7 @@ export default function TreeCanvas({
           boardId={boardId}
           boardSlug={boardSlug}
           allNodes={data.allNodes}
+          slots={data.slots}
           loggedIn={loggedIn}
           onClose={() => setPanelNodeId(null)}
           onOpenNode={openPanel}
