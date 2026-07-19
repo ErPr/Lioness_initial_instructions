@@ -160,7 +160,7 @@ export default function NodePanel({
                       className={`rounded-full px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide ${
                         c.onBoard
                           ? "bg-accent-soft text-accent"
-                          : "bg-stone-100 text-stone-500"
+                          : "bg-stone-100 text-stone-500 dark:bg-stone-800 dark:text-stone-400"
                       }`}
                     >
                       {c.onBoard ? "on board" : "candidate"}

@@ -3,6 +3,10 @@ import Link from "next/link";
 import "./globals.css";
 import { getCurrentUser } from "@/lib/session";
 import { logout } from "@/lib/actions/auth";
+import ThemeToggle from "@/components/ThemeToggle";
+
+// Runs before paint so a saved dark preference never flashes light.
+const THEME_INIT = `(function(){try{var t=localStorage.getItem("lioness.theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()`;
 
 export const metadata: Metadata = {
   title: "Lioness",
@@ -17,7 +21,10 @@ export default async function RootLayout({
 }>) {
   const user = await getCurrentUser();
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+      </head>
       <body className="min-h-full flex flex-col">
         <header className="border-b border-line bg-surface">
           <div className="mx-auto flex h-12 max-w-6xl items-center gap-4 px-4">
@@ -34,6 +41,7 @@ export default async function RootLayout({
               movements, mapped
             </span>
             <div className="ml-auto flex items-center gap-3 text-sm">
+              <ThemeToggle />
               {user ? (
                 <>
                   <span className="text-muted">{user.username}</span>

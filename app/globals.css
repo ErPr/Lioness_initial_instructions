@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode: `dark:` utilities apply under html.dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #faf9f7;
   --foreground: #1c1917;
@@ -8,11 +11,27 @@
   --muted: #78716c;
   --accent: #b45309; /* lioness amber */
   --accent-soft: #fef3e2;
+  --edge: #d6d3d1; /* tree connector curves */
   /* Node status colors: proposed = muted, ratified = solid, contested = highlighted */
   --status-proposed: #a8a29e;
   --status-ratified: #b45309;
   --status-contested: #dc2626;
   --status-archived: #d6d3d1;
+}
+
+.dark {
+  --background: #141110;
+  --foreground: #e7e5e4;
+  --surface: #1e1a17;
+  --border: #332d29;
+  --muted: #a39c95;
+  --accent: #e8912d; /* brighter amber for dark contrast */
+  --accent-soft: rgba(217, 119, 6, 0.16);
+  --edge: #3b3430;
+  --status-proposed: #57534e;
+  --status-ratified: #e8912d;
+  --status-contested: #ef4444;
+  --status-archived: #44403c;
 }
 
 @theme inline {

@@ -12,17 +12,21 @@ const FLYOUT_MAX_H = 384;
 
 const CARD_STATUS_CLS: Record<string, string> = {
   // proposed = muted, ratified = solid, contested = highlighted
-  PROPOSED: "border-dashed border-stone-300 bg-white/70 text-stone-600",
-  RATIFIED: "border-solid border-amber-600/50 bg-white shadow-sm",
-  CONTESTED: "border-solid border-red-400 bg-red-50 shadow-sm",
-  ARCHIVED: "border-dotted border-stone-300 bg-stone-50 text-stone-400",
+  PROPOSED:
+    "border-dashed border-stone-300 bg-white/70 text-stone-600 dark:border-stone-600 dark:bg-stone-900/50 dark:text-stone-400",
+  RATIFIED:
+    "border-solid border-amber-600/50 bg-white shadow-sm dark:border-amber-500/50 dark:bg-stone-900",
+  CONTESTED:
+    "border-solid border-red-400 bg-red-50 shadow-sm dark:border-red-500/60 dark:bg-red-950/40",
+  ARCHIVED:
+    "border-dotted border-stone-300 bg-stone-50 text-stone-400 dark:border-stone-700 dark:bg-stone-900/40 dark:text-stone-500",
 };
 
 const BAR_STATUS_CLS: Record<string, string> = {
-  PROPOSED: "bg-stone-300",
-  RATIFIED: "bg-amber-600",
+  PROPOSED: "bg-stone-300 dark:bg-stone-600",
+  RATIFIED: "bg-amber-600 dark:bg-amber-500",
   CONTESTED: "bg-red-500",
-  ARCHIVED: "bg-stone-200",
+  ARCHIVED: "bg-stone-200 dark:bg-stone-700",
 };
 
 export default function TreeCanvas({
@@ -113,7 +117,7 @@ export default function TreeCanvas({
           {layout.bands.map((band, i) => (
             <div key={band.tier}>
               <div
-                className={`absolute inset-y-0 ${i % 2 === 1 ? "bg-stone-50/80" : ""}`}
+                className={`absolute inset-y-0 ${i % 2 === 1 ? "bg-stone-50/80 dark:bg-stone-900/30" : ""}`}
                 style={{ left: band.x, width: band.w }}
               />
               <div
@@ -138,7 +142,7 @@ export default function TreeCanvas({
                   key={e.key}
                   d={`M ${e.x1} ${e.y1} C ${e.x1 + dx} ${e.y1}, ${e.x2 - dx} ${e.y2}, ${e.x2} ${e.y2}`}
                   fill="none"
-                  stroke="#d6d3d1"
+                  style={{ stroke: "var(--edge)" }}
                   strokeWidth={1.5}
                 />
               );
@@ -157,7 +161,7 @@ export default function TreeCanvas({
                   type="button"
                   data-node-card
                   onClick={() => openPanel(stub.parentNodeId)}
-                  className="absolute flex flex-col items-center justify-center gap-0.5 rounded-md border border-dashed border-stone-300 bg-stone-50/60 text-muted transition-colors hover:border-accent hover:text-accent"
+                  className="absolute flex flex-col items-center justify-center gap-0.5 rounded-md border border-dashed border-stone-300 bg-stone-50/60 text-muted transition-colors hover:border-accent hover:text-accent dark:border-stone-600 dark:bg-stone-900/40"
                   style={{ left: inst.x, top: inst.y, width: CARD_W, height: CARD_H }}
                 >
                   <span className="text-[13px] font-medium">
@@ -236,11 +240,11 @@ export default function TreeCanvas({
       {/* Legend */}
       <div className="mt-2 flex flex-wrap items-center gap-4 text-[11px] text-muted">
         <span className="flex items-center gap-1">
-          <span className="inline-block h-2.5 w-2.5 rounded-sm border border-dashed border-stone-400 bg-white" />
+          <span className="inline-block h-2.5 w-2.5 rounded-sm border border-dashed border-stone-400 bg-white dark:border-stone-500 dark:bg-stone-900" />
           proposed
         </span>
         <span className="flex items-center gap-1">
-          <span className="inline-block h-2.5 w-2.5 rounded-sm bg-amber-600" />
+          <span className="inline-block h-2.5 w-2.5 rounded-sm bg-amber-600 dark:bg-amber-500" />
           ratified
         </span>
         <span className="flex items-center gap-1">

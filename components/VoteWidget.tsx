@@ -56,7 +56,7 @@ export default function VoteWidget({
       className={`leading-none transition-colors ${
         optimistic.myVote === value
           ? "text-accent"
-          : "text-stone-400 hover:text-stone-600"
+          : "text-stone-400 hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300"
       }`}
     >
       {value === 1 ? "▲" : "▼"}
@@ -73,10 +73,10 @@ export default function VoteWidget({
       <span
         className={`min-w-4 text-center font-semibold tabular-nums ${
           optimistic.score > 0
-            ? "text-stone-700"
+            ? "text-stone-700 dark:text-stone-200"
             : optimistic.score < 0
-              ? "text-red-600"
-              : "text-stone-400"
+              ? "text-red-600 dark:text-red-400"
+              : "text-stone-400 dark:text-stone-500"
         }`}
       >
         {optimistic.score}

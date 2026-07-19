@@ -111,7 +111,7 @@ export default function TreeMiniMap({
               y1={sy(e.y1)}
               x2={sx(e.x2)}
               y2={sy(e.y2)}
-              stroke="#e0dcd7"
+              style={{ stroke: "var(--edge)" }}
               strokeWidth={0.75}
             />
           ))}
@@ -120,7 +120,7 @@ export default function TreeMiniMap({
             if (!m) return null;
             const isStub = m.status === "STUB";
             const fill = isStub
-              ? "#d6d3d1"
+              ? "var(--status-proposed)"
               : (TIER_FILL[m.tier as Tier] ?? "#a8a29e");
             // A stub block represents a parent's overflow candidate pool;
             // clicking it opens that parent in the tree view.
