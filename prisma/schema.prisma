@@ -29,6 +29,7 @@ model User {
   treeNodes    TreeNode[]
   nodeLinks    NodeLink[]
   nodeEditLogs NodeEditLog[]
+  memberships  Membership[]
 }
 
 model Board {
@@ -37,14 +38,35 @@ model Board {
   name        String
   description String
   category    String   @default("")
+  // Atlas signal scores (0-100); power the hero pick, explore leaderboard,
+  // and the momentum × importance map. 0 = not scored.
+  momentum   Int @default(0)
+  importance Int @default(0)
   // Working-plan slots: how many top-voted children per parent appear on the
   // visible tree; the rest wait in the candidate pool. Admin-configurable
   // later; per-board from day one.
   slotsPerParent Int   @default(3)
   createdAt   DateTime @default(now())
 
-  posts Post[]
-  nodes TreeNode[]
+  posts       Post[]
+  nodes       TreeNode[]
+  memberships Membership[]
+}
+
+// A user's connection to a movement: powers "My movements", the signed-in
+// home dashboard, and (later) roles like established leaders.
+model Membership {
+  id        String   @id @default(cuid())
+  userId    String
+  boardId   String
+  role      String   @default("MEMBER") // MEMBER for the pilot; LEADER later
+  createdAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  board Board @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, boardId])
+  @@index([userId])
 }
 
 model TreeNode {

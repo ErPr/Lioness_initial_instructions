@@ -75,19 +75,6 @@ export default async function BoardPage({
   return (
     <div className="flex flex-col gap-4">
       <TreeMiniMap boardSlug={slug} data={miniMap} />
-      <div className="flex flex-wrap items-start justify-between gap-3 md:pr-60">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight">{board.name}</h1>
-          <p className="text-sm text-muted">{board.description}</p>
-        </div>
-        <Link
-          href={`/b/${slug}/tree`}
-          className="rounded border border-accent bg-accent-soft px-3 py-1.5 text-sm font-medium text-accent hover:bg-accent hover:text-white"
-        >
-          View goal tree →
-        </Link>
-      </div>
-
       {user ? (
         <PostForm boardSlug={slug} nodes={board.nodes} />
       ) : (

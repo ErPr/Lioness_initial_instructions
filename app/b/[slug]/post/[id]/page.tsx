@@ -92,7 +92,7 @@ export default async function PostPage({
       <TreeMiniMap boardSlug={slug} data={miniMap} />
       <div className="text-xs text-muted">
         <Link href={`/b/${slug}`} className="hover:text-accent">
-          ← {post.board.name}
+          ← All posts
         </Link>
       </div>
 

@@ -38,8 +38,8 @@ export default function TreeMiniMap({
   // Default open on wide screens; remember the user's last choice.
   useEffect(() => {
     const saved = window.localStorage.getItem("lioness.minimap");
-    if (saved !== null) setCollapsed(saved === "closed");
-    else setCollapsed(window.innerWidth < 1280);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- hydration-safe localStorage sync
+    setCollapsed(saved !== null ? saved === "closed" : window.innerWidth < 1280);
   }, []);
   function toggle() {
     setCollapsed((c) => {
@@ -64,7 +64,7 @@ export default function TreeMiniMap({
         type="button"
         onClick={toggle}
         title="Show goal-tree minimap"
-        className="fixed right-4 top-16 z-30 hidden items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-muted shadow-md hover:border-accent hover:text-accent md:flex"
+        className="fixed bottom-4 right-4 z-30 hidden items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-muted shadow-md hover:border-accent hover:text-accent md:flex"
       >
         <MiniGlyph />
         Tree map
@@ -75,7 +75,7 @@ export default function TreeMiniMap({
   const hoveredTitle = hovered ? meta[hovered]?.title : null;
 
   return (
-    <div className="fixed right-4 top-16 z-30 hidden w-56 rounded-lg border border-line bg-surface shadow-lg md:block">
+    <div className="fixed bottom-4 right-4 z-30 hidden w-56 rounded-lg border border-line bg-surface shadow-lg md:block">
       <div className="flex items-center gap-2 border-b border-line px-2.5 py-1.5">
         <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
           Goal tree

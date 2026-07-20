@@ -25,38 +25,23 @@ export default async function TreePage({
   const data = await getTreeViewData(board, user?.id, showAll);
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight">
-            {board.name} — goal tree
-          </h1>
-          <p className="text-sm text-muted">
-            The working plan: the top-voted ideas hold each branch of the
-            board, and the rest wait in candidate pools.
-            {user
-              ? " Click any card to open its links and discussion; expand for editing."
-              : " Log in to vote and edit the tree."}
-          </p>
-        </div>
-        <div className="flex gap-2">
-          <Link
-            href={showAll ? `/b/${slug}/tree` : `/b/${slug}/tree?all=1`}
-            className={`rounded border px-3 py-1.5 text-sm ${
-              showAll
-                ? "border-accent bg-accent-soft text-accent"
-                : "border-line bg-surface hover:border-accent hover:text-accent"
-            }`}
-          >
-            {showAll ? "✓ Showing all candidates" : "Show all candidates"}
-          </Link>
-          <Link
-            href={`/b/${slug}`}
-            className="rounded border border-line bg-surface px-3 py-1.5 text-sm hover:border-accent hover:text-accent"
-          >
-            ← Forum view
-          </Link>
-        </div>
+    <div className="flex flex-col gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-muted">
+          The working plan: top-voted ideas hold each branch; the rest wait in
+          candidate pools.
+          {user ? "" : " Log in to vote and edit the tree."}
+        </p>
+        <Link
+          href={showAll ? `/b/${slug}/tree` : `/b/${slug}/tree?all=1`}
+          className={`rounded border px-3 py-1.5 text-sm ${
+            showAll
+              ? "border-accent bg-accent-soft text-accent"
+              : "border-line bg-surface hover:border-accent hover:text-accent"
+          }`}
+        >
+          {showAll ? "✓ Showing all candidates" : "Show all candidates"}
+        </Link>
       </div>
 
       {data.layout.instances.length === 0 ? (
