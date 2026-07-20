@@ -53,6 +53,7 @@ interface AtlasEntry {
 
 async function main() {
   console.log("Clearing existing data...");
+  await prisma.membership.deleteMany();
   await prisma.vote.deleteMany();
   await prisma.nodeEditLog.deleteMany();
   await prisma.comment.deleteMany();
@@ -87,6 +88,8 @@ async function main() {
         name: m.name,
         description: m.goal,
         category: m.category,
+        momentum: m.momentum,
+        importance: m.importance,
         createdAt: daysAgo(75),
       },
     });
@@ -226,6 +229,35 @@ async function main() {
       p++;
     }
     if (i % 25 === 0) console.log(`  ${i}/${entries.length}...`);
+  }
+
+  // Memberships: ava_quinn joins the top-momentum boards (so the demo login
+  // lands on a lively dashboard); everyone else joins a deterministic spread.
+  console.log("Creating memberships...");
+  const boards = await prisma.board.findMany({
+    orderBy: { momentum: "desc" },
+    select: { id: true },
+  });
+  for (let b = 0; b < 5 && b < boards.length; b++) {
+    await prisma.membership.create({
+      data: { userId: users[0], boardId: boards[b].id, createdAt: daysAgo(60) },
+    });
+  }
+  for (let u = 1; u < users.length; u++) {
+    for (let k = 0; k < 6; k++) {
+      const idx = (u * 13 + k * 17) % boards.length;
+      await prisma.membership.upsert({
+        where: {
+          userId_boardId: { userId: users[u], boardId: boards[idx].id },
+        },
+        update: {},
+        create: {
+          userId: users[u],
+          boardId: boards[idx].id,
+          createdAt: daysAgo(55 - k),
+        },
+      });
+    }
   }
 
   // Derive every node status through the same automatic rule as the app.

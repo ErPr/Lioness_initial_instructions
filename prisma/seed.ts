@@ -19,6 +19,7 @@ type Status = "PROPOSED" | "RATIFIED" | "CONTESTED" | "ARCHIVED";
 
 async function main() {
   console.log("Clearing existing data...");
+  await prisma.membership.deleteMany();
   await prisma.vote.deleteMany();
   await prisma.nodeEditLog.deleteMany();
   await prisma.comment.deleteMany();
@@ -1144,6 +1145,23 @@ async function main() {
       await prisma.treeNode.update({
         where: { id: n.id },
         data: { status: next },
+      });
+    }
+  }
+
+  // Everyone belongs to the flagship; a few users join a second board.
+  const allBoards = await prisma.board.findMany({ select: { id: true, slug: true } });
+  const mopBoard = allBoards.find((b) => b.slug === "money-out-of-politics")!;
+  for (let u = 0; u < usernames.length; u++) {
+    await prisma.membership.create({
+      data: { userId: U(usernames[u]), boardId: mopBoard.id, createdAt: daysAgo(60) },
+    });
+    const other = allBoards[(u * 3) % allBoards.length];
+    if (other.id !== mopBoard.id) {
+      await prisma.membership.upsert({
+        where: { userId_boardId: { userId: U(usernames[u]), boardId: other.id } },
+        update: {},
+        create: { userId: U(usernames[u]), boardId: other.id, createdAt: daysAgo(50) },
       });
     }
   }
