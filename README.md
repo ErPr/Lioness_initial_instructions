@@ -59,7 +59,8 @@ algorithm (`lib/treeLayout.ts`) — no graph libraries.
 ## Useful commands
 
 ```bash
-npm run db:seed    # re-seed (wipes all data)
-npm run db:reset   # drop + re-migrate + re-seed
-npx prisma studio  # inspect the DB
+npm run db:seed        # re-seed the original 10-board pilot set (wipes all data)
+npm run db:seed:atlas  # seed the 131-movement Collective Effort Atlas instead
+npm run db:reset       # drop + re-migrate + re-seed
+npx prisma studio      # inspect the DB
 ```

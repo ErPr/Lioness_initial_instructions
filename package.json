@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:seed": "tsx prisma/seed.ts",
-    "db:reset": "prisma migrate reset --force"
+    "db:reset": "prisma migrate reset --force",
+    "db:seed:atlas": "tsx prisma/seed-atlas.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",

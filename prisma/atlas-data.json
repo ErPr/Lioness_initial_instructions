@@ -1,0 +1,2625 @@
+[
+ {
+  "slug": "global-solar-buildout",
+  "name": "Global Solar Buildout",
+  "category": "Climate, Environment & Energy",
+  "type": "Current",
+  "region": "Global (China, India, EU, US, Africa)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 92,
+  "importance": 90,
+  "goal": "Deploy solar PV fast enough to make it the world's largest electricity source and push fossil generation into decline",
+  "whyNow": "Solar added ~600GW in 2025 and renewables passed ~49% of global capacity, with clean sources now covering nearly all electricity demand growth",
+  "actors": "IEA, Ember, SEIA, Global Solar Council, Chinese manufacturers (LONGi, Tongwei), RMI, Bill McKibben ('Here Comes the Sun')",
+  "hubs": "r/solar, LinkedIn energy circles, PV-Tech and Ember report threads on X/Bluesky, Volts and Cleaning Up podcasts",
+  "actions": [
+   "Install rooftop/community solar",
+   "Lobby for permitting and interconnection reform",
+   "Track and publicize record deployment data"
+  ]
+ },
+ {
+  "slug": "open-weights-ai-model-community",
+  "name": "Open-Weights AI Model Community",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global (US, China, Europe)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 92,
+  "importance": 90,
+  "goal": "Keep frontier-class AI open: release, fine-tune, and deploy open-weights models that rival closed labs",
+  "whyNow": "Chinese open models (DeepSeek V4, Kimi K2.x, Qwen) now trade blows with closed frontier labs, making open weights a live geopolitical and technical contest",
+  "actors": "Hugging Face, DeepSeek, Alibaba Qwen, Moonshot (Kimi), Meta Llama, Mistral, EleutherAI, AI2",
+  "hubs": "Hugging Face Hub, r/LocalLLaMA, X/Twitter ML circles, Discord servers, GitHub",
+  "actions": [
+   "Fine-tuning and quantizing new releases within hours",
+   "Publishing open datasets and evals",
+   "Coordinated leaderboard benchmarking"
+  ]
+ },
+ {
+  "slug": "no-kings-protest-wave",
+  "name": "No Kings Protest Wave",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "US nationwide",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 93,
+  "importance": 88,
+  "goal": "Mass peaceful street mobilization against perceived authoritarianism by the Trump administration",
+  "whyNow": "March 2026 edition was the largest single-day demonstration in US history, with another wave expected before the midterms",
+  "actors": "Indivisible, ACLU, MoveOn, AFT/SEIU, 300+ partner orgs; distributed local organizers",
+  "hubs": "nokings.org, Mobilize.us, Reddit r/50501, Bluesky, local Signal/Discord groups",
+  "actions": [
+   "Coordinated single-day rallies in thousands of cities (est. 8M turnout March 28, 2026)",
+   "Local recurring visibility events",
+   "Nonviolence trainings and de-escalation marshaling"
+  ]
+ },
+ {
+  "slug": "ice-raid-resistance-rapid-response-networks",
+  "name": "ICE Raid Resistance & Rapid Response Networks",
+  "category": "Peace, Conflict & Migration",
+  "type": "Movement",
+  "region": "US, strongest in Chicago, LA, Minneapolis-St. Paul, Charlotte, NYC",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 90,
+  "importance": 90,
+  "goal": "Protect immigrants from mass deportation operations through alerts, accompaniment, legal defense and street protest",
+  "whyNow": "2026 surge-city enforcement operations (and vehicle-attack rhetoric wars with DHS) have made ICE resistance the most active daily organizing front in the country",
+  "actors": "NILC, United We Dream, local rapid-response coalitions, labor unions, faith congregations, mayors of sanctuary cities",
+  "hubs": "Signal/WhatsApp alert trees, Instagram raid-tracker accounts, NILC and LWV action pages",
+  "actions": [
+   "Verified raid-alert hotlines and neighborhood patrols",
+   "Know-your-rights trainings",
+   "Courthouse and detention-facility protests",
+   "Family support funds"
+  ]
+ },
+ {
+  "slug": "global-gen-z-protest-wave",
+  "name": "Global Gen Z Protest Wave",
+  "category": "Democracy, Rights & Governance",
+  "type": "Current",
+  "region": "Global South (Africa, Asia, Latin America)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 93,
+  "importance": 85,
+  "goal": "Topple or discipline corrupt gerontocratic governments over inequality, youth unemployment and elite impunity, sharing tactics across borders",
+  "whyNow": "Spread to 10+ countries since mid-2025, toppling governments in Nepal and Madagascar and forcing concessions in Morocco, Indonesia and the Philippines",
+  "actors": "Youth networks in Kenya, Nepal, Indonesia, Madagascar, Morocco, Peru, Mexico, Philippines; no central org; One Piece 'Jolly Roger' flag as shared symbol",
+  "hubs": "Discord servers, TikTok, X; cross-country tactic-sharing threads documented by Waging Nonviolence and CIVICUS",
+  "actions": [
+   "Discord-organized decentralized street mobilization",
+   "Cross-national symbol adoption (pirate flag, anthem remixes)",
+   "Documentation and mutual advice between national movements"
+  ]
+ },
+ {
+  "slug": "maha-make-america-healthy-again",
+  "name": "MAHA (Make America Healthy Again)",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 90,
+  "importance": 86,
+  "goal": "Remake US health policy around chronic disease, food additives, and vaccine skepticism under RFK Jr.'s HHS",
+  "whyNow": "Kennedy's HHS is actively rewriting childhood vaccine recommendations and food policy in 2026, with allies pushing to eliminate all childhood vaccine schedules amid measles outbreaks",
+  "actors": "RFK Jr./HHS, Calley & Casey Means, MAHA Institute, MAHA moms influencer network",
+  "hubs": "X, Instagram wellness accounts, podcasts (Tucker, Rogan), Substack",
+  "actions": [
+   "Pressure state legislatures on food-dye and fluoride bans",
+   "Comment/testify in HHS and ACIP proceedings",
+   "Boycott ultra-processed foods and promote raw-milk/whole-food buying"
+  ]
+ },
+ {
+  "slug": "psychedelic-medicine-movement",
+  "name": "Psychedelic Medicine Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 92,
+  "importance": 83,
+  "goal": "Win FDA approval and legal access to psilocybin, MDMA-like drugs, and ibogaine for mental health treatment",
+  "whyNow": "FDA put psilocybin and methylone on priority-voucher fast track after an April 2026 White House executive order; first federal psychedelic approval expected within months",
+  "actors": "Compass Pathways, Lykos/MAPS, Rick Doblin, Texas ibogaine coalition (Rick Perry), veterans' groups (Heroic Hearts, VETS)",
+  "hubs": "r/psychedelics, X, Psychedelic Science conferences, veteran advocacy podcasts",
+  "actions": [
+   "Submit comments for FDA's July 2026 psychedelics public hearing",
+   "Lobby state bills (Texas ibogaine funding, state psilocybin programs)",
+   "Fund and enroll in clinical trials"
+  ]
+ },
+ {
+  "slug": "redistricting-wars-counter-gerrymandering",
+  "name": "Redistricting Wars & Counter-Gerrymandering",
+  "category": "Democracy, Rights & Governance",
+  "type": "Campaign",
+  "region": "California, Texas, and a dozen contested states",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 85,
+  "importance": 88,
+  "goal": "Redraw (or defend) congressional maps to control the House in the 2026 midterms",
+  "whyNow": "Court rulings through late 2025 left the GOP with a redistricting edge, making maps themselves the central battlefield of the midterms",
+  "actors": "Trump/state GOP legislatures, Gov. Newsom and CA Prop 50 coalition, NDRC, Democracy Docket, state courts",
+  "hubs": "Democracy Docket tracker, X, state legislative hearings",
+  "actions": [
+   "Mid-decade map fights and litigation in Texas, California and beyond",
+   "Ballot campaigns authorizing counter-maps",
+   "Voter education on new districts"
+  ]
+ },
+ {
+  "slug": "yimby-housing-abundance-movement",
+  "name": "YIMBY / Housing Abundance Movement",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States (spreading to Canada, UK, Australia, NZ)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 86,
+  "importance": 85,
+  "goal": "Legalize dense housing by rolling back zoning, parking, and permitting restrictions to end the housing shortage",
+  "whyNow": "'Abundance' went mainstream in both parties, LA and other cities passed landmark upzonings, and housing is a top issue in 2026 elections from DC to the California governor's race",
+  "actors": "YIMBY Action, California YIMBY, Welcoming Neighbors Network, Abundance Network (Klein/Thompson), AURA, Sightline, PricedOut UK",
+  "hubs": "r/yimby, X urbanist twitter, YIMBYtown conference, Discourse forums, Substacks (Darrell Owens, Yglesias)",
+  "actions": [
+   "Testifying at city councils and state legislatures",
+   "Electing pro-housing candidates",
+   "State preemption bill campaigns"
+  ]
+ },
+ {
+  "slug": "glp-1-metabolic-health-wave",
+  "name": "GLP-1 Metabolic Health Wave",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Current",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 88,
+  "importance": 83,
+  "goal": "Normalize and expand access to GLP-1 drugs for obesity, addiction, and longevity, including microdosing and compounded access",
+  "whyNow": "Telehealth GLP-1 demand is booming in 2026 with a regulatory battle over compounded versions and a fast-growing microdosing subculture doctors call unsupported by evidence",
+  "actors": "Hims/Hers, Ro, Noom, Eli Lilly/Novo, r/Ozempic communities, obesity medicine physicians",
+  "hubs": "Reddit (r/Ozempic, r/Zepbound), TikTok, telehealth platforms, Facebook groups",
+  "actions": [
+   "Share dosing/side-effect protocols peer-to-peer",
+   "Fight insurance denials and pressure employers for coverage",
+   "Navigate compounding-pharmacy and telehealth access after FDA shortage rulings"
+  ]
+ },
+ {
+  "slug": "encryption-anti-surveillance-defense-chat-contro",
+  "name": "Encryption & Anti-Surveillance Defense (Chat Control Fight)",
+  "category": "Tech & Digital Life",
+  "type": "Campaign",
+  "region": "EU-centered, global stakes",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 84,
+  "importance": 86,
+  "goal": "Kill client-side scanning mandates and mandatory age verification that would break end-to-end encryption",
+  "whyNow": "The CSAR/Chat Control fight reached its endgame in 2026 trilogues\u2014scanning mandates were beaten back but mandatory age verification opened a second front",
+  "actors": "EDRi, EFF, Signal (Meredith Whittaker), Tuta, Patrick Breyer, fightchatcontrol.eu",
+  "hubs": "fightchatcontrol.eu, Mastodon infosec circles, r/privacy, EDRi network",
+  "actions": [
+   "Mass-emailing MEPs before trilogue votes",
+   "Threatened service withdrawal by Signal",
+   "Tracking and publicizing member-state positions"
+  ]
+ },
+ {
+  "slug": "grid-battery-storage-surge",
+  "name": "Grid Battery Storage Surge",
+  "category": "Climate, Environment & Energy",
+  "type": "Current",
+  "region": "US (TX/CA/AZ), China, Australia, Europe",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 88,
+  "importance": 82,
+  "goal": "Scale battery storage to firm renewables, kill peaker plants, and stabilize grids under AI-driven demand growth",
+  "whyNow": "Storage is the fastest-growing power technology of 2025-26, with costs still falling and batteries now setting evening prices in Texas and California",
+  "actors": "Tesla Energy, BYD, Fluence, CATL, ERCOT/CAISO operators, home-battery installers, RMI",
+  "hubs": "r/energystorage, Texas grid X/Twitter community, Volts podcast, battery-industry LinkedIn",
+  "actions": [
+   "Deploy home and utility-scale batteries",
+   "Advocate storage mandates and capacity-market reform",
+   "Pair batteries with community solar"
+  ]
+ },
+ {
+  "slug": "kids-off-social-media-under-16-bans",
+  "name": "Kids Off Social Media / Under-16 Bans",
+  "category": "Tech & Digital Life",
+  "type": "Campaign",
+  "region": "Australia, EU, UK, US states",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 88,
+  "importance": 82,
+  "goal": "Legally bar minors under 16 from social media platforms via age verification",
+  "whyNow": "Australia's ban took effect Dec 2025 and enforcement with major fines ramped in mid-2026, with a dozen-plus jurisdictions drafting copycat laws",
+  "actors": "Australia eSafety Commissioner, Smartphone Free Childhood, EU lawmakers, US state AGs, Haidt-inspired parent groups",
+  "hubs": "Smartphone Free Childhood WhatsApp groups, After Babel, parliamentary inquiries",
+  "actions": [
+   "Enforcing/expanding Australia's world-first ban",
+   "Pushing copycat bills in EU, UK, and US states",
+   "Parent pacts delaying first smartphones"
+  ]
+ },
+ {
+  "slug": "the-grassroots-ai-backlash",
+  "name": "The Grassroots AI Backlash",
+  "category": "Tech & Digital Life",
+  "type": "Current",
+  "region": "US and global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 88,
+  "importance": 82,
+  "goal": "Push back on AI being forced into work, school, art, and public infrastructure without consent",
+  "whyNow": "2026 is widely described as AI's 'grassroots backlash era'\u2014polls show majorities distrustful and opposition has fused job, copyright, energy, and mental-health grievances into one current",
+  "actors": "Ban the Bots, labor unions, teachers' groups, Blood in the Machine (Brian Merchant), local activist coalitions",
+  "hubs": "banthebots.org, Reddit (r/antiai and hobby subs), TikTok, local Facebook groups",
+  "actions": [
+   "Boycotting AI-generated content and AI-mandating brands",
+   "Petitioning school boards and city councils",
+   "Anti-AI clauses in union contract fights"
+  ]
+ },
+ {
+  "slug": "young-men-s-return-to-church",
+  "name": "Young Men's Return to Church",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 88,
+  "importance": 82,
+  "goal": "Reverse secularization by bringing Gen Z/millennial men into regular congregational life",
+  "whyNow": "Gallup's spring 2026 data shows young men's church attendance at its highest in over a decade, flipping the historic gender gap",
+  "actors": "Gallup & Barna (documenting), evangelical and non-denominational churches, podcast-sphere pastors, campus ministries (Cru, FOCUS)",
+  "hubs": "YouTube/podcast Christianity (Bible in a Year, Ruslan, Cliffe Knechtle clips), church TikTok, Reddit r/Christianity",
+  "actions": [
+   "Weekly service attendance",
+   "Men's small groups and Bible studies",
+   "Bringing unchurched friends to alpha-style courses"
+  ]
+ },
+ {
+  "slug": "ai-safety-alignment-movement",
+  "name": "AI Safety & Alignment Movement",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US, UK, global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 76,
+  "importance": 93,
+  "goal": "Ensure advanced AI development doesn't cause catastrophic or existential harm, via research, policy, and lab pressure",
+  "whyNow": "As agentic systems ship widely and timelines compress, the movement is pivoting from theory to evals, whistleblowing, and state-level legislation\u2014while fighting federal preemption efforts",
+  "actors": "CAIS, MIRI, Apollo/METR-style eval orgs, UK AISI, 80,000 Hours, Anthropic/DeepMind safety teams, Yoshua Bengio",
+  "hubs": "LessWrong, Alignment Forum, Transformer newsletter, EA Forum, X/Twitter",
+  "actions": [
+   "Publishing dangerous-capability evals of frontier models",
+   "Drafting and lobbying state/national AI safety bills",
+   "Superintelligence-moratorium open statements"
+  ]
+ },
+ {
+  "slug": "mission-300-african-electrification",
+  "name": "Mission 300 African Electrification",
+  "category": "Climate, Environment & Energy",
+  "type": "Project",
+  "region": "Sub-Saharan Africa",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 82,
+  "importance": 86,
+  "goal": "Connect 300 million Africans to electricity by 2030, largely via solar mini-grids and off-grid solar",
+  "whyNow": "First 50 million connections announced June 2026 with a public progress tracker, but the pace must hit 50M/year to reach the 2030 goal",
+  "actors": "World Bank, African Development Bank, Rockefeller Foundation, GEAPP, Sustainable Energy for All, national utilities, mini-grid firms (Husk Power, Zola)",
+  "hubs": "Mission300Africa.org tracker, ESI Africa forums, energy-access LinkedIn, Africa Energy Forum",
+  "actions": [
+   "Finance and build mini-grids",
+   "National energy compact reforms in 30+ countries",
+   "Deploy pay-as-you-go solar home systems"
+  ]
+ },
+ {
+  "slug": "medical-freedom-vaccine-choice-movement",
+  "name": "Medical Freedom / Vaccine-Choice Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 84,
+  "importance": 84,
+  "goal": "End vaccine mandates and expand personal exemption rights in schools, employment, and medicine",
+  "whyNow": "With allies inside HHS, the movement is closer than ever to dismantling federal vaccine recommendations, while measles outbreaks are fracturing parts of its parent base",
+  "actors": "Children's Health Defense, ICAN (Del Bigtree), Stand for Health Freedom, state freedom caucuses",
+  "hubs": "CHD.TV, The Highwire, Telegram/X groups, state Facebook networks",
+  "actions": [
+   "Lobby state legislatures for exemption expansions and mandate bans",
+   "File lawsuits against health agencies",
+   "Mobilize testimony at ACIP and state health board meetings"
+  ]
+ },
+ {
+  "slug": "amazon-indigenous-land-defenders",
+  "name": "Amazon & Indigenous Land Defenders",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "Brazil, Ecuador, Peru, Colombia, Pan-Amazon",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 78,
+  "importance": 88,
+  "goal": "Secure Indigenous land rights and stop deforestation, oil expansion and criminal networks in the Amazon",
+  "whyNow": "Post-COP30 Belem, 2026 is a decision year: record Free Land Camp turnout, new demarcations, and escalating violence from criminal networks",
+  "actors": "APIB, COICA, Amazon Watch, Amazon Frontlines, Sonia Guajajara, Marina Silva, Rainforest Foundation, Global Witness",
+  "hubs": "Amazon Watch and APIB channels, Free Land Camp (Acampamento Terra Livre) networks, Indigenous Instagram/TikTok",
+  "actions": [
+   "Annual Free Land Camp mobilization in Brasilia",
+   "Land demarcation and titling campaigns",
+   "Taking Amazon crime crisis to the UN"
+  ]
+ },
+ {
+  "slug": "climate-litigation-wave",
+  "name": "Climate Litigation Wave",
+  "category": "Climate, Environment & Energy",
+  "type": "Campaign",
+  "region": "Global (ICJ, US states, Europe, Pacific)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 82,
+  "importance": 84,
+  "goal": "Use courts to force emissions cuts and make fossil companies and governments pay for climate damage",
+  "whyNow": "The ICJ's 2025 advisory opinion declared climate inaction unlawful, and 2026 suits are testing it while US groups litigate against EPA rollbacks",
+  "actors": "Earthjustice, Our Children's Trust, ClientEarth, Urgenda, Vanuatu/Pacific island states, Sabin Center, state AGs suing Big Oil",
+  "hubs": "Sabin Center litigation database, legal Twitter/Bluesky, Drilled podcast",
+  "actions": [
+   "File and fund suits citing the 2025 ICJ advisory opinion",
+   "State 'climate superfund' laws",
+   "Challenge EPA endangerment-finding repeal"
+  ]
+ },
+ {
+  "slug": "european-housing-revolt",
+  "name": "European Housing Revolt",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "Europe (Spain, Portugal, Netherlands, Ireland, Germany)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 84,
+  "importance": 82,
+  "goal": "Force rent regulation, public housing investment, and curbs on tourist flats and speculative landlords",
+  "whyNow": "Housing is now called Europe's biggest political problem, with 2025-26 mega-protests pushing Spain to a EUR 7bn public housing plan and EU-level affordability initiatives",
+  "actors": "Sindicat de Llogateres (Barcelona), Madrid tenant unions, Woonprotest (NL), CATU (Ireland), Deutsche Wohnen & Co enteignen, Living Rent (Scotland)",
+  "hubs": "Telegram/Instagram of tenant syndicates, European Action Coalition, national subreddits",
+  "actions": [
+   "Mass street demonstrations (hundreds of thousands across Spain)",
+   "Coordinated rent strikes",
+   "Anti-Airbnb and tourist-flat direct action"
+  ]
+ },
+ {
+  "slug": "school-choice-education-freedom-movement",
+  "name": "School Choice / Education Freedom Movement",
+  "category": "Education & Knowledge",
+  "type": "Movement",
+  "region": "US, ~20 universal-choice states plus federal",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 84,
+  "importance": 82,
+  "goal": "Universalize ESAs, vouchers and tax-credit scholarships so public money follows every student",
+  "whyNow": "First federal school-choice program rolling out in 2026-27 while new state programs launch, shifting fights from passage to implementation",
+  "actors": "EdChoice, American Federation for Children, Americans for Prosperity, Moms groups, Trump administration (federal tax-credit scholarships)",
+  "hubs": "schoolchoiceusa.org trackers, National School Choice Week networks, X, state Facebook parent groups",
+  "actions": [
+   "State legislative campaigns and ESA application drives",
+   "National School Choice Week events",
+   "Implementation of the federal scholarship tax credit"
+  ]
+ },
+ {
+  "slug": "phone-free-schools-smartphone-free-childhood",
+  "name": "Phone-Free Schools & Smartphone-Free Childhood",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US (35+ states), UK, France, Brazil",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 90,
+  "importance": 76,
+  "goal": "Get bell-to-bell smartphone bans into every K-12 school and delay smartphones for kids",
+  "whyNow": "NY and CA statewide mandates take effect for 2026-27, most US states now have laws or policies, and lawmakers are escalating partial bans to bell-to-bell",
+  "actors": "Jonathan Haidt (After Babel), Phone-Free Schools Movement, Smartphone Free Childhood, Wait Until 8th, Gov. Hochul (NY) and Newsom (CA), Yondr, parent coalitions",
+  "hubs": "After Babel Substack, Facebook/WhatsApp parent groups, state legislature hearings, school board meetings",
+  "actions": [
+   "Lobbying state bell-to-bell ban bills",
+   "School-board petition drives",
+   "Parent pacts delaying smartphones",
+   "Yondr-pouch pilot programs"
+  ]
+ },
+ {
+  "slug": "ai-reskilling-wave",
+  "name": "AI Reskilling Wave",
+  "category": "Education & Knowledge",
+  "type": "Current",
+  "region": "Global (US-intense)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 85,
+  "importance": 80,
+  "goal": "Retrain workers en masse for an AI-transformed labor market",
+  "whyNow": "With entry-level white-collar hiring contracting and estimates that most workers need retraining, 2026 has made AI upskilling a near-universal employer and worker priority",
+  "actors": "WEF Reskilling Revolution, Coursera/Google/Microsoft certificates, community colleges, employer academies, National Academies",
+  "hubs": "LinkedIn Learning, r/learnmachinelearning, corporate L&D programs, bootcamp Discords",
+  "actions": [
+   "Complete AI literacy certificates and prompt-engineering courses",
+   "Employer-funded upskilling academies",
+   "Community college rapid-credential programs for displaced workers"
+  ]
+ },
+ {
+  "slug": "nyc-affordability-mandate-mamdani-era",
+  "name": "NYC Affordability Mandate (Mamdani Era)",
+  "category": "Economy, Labor & Housing",
+  "type": "Current",
+  "region": "New York City",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 90,
+  "importance": 75,
+  "goal": "Use city power for rent freezes, social housing, and public options after an affordability-driven electoral upset",
+  "whyNow": "The board approved a two-year rent freeze on ~1 million stabilized apartments in June 2026, making NYC the national test case for affordability politics",
+  "actors": "Mayor Zohran Mamdani, NYC-DSA, Housing Justice for All, Rent Guidelines Board, tenant groups",
+  "hubs": "NYC political X/Bluesky, Hell Gate, City Limits, r/nyc, DSA branches",
+  "actions": [
+   "Rent Guidelines Board campaigns",
+   "Social housing and city grocery pilots",
+   "Tenant harassment enforcement drives"
+  ]
+ },
+ {
+  "slug": "sudan-emergency-response-rooms",
+  "name": "Sudan Emergency Response Rooms",
+  "category": "Community, Mutual Aid & Local Life",
+  "type": "Community/Scene",
+  "region": "Sudan / Horn of Africa",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 78,
+  "importance": 86,
+  "goal": "Run neighborhood-level mutual aid \u2014 communal kitchens, clinics, evacuation \u2014 for millions amid the world's largest humanitarian crisis",
+  "whyNow": "With formal aid gutted by donor cuts, ERRs are now cited by the UN and Chatham House as the template for the future of humanitarian response",
+  "actors": "Hundreds of volunteer-run ERRs; Localization Coordination Council; Mutual Aid Sudan Coalition; Right Livelihood Award laureate 2025",
+  "hubs": "WhatsApp/Facebook coordination groups, mutualaidsudan.org, diaspora fundraising networks",
+  "actions": [
+   "Communal kitchen funding drives",
+   "Cross-border cash transfer relays as banks collapse",
+   "Documentation of famine conditions for UN advocacy"
+  ]
+ },
+ {
+  "slug": "turning-point-usa-america-first-youth-movement",
+  "name": "Turning Point USA & America First Youth Movement",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "US campuses and churches nationwide",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 87,
+  "importance": 77,
+  "goal": "Build a durable young conservative mass movement carrying Charlie Kirk's legacy into the midterms",
+  "whyNow": "Kirk's assassination triggered unprecedented chapter growth and martyrdom energy that the organization is converting into midterm infrastructure",
+  "actors": "Turning Point USA under Erika Kirk, TPAction, campus and high school chapters, allied churches",
+  "hubs": "X, TPUSA events (AmericaFest), YouTube/Rumble, campus tabling",
+  "actions": [
+   "Thousands of new chapter formations since the September 2025 assassination",
+   "Campus speaking tours",
+   "Youth voter turnout operation for 2026"
+  ]
+ },
+ {
+  "slug": "tisza-movement-hungary",
+  "name": "Tisza Movement (Hungary)",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Hungary / Central Europe",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 88,
+  "importance": 76,
+  "goal": "End Orb\u00e1n-era illiberal rule and restore democratic institutions and EU alignment",
+  "whyNow": "Magyar's 2026 election victory over Fidesz is the biggest opposition win against entrenched illiberalism in Europe in a decade",
+  "actors": "P\u00e9ter Magyar, Tisza party, civic anti-corruption groups, independent media",
+  "hubs": "Facebook (dominant in Hungary), Magyar's livestreams, Telegram",
+  "actions": [
+   "Mass rallies and country-wide listening tours",
+   "Poll-watching and vote protection",
+   "Rebuilding independent local media"
+  ]
+ },
+ {
+  "slug": "ev-transition",
+  "name": "EV Transition",
+  "category": "Climate, Environment & Energy",
+  "type": "Current",
+  "region": "China, EU, US, emerging markets",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 85,
+  "goal": "Make electric vehicles the default new car and two-wheeler worldwide, ending oil demand growth",
+  "whyNow": "Global EV sales keep setting records led by China and cheap BYD models even as US tax-credit repeal slows the American market, making 2026 a divergence year",
+  "actors": "BYD, Tesla, Chinese OEMs, EU regulators, CALSTART, Plug In America, e-mobility startups in India/Africa (Ola, Ampersand)",
+  "hubs": "r/electricvehicles, EV YouTube (Out of Spec, Fully Charged), China EV Twitter, InsideEVs comments",
+  "actions": [
+   "Buy/advocate EVs and e-motorbikes",
+   "Defend emissions standards against rollback",
+   "Build out charging co-ops and fleets"
+  ]
+ },
+ {
+  "slug": "climate-adaptation-resilience-push",
+  "name": "Climate Adaptation & Resilience Push",
+  "category": "Climate, Environment & Energy",
+  "type": "Current",
+  "region": "Global (South Asia, Africa, US Sunbelt, Mediterranean)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 74,
+  "importance": 88,
+  "goal": "Heat-proof, flood-proof and insure cities and farms for a 1.5C+ world through early warning, cooling and resilient infrastructure",
+  "whyNow": "After 2025 became another hottest-year with deadly heatwaves and floods, and RFF declaring 1.5C effectively lost, adaptation budgets are surging worldwide",
+  "actors": "Chief heat officers, UN Early Warnings for All, Adrienne Arsht-Rock Resilience Center, FEMA-gap state programs, insurers, C40 cities",
+  "hubs": "Adaptation LinkedIn, urban-resilience Substacks, municipal climate offices",
+  "actions": [
+   "Deploy heat action plans and cooling centers",
+   "Sponge-city and flood-defense projects",
+   "Fight insurance retreat with public options"
+  ]
+ },
+ {
+  "slug": "ukrainian-volunteer-drone-funding-networks",
+  "name": "Ukrainian Volunteer & Drone-Funding Networks",
+  "category": "Peace, Conflict & Migration",
+  "type": "Community/Scene",
+  "region": "Ukraine / Eastern Europe",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 74,
+  "importance": 88,
+  "goal": "Crowdfund and build drones, vehicles and medical supply chains sustaining Ukraine's defense and civilian resilience",
+  "whyNow": "As Western aid wavers into 2026, civilian crowdfunding and volunteer production have become structural to national survival, not supplemental",
+  "actors": "Come Back Alive, Serhiy Prytula Foundation, United24, Dignitas, Ukraine Aid Ops, diaspora orgs",
+  "hubs": "X/Twitter fundraising threads, Telegram unit channels, monobank jar links",
+  "actions": [
+   "Targeted crowdfunding 'jars' for specific units' drones/UGVs",
+   "Volunteer workshops scaling battlefield innovation",
+   "International diaspora drives"
+  ]
+ },
+ {
+  "slug": "high-seas-treaty-30x30-ocean-protection",
+  "name": "High Seas Treaty & 30x30 Ocean Protection",
+  "category": "Climate, Environment & Energy",
+  "type": "Campaign",
+  "region": "Global",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 78,
+  "importance": 84,
+  "goal": "Bring the BBNJ High Seas Treaty into force and protect 30% of the ocean by 2030, including a deep-sea mining moratorium",
+  "whyNow": "The treaty crossed its 60-ratification threshold in late 2025 and enters into force in 2026, opening the first-ever legal path to high-seas MPAs",
+  "actors": "High Seas Alliance, Oceana, Pew, TNC, Marine Conservation Institute, Pacific island states, EU, Sylvia Earle's Mission Blue",
+  "hubs": "High Seas Alliance ratification tracker, ocean-policy Twitter/LinkedIn, UN Ocean Conference side events",
+  "actions": [
+   "Push national ratifications past 60",
+   "Designate first high-seas MPAs",
+   "Hold moratorium line against deep-sea mining"
+  ]
+ },
+ {
+  "slug": "global-pentecostal-charismatic-expansion",
+  "name": "Global Pentecostal-Charismatic Expansion",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "Africa, Latin America, Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 70,
+  "importance": 90,
+  "goal": "Plant churches and win converts at scale, reshaping world Christianity's center of gravity",
+  "whyNow": "2026 coverage confirms Pentecostal churches outgrowing all rivals across Africa, now numbering in the hundreds of millions and exporting globally",
+  "actors": "RCCG, Winners Chapel, Assemblies of God, IURD, independent African megachurches, Lausanne Movement",
+  "hubs": "WhatsApp/Facebook church networks, YouTube livestreamed services, gospel TikTok",
+  "actions": [
+   "Mass crusades and all-night vigils",
+   "Aggressive church planting incl. reverse missions to Europe",
+   "Tithing-funded media empires"
+  ]
+ },
+ {
+  "slug": "iranian-anti-regime-protest-wave-woman-life-free",
+  "name": "Iranian Anti-Regime Protest Wave (Woman, Life, Freedom)",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Iran / Middle East",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 74,
+  "importance": 86,
+  "goal": "End clerical authoritarian rule; immediate aims include stopping executions and compulsory-hijab enforcement",
+  "whyNow": "Economic collapse, water/power crises and post-war weakness have analysts openly debating whether 2026 protests could threaten the regime",
+  "actors": "Woman Life Freedom networks, labor strikes (truckers, nurses), families of executed protesters, diaspora coalitions, Narges Mohammadi",
+  "hubs": "Instagram/Telegram (VPN-dependent), diaspora X, Manoto/Iran International audiences",
+  "actions": [
+   "Rolling strikes and blackout-night chants",
+   "#StopExecutions campaigns",
+   "Mass everyday unveiling despite enforcement",
+   "Documentation for UN fact-finding mechanisms"
+  ]
+ },
+ {
+  "slug": "kenya-gen-z-movement",
+  "name": "Kenya Gen Z Movement",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Kenya / East Africa",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 82,
+  "importance": 78,
+  "goal": "Force accountability for police killings, end corruption and over-taxation, and unseat the Ruto government at or before the 2027 election",
+  "whyNow": "June 2026 anniversary protests forced Nairobi lockdowns and the movement is now the defining force heading into Kenya's 2027 election",
+  "actors": "Leaderless Gen Z networks; families of June 25 victims; Kenya Human Rights Commission; LSK; online organizers post-#RejectFinanceBill",
+  "hubs": "X (Kenyan Twitter/#RutoMustGo), TikTok, WhatsApp/Telegram cells",
+  "actions": [
+   "June 25 and Saba Saba anniversary street protests",
+   "Crowdsourced legal/medical funds for arrested and injured protesters",
+   "Viral naming-and-documenting of abductions and police violence"
+  ]
+ },
+ {
+  "slug": "nuclear-renaissance-advocacy",
+  "name": "Nuclear Renaissance Advocacy",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "US, France, Poland, Japan, South Korea, Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 84,
+  "importance": 76,
+  "goal": "Win public and policy support to build new reactors (especially SMRs) as firm clean power for grids and data centers",
+  "whyNow": "A year after US executive orders, ~15 reactors are moving worldwide, restarts (Palisades, TMI) are underway, and AI power demand has flipped the politics",
+  "actors": "DOE, Nuclear Energy Institute, Generation Atomic, Mothers for Nuclear, Oklo, Kairos, Holtec, TerraPower, Isodope/Grace Stanke influencers, big tech buyers (Microsoft, Google, Amazon)",
+  "hubs": "r/nuclear, nuclear X/Twitter ('nuclear bros'), Decouple podcast, Titans of Nuclear",
+  "actions": [
+   "Advocate reactor restarts and license reform",
+   "Sign PPAs tying AI data centers to nuclear",
+   "Pro-nuclear rallies at closing plants"
+  ]
+ },
+ {
+  "slug": "serbian-student-uprising",
+  "name": "Serbian Student Uprising",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Serbia / Balkans",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 85,
+  "importance": 74,
+  "goal": "Force accountable government and early elections after the Novi Sad canopy collapse exposed systemic corruption",
+  "whyNow": "18+ months of Europe's largest student movement; May 2026 Belgrade rallies and clashes renewed demands for snap elections",
+  "actors": "University student assemblies (blokade), Belgrade/Novi Sad faculties, supportive farmers and lawyers; opposed to President Vu\u010di\u0107",
+  "hubs": "Instagram/TikTok student assembly accounts, Telegram, X hashtags #StudentiUBlokadi",
+  "actions": [
+   "Join faculty blockades and rotating city rallies",
+   "Participate in general strikes",
+   "Support student-endorsed electoral lists"
+  ]
+ },
+ {
+  "slug": "may-day-2028-general-strike-alignment",
+  "name": "May Day 2028 General Strike Alignment",
+  "category": "Economy, Labor & Housing",
+  "type": "Campaign",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 80,
+  "goal": "Align major union contract expirations to May 1, 2028 to enable a coordinated mass strike",
+  "whyNow": "State federations and major locals keep signing on through 2025-26, turning a slogan into the labor movement's central organizing horizon",
+  "actors": "UAW/Shawn Fain, flight attendants (AFA/Sara Nelson), NEA locals, state AFL-CIO federations, SolidarityNetwork.org",
+  "hubs": "may1.uaw.org, Labor Notes, In These Times, union member Facebook/Discord groups",
+  "actions": [
+   "Bargaining contracts to expire 4/30/28",
+   "Passing federation resolutions endorsing the plan",
+   "Strike-readiness trainings"
+  ]
+ },
+ {
+  "slug": "state-ai-regulation-defense",
+  "name": "State AI Regulation Defense",
+  "category": "Tech & Digital Life",
+  "type": "Current",
+  "region": "US states vs. Washington DC",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 80,
+  "goal": "Preserve states' power to regulate AI against federal preemption and Trump's 'one rule' executive order",
+  "whyNow": "Trump's 2026 executive order challenging state AI laws set up a live federalism showdown with billions in AI-industry lobbying behind it",
+  "actors": "State legislators (CA, CO, TX, NY), Center for American Progress, consumer groups, state AGs; opposed by White House AI czar and tech lobby",
+  "hubs": "TechPolicy.Press, StateScoop, legislative hearings, LinkedIn/X policy circles",
+  "actions": [
+   "Passing and defending state AI laws (frontier safety, deepfakes, chatbot rules)",
+   "Litigation over the preemption EO",
+   "Blocking moratorium riders in must-pass bills"
+  ]
+ },
+ {
+  "slug": "wikipedia-open-knowledge-defense",
+  "name": "Wikipedia & Open Knowledge Defense",
+  "category": "Tech & Digital Life",
+  "type": "Project",
+  "region": "Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 72,
+  "importance": 85,
+  "goal": "Keep the free, human-curated knowledge commons alive under AI scraping and political attack",
+  "whyNow": "At 25, Wikipedia faces an existential squeeze\u2014AI answers divert traffic while bots strip-mine its servers\u2014forcing new AI strategy, paid API deals, and a public 'stop scraping' campaign",
+  "actors": "Wikimedia Foundation, volunteer editor corps, Wikipedia Libraries/GLAM partners; antagonists: AI scrapers, Grokipedia",
+  "hubs": "Wikipedia village pumps, Wikimedia-l, Diff blog, fediverse",
+  "actions": [
+   "Enforcing new anti-AI-slop content policies",
+   "Wikimedia Enterprise paid-access deals with AI firms",
+   "25th-anniversary fundraising and editor recruitment"
+  ]
+ },
+ {
+  "slug": "data-center-opposition-movement",
+  "name": "Data Center Opposition Movement",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US (Virginia, Georgia, Arizona, Midwest), Ireland, Chile",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 85,
+  "importance": 72,
+  "goal": "Block or condition hyperscale AI data centers over electricity rates, water use, and land",
+  "whyNow": "Billions in projects have been delayed or blocked by local votes; rising residential power bills made data centers a 2026 election issue in multiple states",
+  "actors": "Data Center Watch-tracked local groups, Sierra Club chapters, county boards, ratepayer advocates, Prince William County activists",
+  "hubs": "Local Facebook/Nextdoor groups, county zoning hearings, utility-commission dockets, More Perfect Union videos",
+  "actions": [
+   "Packing zoning and utility-commission hearings",
+   "Ballot referenda and moratorium campaigns",
+   "Publicizing rate-hike and water data"
+  ]
+ },
+ {
+  "slug": "voting-access-defense-coalition",
+  "name": "Voting Access Defense Coalition",
+  "category": "Democracy, Rights & Governance",
+  "type": "Campaign",
+  "region": "US nationwide",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 73,
+  "importance": 83,
+  "goal": "Block the SAVE Act, voter purges and federal interference in 2026 election administration",
+  "whyNow": "House passage of the SAVE Act and pre-midterm purge efforts have turned routine voter services into an emergency legal campaign",
+  "actors": "Brennan Center, Campaign Legal Center, ACLU, League of Women Voters, Protect Democracy, state election officials",
+  "hubs": "Org action alerts, Vote.org, legal filings, Bluesky",
+  "actions": [
+   "Litigation against purges and federal data demands",
+   "Senate pressure campaign against SAVE Act",
+   "Voter registration and documentation-assistance drives"
+  ]
+ },
+ {
+  "slug": "defend-science-stand-up-for-science",
+  "name": "Defend Science / Stand Up for Science",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 76,
+  "importance": 80,
+  "goal": "Reverse federal cuts to NIH/NSF research funding and defend scientific independence from political interference",
+  "whyNow": "After 2025's funding upheaval, courts and Congress have partially rebuffed cuts, and the fight over the FY2027 science budget is escalating through 2026",
+  "actors": "Stand Up for Science organizers, AAAS, university associations, 5Calls networks, laid-off federal scientists",
+  "hubs": "Bluesky, r/labrats, university listservs, ScienceUnderAttack trackers",
+  "actions": [
+   "Rally in 50+ cities",
+   "Sue and lobby Congress to restore appropriations",
+   "Document and publicize terminated grants and brain-drain departures"
+  ]
+ },
+ {
+  "slug": "platform-gig-worker-organizing-global",
+  "name": "Platform & Gig Worker Organizing (Global)",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "Global (EU, UK, Latin America, Africa, Asia)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 76,
+  "importance": 80,
+  "goal": "Win employment rights, minimum pay, and algorithmic transparency for app-based drivers and couriers",
+  "whyNow": "EU member states are transposing the Platform Work Directive through 2026 while strike waves hit delivery apps from India to Latin America",
+  "actors": "IAATW, App Drivers & Couriers Union (UK), UNI Global, Gig Workers Rising (US), NYC deliveristas (Los Deliveristas Unidos)",
+  "hubs": "WhatsApp/Telegram driver groups, Rest of World coverage, Fairwork project, union apps",
+  "actions": [
+   "Multi-city app log-offs and strikes",
+   "EU Platform Work Directive transposition fights",
+   "Minimum pay ordinance campaigns"
+  ]
+ },
+ {
+  "slug": "milei-style-libertarian-current",
+  "name": "Milei-Style Libertarian Current",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "Argentina / Latin America",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 82,
+  "importance": 74,
+  "goal": "Replace Latin American statism with radical free-market, anti-'casta' governance \u2014 and export the model region-wide",
+  "whyNow": "The October 2025 midterm landslide plus falling inflation turned Milei's experiment into the region's most-copied political template for 2026 elections",
+  "actors": "La Libertad Avanza, Javier Milei, Karina Milei's party-builders; admirers in Chile (Kast/Kaiser), Bolivia, Brazil's right",
+  "hubs": "X (Milei's feed), YouTube libertarian channels, TikTok economics influencers",
+  "actions": [
+   "Electoral machine-building after the October 2025 midterm landslide",
+   "Deregulation-by-decree agenda",
+   "Regional speaking circuit converting young men to mercado-libre politics"
+  ]
+ },
+ {
+  "slug": "nepal-gen-z-uprising-post-revolution-politics",
+  "name": "Nepal Gen Z Uprising & Post-Revolution Politics",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Nepal / South Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 84,
+  "importance": 72,
+  "goal": "Convert the September 2025 uprising that toppled the Oli government into durable anti-corruption reform via the March 2026 elections",
+  "whyNow": "First post-uprising election held March 2026 is testing whether a revolution led by teenagers can outvote the old party machines",
+  "actors": "Hami Nepal and Gen Z networks; interim PM Sushila Karki; new youth parties vs. resurgent establishment parties",
+  "hubs": "Discord (organizing hub of the uprising), TikTok, Reddit r/Nepal",
+  "actions": [
+   "Discord-based candidate vetting and voter mobilization for the March 2026 vote",
+   "Pressure campaigns to publish crackdown inquiry reports",
+   "Memorialization of killed protesters"
+  ]
+ },
+ {
+  "slug": "new-labor-organizing-wave-us",
+  "name": "New Labor Organizing Wave (US)",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 70,
+  "importance": 85,
+  "goal": "Rebuild union density through new organizing at Starbucks, Amazon, autos, academia and the South despite a hostile NLRB",
+  "whyNow": "Approval of unions near record highs and big 2026 contract fights are underway even as strike numbers dipped and federal labor enforcement weakened",
+  "actors": "UAW (Shawn Fain), SEIU (post-AFL-CIO affiliation), Teamsters, Starbucks Workers United, Labor Notes, EWOC",
+  "hubs": "labornotes.org, r/union, X/Bluesky labor twitter, Jacobin/In These Times, union Discords",
+  "actions": [
+   "Salting and shop-floor organizing committees",
+   "Strike votes and contract campaigns",
+   "Labor Notes conferences and troublemaker schools"
+  ]
+ },
+ {
+  "slug": "mutual-aid-disaster-relief-networks",
+  "name": "Mutual Aid & Disaster Relief Networks",
+  "category": "Community, Mutual Aid & Local Life",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 80,
+  "importance": 75,
+  "goal": "Build neighbor-to-neighbor relief infrastructure as federal disaster and safety-net capacity shrinks",
+  "whyNow": "FEMA cuts and back-to-back climate disasters in 2025-26 have made mutual aid networks the de facto first responders in many communities",
+  "actors": "Mutual Aid Disaster Relief, Mutual Aid Hub, World Central Kitchen adjacents, local hubs from Asheville to LA fire response",
+  "hubs": "mutualaiddisasterrelief.org, Action Network, local Signal/Discord hubs, Instagram",
+  "actions": [
+   "Rapid-response supply distribution after hurricanes/fires/floods",
+   "Skill trainings and preparedness pods",
+   "Solidarity funds"
+  ]
+ },
+ {
+  "slug": "longevity-don-t-die-movement",
+  "name": "Longevity / Don't Die Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "Global (US-led)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 82,
+  "importance": 73,
+  "goal": "Extend human healthspan and lifespan via protocols, biomarker tracking, and longevity biotech",
+  "whyNow": "Longevity is 2026's dominant wellness buzzword, moving from fringe biohacking to a clinic gold rush, mainstream beauty positioning, and state-level 'longevity medicine' bills",
+  "actors": "Bryan Johnson (Blueprint/Don't Die), Peter Attia, David Sinclair, A4M, Vitalist/Zuzalu network, longevity clinics",
+  "hubs": "X, YouTube, Don't Die app/summits, r/longevity, Longevity Fest",
+  "actions": [
+   "Follow shared protocols (sleep, VO2max, biomarker panels) and post results",
+   "Attend longevity summits and clinic programs",
+   "Invest in and evangelize longevity biotech"
+  ]
+ },
+ {
+  "slug": "local-ai-run-your-own-model-scene",
+  "name": "Local AI / Run-Your-Own-Model Scene",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 85,
+  "importance": 70,
+  "goal": "Run capable AI entirely on personal hardware, free of cloud gatekeepers and surveillance",
+  "whyNow": "Consumer hardware plus efficient open models crossed a usability threshold; local inference is now a mainstream hobbyist default, not a fringe workaround",
+  "actors": "r/LocalLLaMA (500k+ members), Ollama, llama.cpp (ggerganov), LM Studio, ZimaSpace and NAS vendors",
+  "hubs": "r/LocalLLaMA, GitHub, Hugging Face, YouTube homelab channels",
+  "actions": [
+   "Quantizing and benchmarking models on consumer GPUs",
+   "Sharing rig builds and inference configs",
+   "Stress-testing every new open release day-one"
+  ]
+ },
+ {
+  "slug": "kids-online-safety-age-verification-push",
+  "name": "Kids Online Safety & Age Verification Push",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US federal plus 25+ states",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 80,
+  "importance": 74,
+  "goal": "Mandate age verification, minor social-media limits and design duties on platforms",
+  "whyNow": "A major kids online safety bill just cleared the House as state laws expand to AI chatbots, against active EFF/tech opposition",
+  "actors": "Parent advocacy groups (ParentsTogether, Design It For Us on reform side), state AGs, NCOSE, bipartisan House sponsors of KOSA",
+  "hubs": "Facebook parent groups, statehouse hearings, X",
+  "actions": [
+   "KOSA's House passage in July 2026 and Senate push",
+   "State age-verification and AI-chatbot safety laws",
+   "School phone-ban campaigns"
+  ]
+ },
+ {
+  "slug": "regenerative-agriculture-movement",
+  "name": "Regenerative Agriculture Movement",
+  "category": "Food, Land & Consumption",
+  "type": "Movement",
+  "region": "US, Australia, Brazil, India, EU",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 80,
+  "importance": 74,
+  "goal": "Shift mainstream farming to soil-health practices - cover crops, no-till, managed grazing - at commodity scale",
+  "whyNow": "A June 2026 White House executive order and USDA rule put billions behind regenerative practices, a rare area of cross-partisan food consensus",
+  "actors": "USDA (2026 executive order), Rodale Institute, Kiss the Ground, General Mills/PepsiCo supply programs, Practical Farmers of Iowa, MAHA-aligned advocates",
+  "hubs": "Regen ag Twitter/X, AcresUSA and No-Till on the Plains conferences, farmer YouTube/podcasts",
+  "actions": [
+   "Farmer-to-farmer training networks",
+   "Enroll acres in corporate regen supply programs",
+   "Implement new USDA regenerative feedstock rule"
+  ]
+ },
+ {
+  "slug": "india-gig-worker-strike-wave",
+  "name": "India Gig Worker Strike Wave",
+  "category": "Economy, Labor & Housing",
+  "type": "Campaign",
+  "region": "India",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 82,
+  "importance": 72,
+  "goal": "Win social security, fair pay, and recognition for tens of millions of app-based delivery and ride workers",
+  "whyNow": "Repeated 2025-26 nationwide shutdowns of quick-commerce platforms mark the Global South's largest gig labor escalation, with states legislating welfare boards in response",
+  "actors": "GIPSWU, IFAT, NETWA, Telangana and Karnataka gig worker unions, state governments piloting welfare boards",
+  "hubs": "WhatsApp organizing networks, X hashtags (#GigWorkersStrike), Countercurrents/Scroll coverage",
+  "actions": [
+   "Nationwide flash strikes (40,000+ workers, ~60% participation in May 2026)",
+   "Pushing state gig-worker welfare laws",
+   "Blocking quick-commerce dark stores"
+  ]
+ },
+ {
+  "slug": "women-s-sports-fandom-surge",
+  "name": "Women's Sports Fandom Surge",
+  "category": "Culture, Identity & Belief",
+  "type": "Community/Scene",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 84,
+  "importance": 70,
+  "goal": "Build durable supporter culture and media economics around women's leagues",
+  "whyNow": "WNBA enters its 2026 30th season off record-setting fandom growth and expansion, topping global social-engagement rankings",
+  "actors": "WNBA (30th season), Caitlin Clark/A'ja Wilson fandoms, Togethxr, NWSL supporter groups, Unrivaled",
+  "hubs": "TikTok/IG highlight culture, X WNBA Twitter, team subreddits",
+  "actions": [
+   "Record attendance and watch parties",
+   "Supporter-section culture at NWSL/WNBA games",
+   "Merch and rookie-card booms"
+  ]
+ },
+ {
+  "slug": "open-source-robotics-diy-humanoids",
+  "name": "Open-Source Robotics & DIY Humanoids",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global (US, France, China)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 86,
+  "importance": 68,
+  "goal": "Democratize robot learning so hobbyists\u2014not just corporations\u2014can build capable robots",
+  "whyNow": "LeRobot's hub blew past 58,000 datasets in a year and a $2,500 open humanoid shipped in 2026, doing for robotics what Llama did for LLMs",
+  "actors": "Hugging Face LeRobot (Remi Cadene), NVIDIA (Isaac/GR00T open tools), SO-101 arm builders, K-Scale Labs",
+  "hubs": "LeRobot Discord, Hugging Face Hub (58k+ robot datasets), r/robotics, YouTube builds",
+  "actions": [
+   "Building $2,500 3D-printed open humanoids",
+   "Uploading teleoperation datasets to the shared hub",
+   "LeRobot worldwide hackathons"
+  ]
+ },
+ {
+  "slug": "abortion-rights-ballot-campaigns-2026",
+  "name": "Abortion Rights Ballot Campaigns 2026",
+  "category": "Democracy, Rights & Governance",
+  "type": "Campaign",
+  "region": "Missouri, Nevada, Virginia and others",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 72,
+  "importance": 80,
+  "goal": "Enshrine abortion rights in state constitutions via direct democracy",
+  "whyNow": "At least three abortion measures are certified for 2026 ballots, including Missouri's re-vote after legislators moved to undo 2024's amendment",
+  "actors": "Planned Parenthood affiliates, ACLU state chapters, Missourians for Constitutional Freedom, Nevada campaign committees",
+  "hubs": "State campaign sites, Ballotpedia trackers, Instagram/TikTok volunteer recruitment",
+  "actions": [
+   "Signature gathering and legal defense of measures",
+   "Canvassing for November 2026 votes",
+   "Countering legislature-referred restrictions"
+  ]
+ },
+ {
+  "slug": "colorado-river-water-reckoning",
+  "name": "Colorado River Water Reckoning",
+  "category": "Climate, Environment & Energy",
+  "type": "Current",
+  "region": "US Southwest (7 states, 30 tribes, Mexico)",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 72,
+  "importance": 80,
+  "goal": "Negotiate post-2026 operating rules that cut water use enough to keep Lakes Mead and Powell functional",
+  "whyNow": "The interim guidelines expire at the end of 2026 and states blew through deadlines, making this the decisive year for the Southwest's water",
+  "actors": "Basin state negotiators, tribal nations coalition, Bureau of Reclamation, farmers/irrigation districts, Audubon and NGO river advocates",
+  "hubs": "Colorado River Twitter/Substack (John Fleck), KUNC water desk, basin-states hearings",
+  "actions": [
+   "Interstate negotiation of post-2026 guidelines",
+   "Paid fallowing and conservation deals",
+   "Tribal water-rights settlements"
+  ]
+ },
+ {
+  "slug": "diaspora-cultural-defense-organizing",
+  "name": "Diaspora Cultural Defense & Organizing",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "United States, global corridors",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 74,
+  "importance": 78,
+  "goal": "Protect and transmit heritage identity \u2014 and members themselves \u2014 through mutual aid, hometown associations, and rapid-response networks",
+  "whyNow": "The 2025-26 US enforcement wave pushed diaspora networks from cultural programming into active community defense at unprecedented scale",
+  "actors": "Latino hometown associations and know-your-rights networks, African/Asian diaspora federations, church-based immigrant coalitions",
+  "hubs": "WhatsApp/Telegram diaspora groups, ethnic media, parish networks",
+  "actions": [
+   "Rapid-response networks around US immigration enforcement",
+   "Remittance and hometown development projects",
+   "Heritage schools and festivals"
+  ]
+ },
+ {
+  "slug": "artist-rights-anti-ai-art-movement",
+  "name": "Artist Rights / Anti-AI-Art Movement",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US, UK, Japan, global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 74,
+  "goal": "Stop unconsented training on creative work and win consent/credit/compensation for artists",
+  "whyNow": "Landmark copyright settlements and rulings in 2025-26 plus a measurable income crisis for illustrators keep the fight escalating rather than fading",
+  "actors": "Concept Art Association, Cara app, Glaze/Nightshade (Ben Zhao's UChicago team), Karla Ortiz, authors' and musicians' guilds",
+  "hubs": "Cara, Bluesky, Tumblr, X/Twitter #NoAI, Blood in the Machine newsletter",
+  "actions": [
+   "Poisoning/cloaking images with Glaze and Nightshade",
+   "Class-action copyright suits against AI firms",
+   "Platform boycotts and #NoAI mass-tagging"
+  ]
+ },
+ {
+  "slug": "global-football-supporter-culture-world-cup-2026",
+  "name": "Global Football Supporter Culture (World Cup 2026 Wave)",
+  "category": "Culture, Identity & Belief",
+  "type": "Community/Scene",
+  "region": "North America host cities, global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 80,
+  "importance": 72,
+  "goal": "Grow organized supporter culture \u2014 chants, tifos, fan ownership ideals \u2014 especially in the US around the home World Cup",
+  "whyNow": "The World Cup is being played across the US, Mexico, and Canada right now (June-July 2026), the largest fan-culture event in US history",
+  "actors": "American Outlaws, MLS/USL supporter groups, diaspora fan clubs, FIFA host committees",
+  "hubs": "team subreddits, supporter-group Discords, football TikTok/X",
+  "actions": [
+   "Mass watch parties and fan fests during the ongoing 2026 World Cup",
+   "New supporter-group chapters",
+   "Lower-league fan-ownership projects"
+  ]
+ },
+ {
+  "slug": "indonesian-gen-z-protest-wave",
+  "name": "Indonesian Gen Z Protest Wave",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Indonesia / Southeast Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 76,
+  "importance": 75,
+  "goal": "Win police reform, reverse lawmakers' perks, and check Prabowo-era democratic backsliding",
+  "whyNow": "After the deadliest unrest of the Prabowo era and mass arrests, sporadic 2026 flare-ups keep police reform on the national agenda",
+  "actors": "Student alliances (BEM SI), labor unions, K-pop/gamer online publics; 'brave pink' movement symbols",
+  "hubs": "TikTok, X, Instagram; Discord and Telegram organizing",
+  "actions": [
+   "August 2025-style mass mobilizations around parliament",
+   "Viral boycotts and hashtag storms against police violence",
+   "Legal aid networks for thousands arrested"
+  ]
+ },
+ {
+  "slug": "us-tenant-union-movement",
+  "name": "US Tenant Union Movement",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 77,
+  "importance": 74,
+  "goal": "Build permanent tenant unions with collective bargaining power against corporate landlords",
+  "whyNow": "Rent strikes like Raytown's January 2026 win are producing landlord agreements, and the movement is pivoting to direct action as statehouse bills stall",
+  "actors": "Tenant Union Federation (Tara Raghuveer), KC Tenants, Twin Cities Tenants, Louisville Tenants Union, Housing Justice for All",
+  "hubs": "tenantfederation.org, Shelterforce, Homes Guarantee campaign channels, local tenant union Instagrams",
+  "actions": [
+   "Building-level rent strikes",
+   "Landlord-tenant collective bargaining agreements",
+   "Targeting tax abatements and federal financing of bad landlords"
+  ]
+ },
+ {
+  "slug": "fusion-energy-enthusiasm",
+  "name": "Fusion Energy Enthusiasm",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Community/Scene",
+  "region": "Global (US/China race)",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 73,
+  "goal": "Accelerate commercial fusion power to the grid in the 2030s",
+  "whyNow": "Record private funding, Helion's temperature milestones, and SPARC's 2026-27 first-plasma timeline have made fusion a mainstream energy bet amid AI datacenter power demand",
+  "actors": "Commonwealth Fusion Systems, Helion, TAE, Fusion Industry Association, DOE milestone program",
+  "hubs": "X, r/fusion, TechCrunch/energy media, FIA reports",
+  "actions": [
+   "Track and hype SPARC assembly and Helion's 2028 Microsoft deadline",
+   "Lobby for DOE fusion funding and regulatory frameworks",
+   "Join fusion startups and university programs"
+  ]
+ },
+ {
+  "slug": "islamic-revival-among-young-muslims",
+  "name": "Islamic Revival Among Young Muslims",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "Middle East, South/Southeast Asia, Western diasporas",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 66,
+  "importance": 84,
+  "goal": "Deepen religious observance and identity among Muslim youth and engage curious non-Muslims",
+  "whyNow": "Post-2023 spikes in Quran interest and conversion in Western countries persisted into 2025-26 alongside strong youth religiosity data",
+  "actors": "Yaqeen Institute, campus MSAs, Muslim TikTok dawah creators, mosque networks",
+  "hubs": "Muslim TikTok/Instagram, YouTube dawah channels, Discord Quran study groups",
+  "actions": [
+   "Ramadan mosque attendance surges",
+   "Quran-reading challenges and conversions in the West",
+   "Modest-fashion and halal consumer culture"
+  ]
+ },
+ {
+  "slug": "manosphere-masculinity-influencer-sphere",
+  "name": "Manosphere & Masculinity Influencer Sphere",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "Global, anglophone core",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 70,
+  "importance": 80,
+  "goal": "Redefine male identity around self-improvement, traditionalism, and grievance politics via online influencers",
+  "whyNow": "Post-2024 elections and 2026 research (Manosphere Index, academic panels) show the sphere consolidating as a durable political-cultural force",
+  "actors": "podcast hosts and fitness/money influencers, Tate-adjacent networks, red-pill communities",
+  "hubs": "YouTube/Rumble podcasts, X, TikTok clips, Telegram/Discord",
+  "actions": [
+   "Content ecosystems monetizing courses and coaching",
+   "Gym-and-money self-improvement regimens",
+   "Political mobilization of young male voters"
+  ]
+ },
+ {
+  "slug": "turkish-democracy-defense-i-mamo-lu-movement",
+  "name": "Turkish Democracy Defense (\u0130mamo\u011flu Movement)",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Turkey",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 72,
+  "importance": 78,
+  "goal": "Defend electoral competition and free jailed opposition leader Ekrem \u0130mamo\u011flu ahead of national elections",
+  "whyNow": "The largest Turkish protest wave in a decade continues as courts move to decapitate the opposition before elections",
+  "actors": "CHP, Istanbul municipality networks, student groups, bar associations",
+  "hubs": "X (heavily throttled), CHP rallies, Ek\u015fi S\u00f6zl\u00fck, diaspora networks",
+  "actions": [
+   "Weekly mass rallies across provinces",
+   "Consumer boycotts of pro-government firms",
+   "Ballot-box monitoring corps"
+  ]
+ },
+ {
+  "slug": "public-lands-defense-coalition",
+  "name": "Public Lands Defense Coalition",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "US West and Alaska",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 74,
+  "importance": 76,
+  "goal": "Stop sell-offs, mass leasing and road/mine approvals on federal public lands",
+  "whyNow": "An unusually broad left-right outdoor coalition keeps beating sell-off provisions while the administration escalates leasing and privatization moves",
+  "actors": "Sierra Club, Center for Biological Diversity, Native Movement, NPCA, hunters/anglers groups, outdoor recreation industry",
+  "hubs": "Instagram (public lands accounts), org action alerts, Reddit outdoors communities",
+  "actions": [
+   "Litigation against Ambler Road and Alaska leasing",
+   "Rallies at land management offices and national parks",
+   "Bipartisan pressure that stripped land sales from budget bills"
+  ]
+ },
+ {
+  "slug": "menopause-midlife-women-s-health-movement",
+  "name": "Menopause & Midlife Women's Health Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 72,
+  "goal": "End medical neglect of menopause; normalize HRT/testosterone and midlife women's care",
+  "whyNow": "Post-2025 FDA label-change momentum on hormone therapy and a booming menopause economy have made midlife HRT and women's testosterone 2026's fastest-mainstreaming health conversation",
+  "actors": "Mary Claire Haver, Let's Talk Menopause, Midi Health, Elektra, menopause-literate OB-GYN networks",
+  "hubs": "Instagram/TikTok 'menoposse', Substack, Facebook groups, The 'Pause podcasts",
+  "actions": [
+   "Demand menopause training in med schools and insurance coverage",
+   "Share HRT protocols and clinician directories",
+   "Lobby for state menopause workplace and coverage laws"
+  ]
+ },
+ {
+  "slug": "right-to-repair-movement",
+  "name": "Right to Repair Movement",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "US (all 50 states), EU, Australia",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 72,
+  "goal": "Make manufacturers provide parts, tools and documentation so people can fix electronics, appliances, wheelchairs and tractors",
+  "whyNow": "Laws took effect January 2026 covering over a quarter of Americans, bills are back in dozens of statehouses, and the EU repair directive is being transposed",
+  "actors": "iFixit (Kyle Wiens), US PIRG, Repair.org, repair cafes, Louis Rossmann, EU ecodesign regulators, farm-equipment litigants vs John Deere",
+  "hubs": "r/righttorepair, iFixit community, Louis Rossmann YouTube, repair cafe networks",
+  "actions": [
+   "Pass state repair laws (now covering 25%+ of Americans)",
+   "Wheelchair and appliance bill campaigns in 2026 sessions",
+   "Run community repair events"
+  ]
+ },
+ {
+  "slug": "the-quiet-revival-uk-europe",
+  "name": "The 'Quiet Revival' (UK/Europe)",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "United Kingdom, Western Europe",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 82,
+  "importance": 68,
+  "goal": "Sustain the unexpected return of under-35s to Christian practice in post-Christian Europe",
+  "whyNow": "UK Bible sales hit record highs in early 2026 and young-adult church attendance keeps rising against decades of decline",
+  "actors": "Bible Society (Quiet Revival research), Church of England and Catholic dioceses, Alpha, SPCK (record Bible sales)",
+  "hubs": "Christian TikTok/Instagram UK, Premier Christianity, church podcasts",
+  "actions": [
+   "First-time Bible purchases",
+   "Attending cathedral and evangelical services",
+   "Joining enquirer courses"
+  ]
+ },
+ {
+  "slug": "palestine-solidarity-ceasefire-enforcement-movem",
+  "name": "Palestine Solidarity & Ceasefire Enforcement Movement",
+  "category": "Peace, Conflict & Migration",
+  "type": "Movement",
+  "region": "Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 66,
+  "importance": 82,
+  "goal": "Enforce and make permanent the Gaza ceasefire, end the blockade on reconstruction, and pursue accountability",
+  "whyNow": "Six months into a fragile 'neither war nor peace' ceasefire, the movement has shifted from stop-the-war to enforce-the-peace",
+  "actors": "PSC (UK), Jewish Voice for Peace, IfNotNow, student SJP networks, UN accountability advocates, BDS movement",
+  "hubs": "Instagram/TikTok, Telegram, campus coalitions, aid-tracker accounts",
+  "actions": [
+   "Marches at ceasefire-violation flashpoints",
+   "Arms-embargo and divestment campaigns",
+   "Reconstruction aid drives and flotillas"
+  ]
+ },
+ {
+  "slug": "us-trans-rights-legal-defense",
+  "name": "US Trans Rights Legal Defense",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 72,
+  "importance": 76,
+  "goal": "Defend transgender Americans' healthcare, sports, documents and public existence against state and federal restrictions",
+  "whyNow": "2026 Supreme Court rulings on trans athletes and care mark the movement's most consequential defensive year yet",
+  "actors": "ACLU, Lambda Legal, Advocates for Trans Equality, Chase Strangio, state-level trans-led groups",
+  "hubs": "Bluesky, r/trans networks, Erin in the Morning newsletter, TransJournalists trackers",
+  "actions": [
+   "Supreme Court and state-court litigation (Skrmetti aftermath, sports cases)",
+   "Mutual-aid relocation funds",
+   "Statehouse testimony campaigns"
+  ]
+ },
+ {
+  "slug": "trillion-peso-march-philippines",
+  "name": "Trillion Peso March (Philippines)",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Philippines / Southeast Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 78,
+  "importance": 70,
+  "goal": "Recover billions stolen from ghost flood-control projects and jail complicit legislators and contractors",
+  "whyNow": "Each 2025-26 typhoon flood re-ignites street protests as hearings expose the scale of stolen flood-control funds",
+  "actors": "Church coalitions (Iglesia ni Cristo, Catholic bishops), student groups, Akbayan, viral whistleblowers; pressure on Marcos administration",
+  "hubs": "Facebook, TikTok, X (#TrillionPesoMarch, #FloodControlScandal)",
+  "actions": [
+   "Mass marches at Luneta and EDSA anniversaries",
+   "Crowd-tracking of ghost projects via satellite/site visits",
+   "Typhoon-timed accountability campaigns"
+  ]
+ },
+ {
+  "slug": "indie-hacker-vibe-coding-scene",
+  "name": "Indie Hacker / Vibe-Coding Scene",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global, US-centered",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 87,
+  "importance": 60,
+  "goal": "Ship profitable one-person software businesses using AI coding tools",
+  "whyNow": "AI coding agents collapsed the cost of shipping software, producing an explosion of solo founders and a genuine cultural moment around one-person companies",
+  "actors": "Indie Hackers, Pieter Levels, Cursor/Claude Code/Lovable user bases, buildinpublic influencers",
+  "hubs": "X/Twitter #buildinpublic, Indie Hackers forum, Product Hunt, AI-tool Discords",
+  "actions": [
+   "Vibe-coding micro-SaaS launches",
+   "Revenue-screenshot build-in-public threads",
+   "Weekend AI hackathons"
+  ]
+ },
+ {
+  "slug": "crypto-defi-builder-community",
+  "name": "Crypto / DeFi Builder Community",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global, US policy center",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 70,
+  "importance": 76,
+  "goal": "Build a parallel, permissionless financial system on public blockchains",
+  "whyNow": "US stablecoin legislation and institutional adoption legitimized the stack, shifting energy from speculation to payments and real-world assets\u2014even as retail mania cooled",
+  "actors": "Ethereum Foundation, Solana ecosystem, Uniswap/Aave DAOs, Coinbase/a16z crypto, stablecoin issuers",
+  "hubs": "X/Twitter, Farcaster, ETHGlobal hackathons, governance forums, Devconnect",
+  "actions": [
+   "Shipping under new US stablecoin/market-structure law",
+   "DAO governance votes",
+   "ETHGlobal hackathon cycles"
+  ]
+ },
+ {
+  "slug": "science-of-reading-movement",
+  "name": "Science of Reading Movement",
+  "category": "Education & Knowledge",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 70,
+  "importance": 76,
+  "goal": "Replace balanced literacy with phonics-based, evidence-aligned reading instruction",
+  "whyNow": "40+ states have enacted science-of-reading laws and 2026 NAEP-era score anxieties keep literacy reform a top bipartisan education priority",
+  "actors": "Emily Hanford (Sold a Story), The Reading League, state literacy laws, Mississippi-model advocates",
+  "hubs": "Sold a Story podcast audience, Facebook 'Science of Reading' groups, district PD networks",
+  "actions": [
+   "Pass state literacy laws mandating evidence-based curricula and banning three-cueing",
+   "Retrain teachers in structured literacy",
+   "Audit and replace district curricula"
+  ]
+ },
+ {
+  "slug": "50501-movement",
+  "name": "50501 Movement",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "US nationwide (all 50 states)",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 76,
+  "importance": 70,
+  "goal": "Sustain decentralized, recurring protests in every state against executive overreach",
+  "whyNow": "Evolved from Reddit spark in early 2025 into a durable state-chapter infrastructure that keeps protest cadence between mass mobilization days",
+  "actors": "50501 volunteer network, state chapters (Mass 50501 etc.), Political Revolution organizers",
+  "hubs": "fiftyfifty.one, Reddit r/50501, Discord, Substack Friday Briefings",
+  "actions": [
+   "Simultaneous 50-state capitol protests",
+   "Weekly local actions and briefings",
+   "Feeding turnout into No Kings mega-days"
+  ]
+ },
+ {
+  "slug": "homeschooling-microschool-boom",
+  "name": "Homeschooling & Microschool Boom",
+  "category": "Education & Knowledge",
+  "type": "Community/Scene",
+  "region": "US nationwide, fastest growth in South and Sun Belt",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 78,
+  "importance": 68,
+  "goal": "Build family-directed alternatives to conventional schooling at scale",
+  "whyNow": "Fastest-growing education model in 2026, supercharged by ESA dollars and post-pandemic distrust of institutions",
+  "actors": "HSLDA, microschool founders, Prenda, KaiPod, co-op networks, EdChoice researchers, National Microschooling Center",
+  "hubs": "Facebook homeschool groups, homeschool conventions, Substack/YouTube curricula channels, microschool.directory",
+  "actions": [
+   "Co-op and microschool formation",
+   "ESA-funded enrollment",
+   "State legislative defense of homeschool freedom"
+  ]
+ },
+ {
+  "slug": "pauseai-grassroots-ai-protest",
+  "name": "PauseAI & Grassroots AI Protest",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "UK, US, Netherlands, global chapters",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 80,
+  "importance": 65,
+  "goal": "Halt frontier AI training runs via public protest and treaty demands",
+  "whyNow": "Held its largest-ever AI safety protest in London in early 2026 and joined broader anti-AI marches, crossing from online niche to visible street movement",
+  "actors": "PauseAI (Joep Meindertsma), Stop AI, ControlAI, local chapters",
+  "hubs": "pauseai.info, Discord, X/Twitter, LessWrong debate threads",
+  "actions": [
+   "Street protests at lab offices and summits (largest-ever London protest, Feb 2026)",
+   "Lobbying MPs/Congress members",
+   "Flyering and normie-recruitment drives"
+  ]
+ },
+ {
+  "slug": "run-club-boom",
+  "name": "Run Club Boom",
+  "category": "Culture, Identity & Belief",
+  "type": "Community/Scene",
+  "region": "US, UK, global cities",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 85,
+  "importance": 60,
+  "goal": "Make group running the default social scene \u2014 friendship, dating, and sobriety-friendly nightlife replacement",
+  "whyNow": "2026 coverage frames run clubs as 'the new dating apps' and nightlife substitute, with record race demand and brand money pouring in",
+  "actors": "local crews (Midnight Runners, November Project style), Strava, brands (On, Nike, Bandit) sponsoring crews, Parkrun",
+  "hubs": "Strava clubs, Instagram crew pages, TikTok #runclub, Meetup",
+  "actions": [
+   "Weekly group runs ending at coffee shops/bars",
+   "Race-cations and marathon lottery culture",
+   "Run-club dating meetups"
+  ]
+ },
+ {
+  "slug": "healthcare-worker-organizing-wave",
+  "name": "Healthcare Worker Organizing Wave",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 68,
+  "importance": 76,
+  "goal": "Win safe staffing ratios, pay, and union recognition across hospitals and care work amid burnout and Medicaid cuts",
+  "whyNow": "Persistent understaffing plus 2025-26 federal health funding cuts are driving some of the largest and most successful strikes in the current labor cycle",
+  "actors": "National Nurses United, SEIU healthcare locals, CIR (resident physicians), state nurse associations",
+  "hubs": "NNU channels, r/nursing, healthcare labor twitter",
+  "actions": [
+   "Hospital strikes and strike votes",
+   "State safe-staffing legislation",
+   "Residency and home-care unionization drives"
+  ]
+ },
+ {
+  "slug": "foss-sustainability-maintainer-movement",
+  "name": "FOSS Sustainability & Maintainer Movement",
+  "category": "Tech & Digital Life",
+  "type": "Movement",
+  "region": "Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 62,
+  "importance": 80,
+  "goal": "Keep the open-source commons maintained and funded as AI both strains and strip-mines it",
+  "whyNow": "Maintainers are drowning in AI-generated slop PRs and scraper load while AI firms profit from their code\u2014turning burnout into an organized funding-and-policy push",
+  "actors": "Sovereign Tech Fund, Open Source Pledge, GitHub maintainers, curl's Daniel Stenberg, Linux Foundation, OSI",
+  "hubs": "GitHub, Mastodon/fosstodon, FOSDEM, maintainer blogs, Hacker News",
+  "actions": [
+   "Blocking AI-slop bug reports and scraper traffic",
+   "Corporate funding pledges for maintainers",
+   "License debates over AI training use"
+  ]
+ },
+ {
+  "slug": "global-press-freedom-defense",
+  "name": "Global Press Freedom Defense",
+  "category": "Democracy, Rights & Governance",
+  "type": "Current",
+  "region": "Global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 62,
+  "importance": 80,
+  "goal": "Protect journalists from killings, jailing, lawfare, and economic strangulation of independent media",
+  "whyNow": "RSF's 2026 index shows press freedom at a 25-year low, declining in 100 of 180 countries, with record journalist deaths in Gaza",
+  "actors": "RSF, CPJ, ICIJ, exiled outlets (Meduza, Zeteo of exile press), press-freedom legal defense funds",
+  "hubs": "RSF/CPJ indices and alerts, Nieman Lab, journalist Signal/Bluesky networks",
+  "actions": [
+   "Emergency relocation and legal defense funds for exiled reporters",
+   "SLAPP-suit countersuits",
+   "Subscription drives for independent outlets"
+  ]
+ },
+ {
+  "slug": "global-plastics-treaty-push",
+  "name": "Global Plastics Treaty Push",
+  "category": "Climate, Environment & Energy",
+  "type": "Campaign",
+  "region": "Global (Geneva/UNEP process, Global South frontline)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 64,
+  "importance": 78,
+  "goal": "Win a binding global treaty capping plastic production, not just managing waste",
+  "whyNow": "Negotiations deadlocked in Geneva but a new chair was elected and 100+ countries stay engaged, making 2026 the reset-or-fail year",
+  "actors": "Break Free From Plastic, CIEL, GAIA, High Ambition Coalition states, waste-picker alliances, Ocean Conservancy",
+  "hubs": "BFFP member networks, INC negotiation live-tweets, zero-waste Instagram",
+  "actions": [
+   "Pressure INC-5.3 successor talks after Geneva collapse",
+   "Pass national single-use bans",
+   "Corporate plastic-audit brand campaigns"
+  ]
+ },
+ {
+  "slug": "walkable-city-new-urbanist-culture",
+  "name": "Walkable City & New Urbanist Culture",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "US, global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 66,
+  "importance": 76,
+  "goal": "Make walkable, transit-rich, human-scale neighborhoods a mainstream cultural demand",
+  "whyNow": "Housing-cost politics and post-2024 zoning-reform wins keep pulling urbanist culture from YouTube into city-council chambers",
+  "actors": "Strong Towns, CNU, YIMBY groups, urbanist YouTube (Not Just Bikes, City Nerd), 15-minute-city planners",
+  "hubs": "urbanist YouTube, r/fuckcars and r/urbanplanning, Strong Towns local conversations",
+  "actions": [
+   "Local zoning-reform advocacy",
+   "Open-streets and pedestrianization pilots",
+   "Strong Towns chapter growth"
+  ]
+ },
+ {
+  "slug": "china-s-rat-people-lying-flat-current",
+  "name": "China's 'Rat People' / Lying Flat Current",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "China / East Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 68,
+  "importance": 74,
+  "goal": "Opt out of the burnout economy \u2014 rejecting 996 work culture, marriage and consumption amid record youth unemployment",
+  "whyNow": "With youth unemployment stuck near record highs into 2026, passive refusal has become China's most consequential \u2014 and least policeable \u2014 social movement",
+  "actors": "Diffuse youth online culture; no orgs (organizing is censored); 'full-time children,' fake-office renters, bedbound 'rat people'",
+  "hubs": "Xiaohongshu, Douban groups, Weibo (until censored), Bilibili",
+  "actions": [
+   "Viral self-documentation of low-desire lifestyles",
+   "Paying for fake offices to simulate work",
+   "Quiet fertility/marriage refusal shaping birthrate debates"
+  ]
+ },
+ {
+  "slug": "catholic-traditionalist-revival",
+  "name": "Catholic Traditionalist Revival",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "US, France, UK, global",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 76,
+  "importance": 66,
+  "goal": "Grow reverent/Latin Mass liturgy, catechesis, and large young-adult convert cohorts within Catholicism",
+  "whyNow": "Dioceses report decade-high adult conversions in 2025-26 with Gen Z disproportionately drawn to traditional liturgy",
+  "actors": "FSSP/ICKSP parishes, Word on Fire (Bp. Barron), Hallow app, National Catholic Register, trad influencers",
+  "hubs": "Catholic Twitter/X, r/Catholicism, New Liturgical Movement, YouTube apologetics",
+  "actions": [
+   "Attending TLM and adoration",
+   "RCIA/OCIA enrollment (decade-high conversions)",
+   "Chartres-style pilgrimages"
+  ]
+ },
+ {
+  "slug": "federal-workers-rights-fight",
+  "name": "Federal Workers' Rights Fight",
+  "category": "Economy, Labor & Housing",
+  "type": "Campaign",
+  "region": "US, concentrated in DC and federal hub cities",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 66,
+  "importance": 75,
+  "goal": "Restore collective bargaining and defend federal jobs against mass layoffs and Schedule F",
+  "whyNow": "Unions are bleeding dues-paying members under the 2025 EO but forced a rare discharge-petition breakthrough in Congress",
+  "actors": "AFGE, NFFE, NTEU, AFL-CIO, Rep. Jared Golden's discharge-petition coalition",
+  "hubs": "Union locals, Federal News Network, Reddit r/fednews, rallies at agencies",
+  "actions": [
+   "Litigation against bargaining-rights termination",
+   "House discharge petition for the Protect America's Workforce Act",
+   "Save Our Services community rallies"
+  ]
+ },
+ {
+  "slug": "informal-worker-organizing-wiego-network",
+  "name": "Informal Worker Organizing (WIEGO Network)",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "Global South",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 58,
+  "importance": 82,
+  "goal": "Win legal recognition, social protection, and bargaining power for the 2 billion workers in the informal economy",
+  "whyNow": "With most of the world's workers informal and climate/austerity shocks mounting, federations are consolidating cross-border strategy documented in new 2025-26 comparative research",
+  "actors": "WIEGO, StreetNet International, International Domestic Workers Federation, HomeNet, SEWA (India), waste picker alliances",
+  "hubs": "wiego.org, ILO forums, national federation WhatsApp networks",
+  "actions": [
+   "ILO standard-setting campaigns",
+   "Street vendor anti-eviction defense",
+   "Domestic worker convention ratification drives"
+  ]
+ },
+ {
+  "slug": "african-mobile-money-financial-inclusion-push",
+  "name": "African Mobile Money & Financial Inclusion Push",
+  "category": "Tech & Digital Life",
+  "type": "Current",
+  "region": "Sub-Saharan Africa",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 60,
+  "importance": 80,
+  "goal": "Bank the unbanked through mobile money rails, agent networks and interoperable cross-border payments",
+  "whyNow": "Transaction volumes keep compounding and mobile money is now measurably driving GDP and inclusion gains across East and West Africa in 2026",
+  "actors": "M-Pesa/Safaricom, MTN MoMo, Wave, GSMA, central banks, PAPSS; fintech startup ecosystems in Lagos/Nairobi/Accra",
+  "hubs": "Tech-in-Africa media, fintech X/LinkedIn, GSMA MWC Africa",
+  "actions": [
+   "Agent network expansion into rural areas",
+   "Interoperability and cross-border remittance integrations",
+   "Merchant payment and credit-scoring rollouts"
+  ]
+ },
+ {
+  "slug": "us-environmental-justice-frontline-defense",
+  "name": "US Environmental Justice Frontline Defense",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "United States (Gulf South, Cancer Alley, NC, urban fenceline)",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 62,
+  "importance": 78,
+  "goal": "Defend fenceline communities from pollution as federal EJ programs, grants and enforcement are dismantled",
+  "whyNow": "2025-26 federal rollbacks erased EJ grants and the endangerment finding, forcing a scrappy state-and-courts defense with communities directly exposed",
+  "actors": "WE ACT, Deep South Center for Environmental Justice, Earthjustice, Dr. Robert Bullard, state EJ offices, Word In Black",
+  "hubs": "EJ listservs and church networks, Earthjustice campaigns, local Facebook groups in impacted parishes",
+  "actions": [
+   "Sue over EPA repeal of climate and air protections",
+   "Community air monitoring",
+   "Shift funding and policy fights to states and cities"
+  ]
+ },
+ {
+  "slug": "electrify-everything-heat-pumps-home-electrifica",
+  "name": "Electrify Everything (Heat Pumps & Home Electrification)",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "US, UK, EU, Australia",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 66,
+  "importance": 74,
+  "goal": "Replace fossil furnaces, stoves and water heaters with heat pumps and electric appliances at mass scale",
+  "whyNow": "US federal incentives were gutted in 2025 so the fight moved to states and utilities, while European heat-pump sales recover from their slump",
+  "actors": "Rewiring America, Ari Matusiak, Electrify Now, EU heat-pump industry, state rebate programs, Octopus Energy",
+  "hubs": "r/heatpumps, Rewiring America community, electrician TikTok, Volts podcast",
+  "actions": [
+   "Home electrification retrofits using state rebates",
+   "Contractor training pipelines",
+   "Local gas-ban and building-code campaigns"
+  ]
+ },
+ {
+  "slug": "georgian-pro-eu-resistance",
+  "name": "Georgian Pro-EU Resistance",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "Georgia (Caucasus)",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 68,
+  "importance": 72,
+  "goal": "Reverse Georgian Dream's turn toward Moscow, free political prisoners, and restore the EU accession path",
+  "whyNow": "Protests passed 500 straight days in 2026 despite escalating arrests \u2014 a grinding stalemate with high geopolitical stakes",
+  "actors": "Daily Rustaveli Avenue protesters, President Salome Zourabichvili, student groups, jailed journalists' defense committees",
+  "hubs": "Telegram channels, X/Instagram #GeorgiaProtests, publika.ge",
+  "actions": [
+   "Nightly parliament vigils (500+ consecutive days)",
+   "ECHR lawsuits for persecuted protesters",
+   "Diaspora lobbying of EU capitals"
+  ]
+ },
+ {
+  "slug": "fight-against-algorithmic-rent-fixing",
+  "name": "Fight Against Algorithmic Rent-Fixing",
+  "category": "Economy, Labor & Housing",
+  "type": "Campaign",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 72,
+  "importance": 68,
+  "goal": "Ban RealPage-style rent-setting software and rein in corporate/private-equity landlords",
+  "whyNow": "A spreading wave of city bans and ongoing federal litigation has made algorithmic pricing the sharpest edge of anti-corporate-landlord politics",
+  "actors": "DOJ antitrust division, state AGs, city councils (SF, Philadelphia, Minneapolis bans), Tenant Union Federation, AELP",
+  "hubs": "ProPublica coverage threads, housing twitter, More Perfect Union",
+  "actions": [
+   "City ordinances banning rent-setting algorithms",
+   "DOJ and class-action suits",
+   "Corporate landlord exposure campaigns"
+  ]
+ },
+ {
+  "slug": "third-place-revival",
+  "name": "Third-Place Revival",
+  "category": "Community, Mutual Aid & Local Life",
+  "type": "Current",
+  "region": "US and global cities",
+  "scope": "both",
+  "lists": "both",
+  "momentum": 75,
+  "importance": 65,
+  "goal": "Rebuild in-person gathering places \u2014 run clubs, social clubs, board-game cafes, libraries \u2014 against the loneliness epidemic",
+  "whyNow": "Loneliness discourse peaked into 2026 with surging membership in run clubs and social sports as Gen Z seeks screen-free connection",
+  "actors": "Run club networks, Belong Center, chess/board-game cafes, public libraries, bookstore-bars, faith-adjacent supper clubs",
+  "hubs": "TikTok/Instagram (#thirdplace, run club content), Eventbrite/Partiful, Substack community-design writers",
+  "actions": [
+   "Weekly run/walk clubs",
+   "Recurring open community nights",
+   "Converting retail vacancies into social infrastructure"
+  ]
+ },
+ {
+  "slug": "academic-freedom-campus-speech-defense",
+  "name": "Academic Freedom & Campus Speech Defense",
+  "category": "Education & Knowledge",
+  "type": "Current",
+  "region": "US higher education",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 66,
+  "importance": 73,
+  "goal": "Resist federal funding compacts, speech policing and political control of universities",
+  "whyNow": "The administration's compact offers and enforcement actions have pushed once-quiet faculty bodies into coordinated legal resistance",
+  "actors": "AAUP, FIRE, PEN America, faculty senates, some university presidents",
+  "hubs": "Inside Higher Ed, Chronicle, faculty listservs, court dockets",
+  "actions": [
+   "Lawsuits against funding-condition compacts and NIH/NSF cuts",
+   "Faculty no-confidence and mutual defense compacts across universities",
+   "Documentation of student speech cases"
+  ]
+ },
+ {
+  "slug": "2026-ballot-initiative-wave",
+  "name": "2026 Ballot Initiative Wave",
+  "category": "Democracy, Rights & Governance",
+  "type": "Current",
+  "region": "US, 30+ states",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 68,
+  "importance": 71,
+  "goal": "Use direct democracy for policy change \u2014 minimum wage, rent, cannabis, ranked choice voting, and initiative-rights defense",
+  "whyNow": "With Congress gridlocked and statehouses polarized, November 2026 ballots are absorbing an outsized share of contested policymaking",
+  "actors": "Fairness Project, state campaign committees, RCV advocates (FairVote), NFIB and state chambers opposing, DC rent-freeze organizers",
+  "hubs": "Ballotpedia, state campaign sites, canvass networks",
+  "actions": [
+   "Signature drives through summer 2026 deadlines",
+   "Campaigns for wage, cannabis and voting-method measures",
+   "Fighting legislative restrictions on the initiative process itself"
+  ]
+ },
+ {
+  "slug": "anti-monopoly-movement",
+  "name": "Anti-Monopoly Movement",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "both",
+  "momentum": 60,
+  "importance": 78,
+  "goal": "Break up or restrain concentrated corporate power in tech, groceries, healthcare, and housing",
+  "whyNow": "Remedies phases of the big tech cases land in 2026 and antitrust populism persists across both parties even after the Khan-era FTC turnover",
+  "actors": "American Economic Liberties Project, Open Markets Institute, Matt Stoller, state AGs, FTC/DOJ case teams",
+  "hubs": "BIG by Matt Stoller (Substack), The Sling, antitrust X, law school symposia",
+  "actions": [
+   "Google/Amazon/Meta/Ticketmaster litigation support",
+   "State-level antitrust and price-gouging bills",
+   "Merger comment campaigns"
+  ]
+ },
+ {
+  "slug": "myanmar-spring-revolution",
+  "name": "Myanmar Spring Revolution",
+  "category": "Peace, Conflict & Migration",
+  "type": "Movement",
+  "region": "Myanmar / Southeast Asia",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 60,
+  "importance": 78,
+  "goal": "Defeat the military junta and build a federal democratic Myanmar",
+  "whyNow": "The junta's fake elections and China-brokered ceasefires are squeezing a resistance that still holds half the country, making 2026 a tipping-point year",
+  "actors": "National Unity Government, People's Defence Forces, ethnic armies (Arakan Army, TNLA, KIA), CDM strikers, diaspora funders",
+  "hubs": "Facebook, Telegram resistance channels, diaspora crowdfunding platforms",
+  "actions": [
+   "Diaspora fundraising for PDFs and displaced people",
+   "Boycott of the junta's sham 2025-26 elections",
+   "Parallel education and health services in liberated zones"
+  ]
+ },
+ {
+  "slug": "brics-de-dollarization-push",
+  "name": "BRICS De-Dollarization Push",
+  "category": "Economy, Labor & Housing",
+  "type": "Current",
+  "region": "BRICS+ / Global South",
+  "scope": "global",
+  "lists": "global",
+  "momentum": 66,
+  "importance": 72,
+  "goal": "Build local-currency trade, gold reserves and payment rails that reduce dependence on the US dollar and sanctions exposure",
+  "whyNow": "US tariff wars and sanctions have pushed local-currency settlement and gold buying to record levels heading into the 2026 India-chaired summit",
+  "actors": "BRICS+ governments (India chairing 2026 summit), central banks, New Development Bank; commodity exporters",
+  "hubs": "BRICS summit communiques, financial X/Telegram commentary, policy journals",
+  "actions": [
+   "Bilateral local-currency settlement deals",
+   "Central bank gold accumulation",
+   "Cross-border payment system pilots (BRICS Pay/mBridge derivatives)"
+  ]
+ },
+ {
+  "slug": "us-climate-democracy-resistance-sunrise-et-al",
+  "name": "US Climate-Democracy Resistance (Sunrise et al.)",
+  "category": "Climate, Environment & Energy",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 72,
+  "goal": "Fight the Trump administration's fossil-fuel expansion and authoritarianism by fusing climate organizing with pro-democracy mobilization",
+  "whyNow": "Sunrise reorganized in 2026 explicitly around fighting authoritarianism, joining ICE and oligarchy protests as the Green New Deal frame fades",
+  "actors": "Sunrise Movement, 350.org, Third Act (Bill McKibben), Climate Defiance, League of Conservation Voters, state green banks",
+  "hubs": "Sunrise hubs on Discord/Signal, climate-left X and Bluesky, Heated newsletter, Common Dreams",
+  "actions": [
+   "'End the Oligarchy' protests at fossil-baron targets",
+   "Electoral organizing for 2026 midterms",
+   "Defend state climate laws and IRA remnants"
+  ]
+ },
+ {
+  "slug": "stop-killing-games",
+  "name": "Stop Killing Games",
+  "category": "Tech & Digital Life",
+  "type": "Campaign",
+  "region": "EU + US (California)",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 82,
+  "importance": 56,
+  "goal": "Legally require publishers to leave games playable when servers shut down",
+  "whyNow": "After 1.3M+ EU signatures met Commission foot-dragging, the fight jumped to US statehouses\u2014California's preservation bill passed the Assembly in June 2026",
+  "actors": "Ross Scott (Accursed Farms), 1.4M EU petition signers, California legislators (Protect Our Games Act), Video Game History Foundation",
+  "hubs": "YouTube, r/StopKillingGames, Discord, EU petition portals",
+  "actions": [
+   "EU Citizens' Initiative follow-through at Commission hearings",
+   "Lobbying California's Protect Our Games Act through the Assembly",
+   "Documenting killed games"
+  ]
+ },
+ {
+  "slug": "immigration-enforcement-border-security-advocacy",
+  "name": "Immigration Enforcement & Border Security Advocacy",
+  "category": "Peace, Conflict & Migration",
+  "type": "Current",
+  "region": "US, strongest in TX, FL, AZ and swing districts",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 62,
+  "importance": 74,
+  "goal": "Maintain public and political support for mass deportations, detention expansion and completed border wall",
+  "whyNow": "With its agenda in power the movement's energy has shifted from protest to defending enforcement against backlash as polling softens",
+  "actors": "DHS/ICE public messaging, Heritage Foundation, FAIR, NumbersUSA, angel-family groups, sheriff associations",
+  "hubs": "X/Truth Social, Fox and talk radio, county sheriff and GOP club meetings",
+  "actions": [
+   "287(g) sign-up drives by county sheriffs",
+   "State legislation criminalizing sanctuary policies",
+   "Rallies backing agents amid attacks on enforcement personnel"
+  ]
+ },
+ {
+  "slug": "long-covid-infection-associated-chronic-illness",
+  "name": "Long COVID & Infection-Associated Chronic Illness Advocacy",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 64,
+  "importance": 72,
+  "goal": "Win research funding, clinical trials, and recognition for Long COVID, ME/CFS, and POTS patients",
+  "whyNow": "Patients secured a $515M RECOVER infusion but are battling in 2026 to redirect it to treatments amid broader NIH cuts threatening post-infectious illness research",
+  "actors": "Solve M.E., Long COVID Alliance, Patient-Led Research Collaborative, #MEAction, Health Rising",
+  "hubs": "X/Bluesky patient communities, r/covidlonghaulers, Health Rising blog, Discord support servers",
+  "actions": [
+   "Annual Advocacy Week lobbying for dedicated NIH funding",
+   "Push RECOVER's $515M toward treatment trials not observation",
+   "Crowdsource symptom and treatment data"
+  ]
+ },
+ {
+  "slug": "fediverse-decentralized-social-web",
+  "name": "Fediverse & Decentralized Social Web",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 70,
+  "goal": "Replace corporate platforms with interoperable, user-controlled social networks",
+  "whyNow": "Growth is steadier than the 2023-24 spikes, but protocol bridges, Free Our Feeds funding, and recurring X/Meta exoduses keep the alternative viable and slowly institutionalizing",
+  "actors": "Bluesky/AT Protocol team, Mastodon gGmbH (Eugen Rochko), Free Our Feeds, Bridgy Fed, Meta Threads (partial), EFF",
+  "hubs": "Mastodon instances, Bluesky, fediverse@lemmy, FediForum",
+  "actions": [
+   "Running independent instances",
+   "Building cross-protocol bridges (Bluesky-Mastodon)",
+   "Migrating communities off X en masse after each controversy"
+  ]
+ },
+ {
+  "slug": "classical-education-revival",
+  "name": "Classical Education Revival",
+  "category": "Education & Knowledge",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 72,
+  "importance": 64,
+  "goal": "Restore liberal-arts, Great Books, and virtue-centered schooling as an alternative to progressive education",
+  "whyNow": "Classical schools are among the fastest-growing choice sectors in 2026, riding the ESA wave and cultural debates over what schools should teach",
+  "actors": "Hillsdale College and its charter network, Great Hearts, ACCS, Classic Learning Test, classical homeschool co-ops",
+  "hubs": "Substack (classical ed writers), X, ACCS conferences, homeschool co-op networks",
+  "actions": [
+   "Open classical charter and Christian schools",
+   "Adopt CLT as SAT alternative (now accepted in multiple state systems)",
+   "Build classical curricula co-ops with ESA funds"
+  ]
+ },
+ {
+  "slug": "eastern-orthodox-convert-wave",
+  "name": "Eastern Orthodox Convert Wave",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 78,
+  "importance": 58,
+  "goal": "Absorb a surge of mostly young male converts into Orthodox parish life",
+  "whyNow": "NYT and parish data through 2025-26 show pews 'overflowing with converts,' heavily young men, prompting internal debate over ideology",
+  "actors": "ROCOR/OCA/Antiochian parishes, Fr. Josiah Trenham, Jonathan Pageau, Orthodox podcasters",
+  "hubs": "Orthodox YouTube, r/OrthodoxChristianity, X 'orthobro' circles",
+  "actions": [
+   "Catechumen classes",
+   "Fasting and liturgical practice",
+   "Founding missions in convert-heavy regions"
+  ]
+ },
+ {
+  "slug": "hybrid-athlete-hyrox-wave",
+  "name": "Hybrid Athlete / HYROX Wave",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Current",
+  "region": "Global (US surging)",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 84,
+  "importance": 52,
+  "goal": "Blend strength and endurance training into a competitive mass-participation sport",
+  "whyNow": "HYROX events are selling out worldwide in 2026 and hybrid training has displaced CrossFit as the dominant fitness culture",
+  "actors": "HYROX, Life Time LT Games, Nick Bare, Fergus Crawley, CrossFit-to-HYROX converts",
+  "hubs": "Instagram/TikTok, Strava, r/hyrox, gym communities",
+  "actions": [
+   "Train shared hybrid programs",
+   "Enter sold-out HYROX/LT Games races",
+   "Convert gyms into hybrid-training boxes"
+  ]
+ },
+ {
+  "slug": "social-housing-movement-us",
+  "name": "Social Housing Movement (US)",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "United States (Seattle, Montgomery County MD, NY, CA)",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 68,
+  "goal": "Create publicly owned, mixed-income, permanently affordable housing developers at city and state level",
+  "whyNow": "Seattle's voter-funded developer is buying buildings and Mamdani's win has made public options the left's answer to the housing crisis",
+  "actors": "House Our Neighbors (Seattle), Montgomery County HOC, NY social housing advocates, CA SB 555 coalition, DSA housing groups",
+  "hubs": "housing twitter, Shelterforce, local DSA and tenant coalition channels",
+  "actions": [
+   "Ballot measures funding social housing developers",
+   "State feasibility studies",
+   "Public developer project pipelines"
+  ]
+ },
+ {
+  "slug": "us-antiwar-mobilization-venezuela-caribbean-inte",
+  "name": "US Antiwar Mobilization (Venezuela/Caribbean Intervention)",
+  "category": "Peace, Conflict & Migration",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 68,
+  "goal": "Stop US military strikes and regime-change war in Venezuela and the Caribbean",
+  "whyNow": "US boat strikes and coup pressure on Caracas in late 2025-26 produced the first sizable new US antiwar front in years",
+  "actors": "CODEPINK, About Face veterans, DSA, ANSWER Coalition, progressive members of Congress pushing war-powers votes",
+  "hubs": "X/Instagram coalition accounts, Democracy Now audiences, local peace councils",
+  "actions": [
+   "Emergency day-of-strike protests",
+   "War-powers resolution lobbying",
+   "'No War on Venezuela' teach-ins folded into No Kings days"
+  ]
+ },
+ {
+  "slug": "commercial-space-starship-fandom",
+  "name": "Commercial Space & Starship Fandom",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Community/Scene",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 68,
+  "importance": 66,
+  "goal": "Push humanity toward the Moon and Mars via NASA Artemis and commercial launch",
+  "whyNow": "2026 brings Artemis crewed flight preparations and Musk's promised first uncrewed Starship Mars window, with fandom debates over lunar-vs-Mars priorities intensifying",
+  "actors": "SpaceX/Elon Musk, NASA Artemis program, National Space Society, Mars Society, spaceflight YouTubers (NSF, Everyday Astronaut)",
+  "hubs": "X, r/SpaceX, NASASpaceflight forums/streams, YouTube launch livestreams",
+  "actions": [
+   "Mass-watch Starship test flights and launch streams",
+   "Advocate for NASA budgets and Artemis vs Mars-first priorities",
+   "Attend ISDC and space conferences"
+  ]
+ },
+ {
+  "slug": "faith-based-sanctuary-accompaniment-organizing",
+  "name": "Faith-Based Sanctuary & Accompaniment Organizing",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "US cities and border regions",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 68,
+  "importance": 66,
+  "goal": "Mobilize congregations to shelter, accompany and advocate for immigrants targeted by enforcement",
+  "whyNow": "Enforcement in formerly protected sensitive locations has pulled clergy across the theological spectrum into open confrontation with federal policy",
+  "actors": "Catholic dioceses, mainline denominations, evangelical immigration table, synagogues and mosques, Faith in Action",
+  "hubs": "Congregation networks, denominational statements, local interfaith coalitions",
+  "actions": [
+   "Sanctuary housing and accompaniment to check-ins and court",
+   "Litigation over ICE actions at houses of worship",
+   "Public witness at detention sites"
+  ]
+ },
+ {
+  "slug": "biohacking-quantified-self",
+  "name": "Biohacking & Quantified Self",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Community/Scene",
+  "region": "Global (US-led)",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 73,
+  "importance": 60,
+  "goal": "Self-optimize health via wearables, CGMs, supplements, and n=1 experimentation",
+  "whyNow": "Wearable and CGM adoption keeps climbing in 2026 as the scene merges into the longevity movement and mainstream preventive care",
+  "actors": "Oura, WHOOP, Levels, Dave Asprey's Biohacking Conference, Andrew Huberman audience",
+  "hubs": "r/Biohackers, X, Huberman Lab podcast ecosystem, Discord protocol groups",
+  "actions": [
+   "Track and share sleep/HRV/glucose data",
+   "Run n=1 supplement and protocol experiments",
+   "Attend biohacking conferences and cold-plunge/sauna meetups"
+  ]
+ },
+ {
+  "slug": "pro-life-movement-post-dobbs",
+  "name": "Pro-Life Movement Post-Dobbs",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "US, DC and red-state capitols",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 56,
+  "importance": 76,
+  "goal": "Restrict abortion pills, defend state bans and rebuild a culture-of-life consensus",
+  "whyNow": "Movement is publicly pressing a friendly administration to act on abortion pills while facing ballot-box losses and telehealth pill flows",
+  "actors": "March for Life, SBA Pro-Life America, Students for Life, Live Action, Catholic and evangelical networks",
+  "hubs": "March for Life events, church networks, X, pro-life campus chapters",
+  "actions": [
+   "Annual March for Life (2026 theme 'Life Is a Gift')",
+   "Pressure campaign for FDA mifepristone restrictions",
+   "Pregnancy resource center expansion"
+  ]
+ },
+ {
+  "slug": "internet-archive-software-preservation",
+  "name": "Internet Archive & Software Preservation",
+  "category": "Tech & Digital Life",
+  "type": "Project",
+  "region": "US-based, global users",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 60,
+  "importance": 72,
+  "goal": "Preserve the digital record\u2014web, software, games, books\u2014against link rot and legal attack",
+  "whyNow": "After surviving publisher lawsuits, the Archive hit 1-trillion-page scale just as AI-era link rot and disappearing government data made preservation feel urgent to normies",
+  "actors": "Internet Archive (Brewster Kahle), Software Heritage, Video Game History Foundation, emulation community",
+  "hubs": "archive.org, r/DataHoarder, VGHF Discord, digital-preservation conferences",
+  "actions": [
+   "Wayback Machine expansion past 1 trillion pages",
+   "DMCA exemption fights for game/software access",
+   "Community mirroring and data-hoarding drives"
+  ]
+ },
+ {
+  "slug": "four-day-workweek-movement",
+  "name": "Four-Day Workweek Movement",
+  "category": "Economy, Labor & Housing",
+  "type": "Movement",
+  "region": "Global (UK, US, Europe, Japan, Latin America)",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 62,
+  "importance": 70,
+  "goal": "Make a 32-hour, no-pay-cut week the norm via trials, collective bargaining, and legislation",
+  "whyNow": "Post-trial adoption keeps compounding and AI-productivity debates plus new government pilots in 2026 have revived legislative interest",
+  "actors": "4 Day Week Global (Juliet Schor), 4 Day Week Foundation UK, Work Time Reduction Center, UAW (32-hour demand), governments of Tokyo/Poland pilots",
+  "hubs": "4dayweek.io, r/4dayworkweek, LinkedIn workplace discourse",
+  "actions": [
+   "Company pilot cohorts with published results",
+   "Union contract demands for shorter hours",
+   "National trial legislation (Poland, Spain, Portugal)"
+  ]
+ },
+ {
+  "slug": "conservative-election-integrity-movement",
+  "name": "Conservative Election Integrity Movement",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "US, strongest in AZ, GA, PA, WI",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 64,
+  "importance": 68,
+  "goal": "Require proof of citizenship, tighten voter rolls and expand poll watching before the midterms",
+  "whyNow": "With allies running DOJ and a friendly executive order on elections, the movement is institutionalizing what was once outsider activism",
+  "actors": "True the Vote, Election Integrity Network (Cleta Mitchell), RNC election integrity program, state legislators",
+  "hubs": "X, Rumble, county GOP meetings, church-adjacent networks",
+  "actions": [
+   "Mass voter-roll challenge filings",
+   "Poll-watcher recruitment and training",
+   "State proof-of-citizenship legislation supporting the SAVE Act"
+  ]
+ },
+ {
+  "slug": "reading-revival-booktok-irl-book-clubs",
+  "name": "Reading Revival: BookTok & IRL Book Clubs",
+  "category": "Culture, Identity & Belief",
+  "type": "Community/Scene",
+  "region": "Global, anglophone core",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 72,
+  "importance": 60,
+  "goal": "Keep the social-reading boom alive \u2014 viral genres online, silent book clubs and reading parties offline",
+  "whyNow": "BookTok still moves bestseller lists in 2026 while the scene visibly migrates offline into silent book clubs and bookstore nightlife",
+  "actors": "BookTok creators, romantasy publishing (Rebecca Yarros et al.), Silent Book Club chapters, celebrity book clubs, indie bookstores",
+  "hubs": "TikTok #BookTok, Goodreads/StoryGraph, Fable app, local bookstore events",
+  "actions": [
+   "Viral backlist-to-bestseller cycles",
+   "Silent Book Club and reading-party chapters multiplying",
+   "Indie bookstore openings at multi-year highs"
+  ]
+ },
+ {
+  "slug": "sober-curious-movement",
+  "name": "Sober-Curious Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 72,
+  "importance": 60,
+  "goal": "Normalize drinking less or not at all without identifying as in recovery",
+  "whyNow": "Roughly two-thirds of Gen Z report drinking less in 2026 and non-alcoholic beverages are the fastest-growing drinks category in the US",
+  "actors": "Athletic Brewing, non-alc beverage brands, Reframe/Sunnyside apps, Dry January orgs",
+  "hubs": "TikTok #sobercurious, r/stopdrinking, sober bars and NA bottle shops",
+  "actions": [
+   "Dry January/Sober October challenges",
+   "Swap to NA beverages at bars and events",
+   "App-based drink tracking and moderation communities"
+  ]
+ },
+ {
+  "slug": "self-hosting-homelab-movement",
+  "name": "Self-Hosting & Homelab Movement",
+  "category": "Tech & Digital Life",
+  "type": "Community/Scene",
+  "region": "Global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 74,
+  "importance": 58,
+  "goal": "Own your data and services by running them at home instead of renting the cloud",
+  "whyNow": "Streaming enshittification, cloud price hikes, and AI-scraping distrust drove a visible 2025-26 surge in first-time self-hosters and polished 'home cloud' apps",
+  "actors": "r/selfhosted and r/homelab communities, Jellyfin, Immich, Nextcloud, Home Assistant, Proxmox, TrueNAS",
+  "hubs": "r/selfhosted, r/homelab, selfh.st, YouTube (Techno Tim, Hardware Haven), Discord",
+  "actions": [
+   "Publishing stack guides and docker-compose recipes",
+   "Degoogling migrations (Immich over Google Photos)",
+   "Annual self-hosted app surveys"
+  ]
+ },
+ {
+  "slug": "second-amendment-movement",
+  "name": "Second Amendment Movement",
+  "category": "Democracy, Rights & Governance",
+  "type": "Movement",
+  "region": "US, strongest in South, Mountain West, rural counties",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 60,
+  "importance": 70,
+  "goal": "Expand carry rights, deregulate suppressors and NFA items, and entrench 2A sanctuaries",
+  "whyNow": "With a friendly DOJ and courts the fight has shifted to locking in deregulation and challenging blue-state assault weapons laws",
+  "actors": "NRA, Gun Owners of America, FPC, state rifle associations, sanctuary county sheriffs",
+  "hubs": "X, YouTube gun channels, gun shows, county commission meetings",
+  "actions": [
+   "Litigation under Bruen",
+   "Federal suppressor/NFA deregulation push",
+   "Second Amendment sanctuary resolutions and state preemption bills"
+  ]
+ },
+ {
+  "slug": "positive-masculinity-men-s-mentorship-push",
+  "name": "Positive Masculinity & Men's Mentorship Push",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "United States, UK, Australia",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 62,
+  "importance": 68,
+  "goal": "Build healthy alternatives for struggling boys and men \u2014 mentorship, mental health, purpose \u2014 without the grievance politics",
+  "whyNow": "The 'lost boys' policy conversation went mainstream in 2025-26, spawning funded institutes and bipartisan attention",
+  "actors": "Richard Reeves' American Institute for Boys and Men, Movember, Equimundo, school mentorship programs",
+  "hubs": "Substack (Of Boys and Men orbit), LinkedIn/policy circles, r/menslib",
+  "actions": [
+   "Male-mentor recruitment drives",
+   "Men's mental health groups and sheds",
+   "Policy pushes on boys' education"
+  ]
+ },
+ {
+  "slug": "food-mutual-aid-surge-post-snap-cuts",
+  "name": "Food Mutual Aid Surge (Post-SNAP Cuts)",
+  "category": "Community, Mutual Aid & Local Life",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 68,
+  "importance": 62,
+  "goal": "Fill food-security gaps left by SNAP cuts through community fridges, pantries, and solidarity kitchens",
+  "whyNow": "2025-26 federal benefit cuts and the government-shutdown SNAP lapse drove record demand and volunteer mobilization",
+  "actors": "Community fridge networks, Food Not Bombs, church and neighborhood pantry coalitions, World Central Kitchen",
+  "hubs": "Instagram fridge accounts, freedge.org, local mutual aid Slacks/Signals",
+  "actions": [
+   "Stocking and maintaining public fridges",
+   "Free grocery distributions",
+   "SNAP-gap emergency funds"
+  ]
+ },
+ {
+  "slug": "native-american-language-revitalization-us",
+  "name": "Native American Language Revitalization (US)",
+  "category": "Culture, Identity & Belief",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 58,
+  "importance": 70,
+  "goal": "Keep endangered Native languages alive through immersion schools, master-apprentice programs, and tech",
+  "whyNow": "Mid-decade urgency of the UN Decade of Indigenous Languages collides with 2025-26 federal funding turbulence, raising the stakes for every remaining speaker",
+  "actors": "tribal nations' language departments, Cherokee/Lakota/Ojibwe immersion schools, ANA grants, 7000 Languages, motion-capture AI archives",
+  "hubs": "tribal Facebook groups, language-app communities, NAFOA/NCAI convenings",
+  "actions": [
+   "Immersion-school enrollment",
+   "Elder recording and AI-assisted archiving",
+   "Fighting for federal grant funding amid cuts"
+  ]
+ },
+ {
+  "slug": "anti-fast-fashion-secondhand-economy",
+  "name": "Anti-Fast-Fashion & Secondhand Economy",
+  "category": "Food, Land & Consumption",
+  "type": "Movement",
+  "region": "EU (France law), US, Ghana (Kantamanto), global online",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 62,
+  "goal": "Curb ultra-fast fashion's waste and emissions via regulation, degrowth of wardrobes, and a mainstream resale economy",
+  "whyNow": "France's ultra-fast-fashion law and EU import crackdowns on Shein/Temu hit in 2025-26 just as resale keeps taking share from new sales",
+  "actors": "Fashion Revolution, Or Foundation (Ghana), French legislators (Shein penalty law), ThredUp/Vinted/Depop, Remake",
+  "hubs": "#PayUp and Fashion Revolution Instagram, deinfluencing TikTok, r/ThriftStoreHauls",
+  "actions": [
+   "Implement France's ultra-fast-fashion penalties and EU ecodesign rules",
+   "Kantamanto waste accountability campaigns",
+   "No-new-clothes pledges and visible mending"
+  ]
+ },
+ {
+  "slug": "starbucks-workers-united-contract-fight",
+  "name": "Starbucks Workers United Contract Fight",
+  "category": "Economy, Labor & Housing",
+  "type": "Campaign",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 66,
+  "importance": 62,
+  "goal": "Win a first master contract for 500+ unionized Starbucks stores four years after the first union win",
+  "whyNow": "After the largest strike in company history, bargaining resumed in spring 2026 with the union sending a full contract proposal",
+  "actors": "Starbucks Workers United (SEIU), Workers United, barista organizing committees",
+  "hubs": "@SBWorkersUnited on X/Instagram, r/starbucks, union TikTok",
+  "actions": [
+   "Rolling strikes including the Dec 2025 open-ended strike",
+   "National bargaining sessions",
+   "Consumer solidarity pickets"
+  ]
+ },
+ {
+  "slug": "homesteading-tradwife-current",
+  "name": "Homesteading & Tradwife Current",
+  "category": "Culture, Identity & Belief",
+  "type": "Current",
+  "region": "United States (rural/exurban), online globally",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 68,
+  "importance": 60,
+  "goal": "Normalize traditional homemaking, land-based self-sufficiency, and large families as aspirational lifestyles",
+  "whyNow": "Forbes documents a full 'tradwife economy' reshaping home/kitchen retail in 2026 while academics and feminists debate the phenomenon",
+  "actors": "Ballerina Farm and homestead influencers, Homesteaders of America, seed/canning brands riding the wave",
+  "hubs": "Instagram/TikTok homestead-core, YouTube homesteading channels, Facebook groups",
+  "actions": [
+   "Backyard chickens/canning/sourdough adoption",
+   "Rural land purchases and homeschool co-ops",
+   "Monetized content empires"
+  ]
+ },
+ {
+  "slug": "men-s-health-optimization-scene",
+  "name": "Men's Health Optimization Scene",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Community/Scene",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 70,
+  "importance": 57,
+  "goal": "Address testosterone decline, fertility, and male mental/physical health through clinics, protocols, and community",
+  "whyNow": "TRT telehealth is booming in 2026, with the Endocrine Society issuing statements against loose prescribing as MAHA elevates testosterone decline as a national issue",
+  "actors": "Hone Health, Marek Health, TRT telehealth clinics, fitness podcasters, Endocrine Society (pushback)",
+  "hubs": "X, YouTube fitness channels, r/Testosterone, podcast manosphere",
+  "actions": [
+   "Get bloodwork panels and share results",
+   "Use telehealth TRT/enclomiphene protocols",
+   "Sperm-count and fertility testing drives"
+  ]
+ },
+ {
+  "slug": "mental-health-peer-support-988-movement",
+  "name": "Mental Health Peer Support & 988 Movement",
+  "category": "Science, Health & Human Enhancement",
+  "type": "Movement",
+  "region": "United States",
+  "scope": "us",
+  "lists": "us",
+  "momentum": 58,
+  "importance": 68,
+  "goal": "Build peer-led crisis support and normalize help-seeking, especially for youth and men",
+  "whyNow": "Peer specialist roles are expanding under Medicaid while 2026 federal budget fights threaten 988 and SAMHSA programs, energizing advocates",
+  "actors": "NAMI, Active Minds, 988 Lifeline, certified peer specialist workforce, Man Therapy campaigns",
+  "hubs": "Instagram, campus chapters, r/mentalhealth, peer-support Discords",
+  "actions": [
+   "Train and certify peer support specialists",
+   "Campus and workplace mental health first-aid programs",
+   "Defend 988 and Medicaid behavioral funding from cuts"
+  ]
+ },
+ {
+  "slug": "kids-coding-to-ai-literacy-movement",
+  "name": "Kids Coding to AI Literacy Movement",
+  "category": "Education & Knowledge",
+  "type": "Movement",
+  "region": "United States / global",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 62,
+  "importance": 64,
+  "goal": "Guarantee every K-12 student computer science and now AI literacy education",
+  "whyNow": "The 2025 federal AI education executive order and state AI-literacy mandates are rebooting the coding-in-schools movement around AI fluency",
+  "actors": "Code.org, CSforALL, TeachAI coalition, state CS graduation requirements, Hour of Code",
+  "hubs": "Code.org teacher networks, CSTA forums, district edtech channels",
+  "actions": [
+   "Hour of Code/AI events in schools",
+   "Pass state CS and AI-literacy graduation requirements",
+   "Train teachers via TeachAI toolkits"
+  ]
+ },
+ {
+  "slug": "balcony-solar-energy-communities",
+  "name": "Balcony Solar & Energy Communities",
+  "category": "Climate, Environment & Energy",
+  "type": "Community/Scene",
+  "region": "Germany, EU, spreading to US (Utah legalization)",
+  "scope": "both",
+  "lists": "us",
+  "momentum": 70,
+  "importance": 56,
+  "goal": "Let ordinary renters and households plug in their own solar and form citizen-owned energy cooperatives",
+  "whyNow": "Germany passed multi-million balcony-solar installs and US states began legalizing plug-in panels in 2025-26, making DIY solar a genuine consumer movement",
+  "actors": "Balkonkraftwerk community, REScoop.eu cooperatives, German tenant groups, Utah/state legalization advocates",
+  "hubs": "r/balkonkraftwerk, German solar forums, energy-co-op meetups",
+  "actions": [
+   "Plug-in solar installs (millions in Germany)",
+   "US state legalization bills",
+   "Found and grow local energy co-ops"
+  ]
+ }
+]

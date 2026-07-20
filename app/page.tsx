@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import BoardForm from "@/components/BoardForm";
+import BoardDirectory from "@/components/BoardDirectory";
 
 export const dynamic = "force-dynamic";
 
@@ -35,32 +35,21 @@ export default async function HomePage() {
             : "Log in to start the first movement."}
           <div className="mt-2 text-xs">
             (Tip: run <code className="rounded bg-background px-1">npm run db:seed</code>{" "}
-            to load the pilot movement set.)
+            or <code className="rounded bg-background px-1">npm run db:seed:atlas</code>{" "}
+            to load a pilot movement set.)
           </div>
         </div>
       ) : (
-        <ul className="grid gap-3 sm:grid-cols-2">
-          {boards.map((b) => (
-            <li
-              key={b.id}
-              className="rounded-lg border border-line bg-surface p-4 transition-colors hover:border-accent"
-            >
-              <Link href={`/b/${b.slug}`} className="font-medium hover:text-accent">
-                {b.name}
-              </Link>
-              <p className="mt-1 line-clamp-2 text-sm text-muted">{b.description}</p>
-              <div className="mt-2 flex gap-4 text-xs text-muted">
-                <span>{b._count.posts} posts</span>
-                <Link
-                  href={`/b/${b.slug}/tree`}
-                  className="text-accent hover:underline"
-                >
-                  {b._count.nodes} tree nodes →
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <BoardDirectory
+          boards={boards.map((b) => ({
+            slug: b.slug,
+            name: b.name,
+            description: b.description,
+            category: b.category,
+            posts: b._count.posts,
+            nodes: b._count.nodes,
+          }))}
+        />
       )}
     </div>
   );
