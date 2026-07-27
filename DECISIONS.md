@@ -9,9 +9,10 @@ things to flag for review. Newest phase last.
   `collective-mind` if you determine the copy keeps git history cleanly." A
   branch keeps full history and matches the established run workflow (the
   reviewer runs versions via `git checkout`). A second on-disk clone would be
-  managed separately and wouldn't get pushed. → branch `collective-mind`,
+  managed separately and wouldn't get pushed. → developed on `collective-mind`,
   forked from `app-shell-reorg` (the most complete base: tree, flyout tabs,
-  automatic statuses, audit log, dark mode all present).
+  automatic statuses, audit log, dark mode all present), and pushed to this
+  session's designated branch `claude/new-session-332a0x`.
 - **Seed with the 10-board pilot (`npm run db:seed`), not the 131-board atlas.**
   Money Out of Politics is the demo target (brief §3), and a compact tree keeps
   the AI routing dump small. `db:seed:atlas` still exists if a bigger set is
@@ -117,6 +118,27 @@ things to flag for review. Newest phase last.
 - **Placement always targets the canonical.** Confirming a re-share is blocked
   with a pointer to the original, so one link becomes one Post no matter how many
   people shared it.
+
+## Phase 5 — Attention heat map
+
+- **Heat is recency-decayed, shareCount-weighted.** `lib/heat.ts` scores a node
+  by its captured items (routed or confirmed) over the last 7 days, each
+  weighted by `shareCount`, halving every ~3 days, with a small bonus for
+  confirmed. So the map shows *current* focus, and a burst of shares reads
+  hotter than an old trickle. Warmth buckets to 0–4 **relative to the hottest
+  node in view**, so the scale reads on a busy or a quiet movement alike.
+- **Rendered two ways, additively.** A per-card orange glow + 🔥 count on the
+  existing tree (`TreeCanvas`), and a "Where attention is flowing" panel of the
+  top-5 hottest nodes (`AttentionPanel`). Level 0 adds nothing, so a board with
+  no captures looks exactly as before — the tree/forum/voting are untouched.
+- **Aggregate counts respect privacy.** Heat includes routed-but-unconfirmed
+  items so incoming attention shows, but only as anonymous totals — no
+  unconfirmed item's content or owner is ever exposed. A "confirmed-only" heat
+  map is a one-line filter if a movement prefers it.
+- **Demo data via `npm run db:seed:captures`.** Idempotent (clears its own prior
+  rows), spreads items across nodes/ages/shareCounts so hot and quiet nodes are
+  visibly different, and confirms some into real Posts. `lib/seedHelpers.ts`
+  places them without a request scope (mirrors `confirmPlacement`'s writes).
 
 ## To flag for review
 

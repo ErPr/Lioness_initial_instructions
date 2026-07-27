@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { getScores, getRecentVelocity } from "@/lib/scores";
 import { firstUrlDomain, timeAgo } from "@/lib/format";
 import { layoutTree, type TreeLayout } from "@/lib/treeLayout";
+import { getNodeHeat, warmthLevel } from "@/lib/heat";
 
 // View-model types shared with the client tree components.
 
@@ -51,6 +52,9 @@ export interface NodeView {
   support: FlyoutRow[];
   news: FlyoutRow[];
   editLog: { when: string; user: string; action: string; detail: string }[];
+  /** attention heat (recent captured evidence); 0..4 warmth + raw counts */
+  heatLevel: number;
+  heatShares: number;
 }
 
 export interface TreeViewData {
@@ -107,14 +111,18 @@ export async function getTreeViewData(
   const postIds = nodes.flatMap((n) => n.posts.map((p) => p.id));
   const commentIds = nodes.flatMap((n) => n.comments.map((c) => c.id));
 
-  const [nodeScores, postScores, commentScores, postVelocity, commentVelocity] =
+  const [nodeScores, postScores, commentScores, postVelocity, commentVelocity, heat] =
     await Promise.all([
       getScores("NODE", nodeIds, viewerUserId),
       getScores("POST", postIds, viewerUserId),
       getScores("COMMENT", commentIds, viewerUserId),
       getRecentVelocity("POST", postIds),
       getRecentVelocity("COMMENT", commentIds),
+      getNodeHeat(nodeIds),
     ]);
+  // Warmth is relative to the hottest node on this board, so the scale always
+  // reads regardless of a movement's overall capture volume.
+  const maxHeat = Math.max(0, ...[...heat.values()].map((h) => h.score));
 
   // The working-plan filter: each parent's children ranked by community vote
   // (score desc, then age — an established idea keeps its seat on ties, a
@@ -234,6 +242,8 @@ export async function getTreeViewData(
         action: e.action,
         detail: e.detail,
       })),
+      heatLevel: warmthLevel(heat.get(n.id)?.score ?? 0, maxHeat),
+      heatShares: heat.get(n.id)?.shares ?? 0,
     };
   }
 

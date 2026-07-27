@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { getTreeViewData } from "@/lib/treeQuery";
 import TreeCanvas from "@/components/tree/TreeCanvas";
+import AttentionPanel from "@/components/tree/AttentionPanel";
 
 export const dynamic = "force-dynamic";
 
@@ -43,6 +44,8 @@ export default async function TreePage({
           {showAll ? "✓ Showing all candidates" : "Show all candidates"}
         </Link>
       </div>
+
+      <AttentionPanel boardId={board.id} />
 
       {data.layout.instances.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line bg-surface p-10 text-center text-sm text-muted">

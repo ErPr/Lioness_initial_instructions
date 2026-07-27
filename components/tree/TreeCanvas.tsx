@@ -29,6 +29,17 @@ const BAR_STATUS_CLS: Record<string, string> = {
   ARCHIVED: "bg-stone-200 dark:bg-stone-700",
 };
 
+// Attention warmth: a glow whose spread/opacity grows with recent captured
+// evidence. Level 0 (quiet) adds nothing, so the tree looks unchanged where
+// there's no activity.
+const HEAT_GLOW: Record<number, string> = {
+  0: "",
+  1: "shadow-[0_0_0_2px_rgba(251,191,36,0.25)]",
+  2: "shadow-[0_0_10px_1px_rgba(251,146,60,0.45)]",
+  3: "shadow-[0_0_16px_2px_rgba(249,115,22,0.6)]",
+  4: "shadow-[0_0_22px_4px_rgba(234,88,12,0.75)]",
+};
+
 export default function TreeCanvas({
   data,
   boardId,
@@ -182,7 +193,9 @@ export default function TreeCanvas({
                 onClick={() => openFlyout(inst)}
                 className={`absolute flex cursor-pointer overflow-hidden rounded-md border transition-shadow hover:shadow-md ${
                   CARD_STATUS_CLS[node.status] ?? CARD_STATUS_CLS.PROPOSED
-                } ${active ? "ring-2 ring-accent/50" : ""}`}
+                } ${HEAT_GLOW[node.heatLevel] ?? ""} ${
+                  active ? "ring-2 ring-accent/50" : ""
+                }`}
                 style={{ left: inst.x, top: inst.y, width: CARD_W, height: CARD_H }}
               >
                 <div
@@ -198,6 +211,14 @@ export default function TreeCanvas({
                   <div className="flex items-center gap-2 text-[11px] text-muted">
                     <span title="Vote score">▲ {node.score}</span>
                     <span title="Attached contributions">✎ {node.attachedCount}</span>
+                    {node.heatLevel > 0 && (
+                      <span
+                        title={`${node.heatShares} recent shared item${node.heatShares === 1 ? "" : "s"} pointing here`}
+                        className="text-orange-500"
+                      >
+                        🔥 {node.heatShares}
+                      </span>
+                    )}
                     {node.parentCount > 1 && (
                       <span
                         title={`Appears in ${node.parentCount} places`}

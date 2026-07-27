@@ -10,6 +10,7 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:reset": "prisma migrate reset --force",
     "db:seed:atlas": "tsx prisma/seed-atlas.ts",
+    "db:seed:captures": "tsx scripts/seed-captures.ts",
     "worker": "tsx scripts/worker.ts"
   },
   "dependencies": {
