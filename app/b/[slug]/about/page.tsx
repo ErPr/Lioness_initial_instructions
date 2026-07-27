@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { getScores } from "@/lib/scores";
+import { getAlliesForBoard } from "@/lib/coalition";
 import { timeAgo } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
@@ -36,6 +37,7 @@ export default async function AboutPage({
     ? (await getScores("NODE", [purpose.id])).get(purpose.id)!.score
     : 0;
 
+  const allies = await getAlliesForBoard(board.id);
   const statusCounts = await prisma.treeNode.groupBy({
     by: ["status"],
     where: { boardId: board.id },
@@ -93,6 +95,46 @@ export default async function AboutPage({
         seats are decided by votes, automatically. Created{" "}
         {timeAgo(board.createdAt)}.
       </section>
+
+      {allies.length > 0 && (
+        <section>
+          <div className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-muted">
+            Potential allies
+          </div>
+          <div className="flex flex-col gap-2">
+            {allies.map((a) => (
+              <div
+                key={a.other.id}
+                className="rounded-lg border border-line bg-surface px-3 py-2.5"
+              >
+                <div className="flex items-baseline gap-2">
+                  <Link
+                    href={`/b/${a.other.slug}`}
+                    className="text-sm font-medium hover:text-accent"
+                  >
+                    {a.other.name}
+                  </Link>
+                  <span className="ml-auto text-[11px] text-muted">
+                    {a.bridgeCount} shared{" "}
+                    {a.bridgeCount === 1 ? "effort" : "efforts"}
+                  </span>
+                </div>
+                {a.topBridge && (
+                  <p className="mt-0.5 truncate text-xs text-muted">
+                    e.g. “{a.topBridge.a.title}” ⇄ “{a.topBridge.b.title}”
+                  </p>
+                )}
+              </div>
+            ))}
+            <Link
+              href="/coalitions"
+              className="px-1 text-xs text-accent hover:underline"
+            >
+              Full coalition graph →
+            </Link>
+          </div>
+        </section>
+      )}
 
       {board.memberships.length > 0 && (
         <section>

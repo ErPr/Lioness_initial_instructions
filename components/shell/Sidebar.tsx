@@ -85,6 +85,14 @@ export default function Sidebar({
         >
           ⌕ Explore all movements
         </Link>
+        <Link
+          href="/coalitions"
+          className={`rounded px-2 py-1.5 text-sm hover:bg-background ${
+            pathname === "/coalitions" ? "font-semibold text-accent" : ""
+          }`}
+        >
+          ⚭ Coalition graph
+        </Link>
       </div>
 
       <div className="px-3 pt-2 text-[10.5px] font-semibold uppercase tracking-widest text-muted">

@@ -12,6 +12,7 @@
     "db:seed:atlas": "tsx prisma/seed-atlas.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
     "@prisma/client": "^6.19.3",
     "bcryptjs": "^3.0.3",
     "iron-session": "^8.0.4",

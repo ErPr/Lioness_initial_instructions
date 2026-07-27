@@ -50,6 +50,21 @@ All seed users have the password `lioness123` (e.g. `ava_quinn`, `marcus_w`,
   to equal-or-lower tier, exactly one Purpose root per board, all tree edits
   logged.
 
+## Coalition Engine (this branch)
+
+`/coalitions` maps where different movements are working on the same thing —
+bridges between tree nodes of different boards, aggregated into movement
+alliances, with "Potential allies" surfaced on every board's About tab.
+Matching is TF-IDF cosine similarity (zero setup). To add Claude
+classification of each match (same effort / complementary / weak), put an
+API key in `.env`:
+
+```
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+Without a key the page runs lexical-only and says so.
+
 ## Stack
 
 Next.js (App Router) + TypeScript, Prisma 6 + SQLite, Tailwind CSS,
