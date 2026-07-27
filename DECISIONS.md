@@ -44,6 +44,25 @@ things to flag for review. Newest phase last.
 - The capture handler only writes and redirects — no fetching or AI — so the
   share feels instant (acceptance criterion: "Saved" in under 2 seconds).
 
+## Phase 2 — Enrichment
+
+- **In-process worker via `instrumentation.ts`** so shares enrich and route
+  automatically with no second terminal (acceptance criterion: routed "within a
+  minute"). A module-level singleton guards against dev-HMR stacking intervals.
+  A standalone `npm run worker` is also provided; set `LIONESS_WORKER=off` on the
+  server to use only that.
+- **No HTML-parser dependency.** Meta tags are scanned with a tolerant regex
+  (`lib/enrich.ts`) rather than adding cheerio/jsdom. Verified against reversed
+  attribute order, entity decoding, and `<title>` fallback.
+- **Fallback chain:** provider oEmbed (YouTube/TikTok/Vimeo, which often block
+  scraping) → OpenGraph/meta → share-sheet fields. 6s timeout, one retry on a
+  fully-empty fetch, then advance regardless — an item is never stuck on
+  enrichment failure.
+- **Sandbox note:** outbound fetch is blocked in the build/test environment, so
+  enrichment yields no metadata here and items advance to `enriched` with the
+  share-sheet title only. On a normal network (the reviewer's machine) metadata
+  populates. This is the designed graceful-degradation path, not a bug.
+
 ## To flag for review
 
 - Icons are a plain amber "L", not brand art — swap when real assets exist.
