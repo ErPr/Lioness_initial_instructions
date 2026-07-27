@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { getCurrentUser } from "@/lib/session";
@@ -6,6 +6,8 @@ import { logout } from "@/lib/actions/auth";
 import { prisma } from "@/lib/db";
 import ThemeToggle from "@/components/ThemeToggle";
 import Sidebar from "@/components/shell/Sidebar";
+import RegisterSW from "@/components/pwa/RegisterSW";
+import { pendingCount } from "@/lib/inboxQuery";
 
 // Runs before paint so a saved dark preference never flashes light.
 const THEME_INIT = `(function(){try{var t=localStorage.getItem("lioness.theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()`;
@@ -14,7 +16,11 @@ export const metadata: Metadata = {
   title: "Lioness",
   description:
     "A discussion platform where every conversation is also a goal tree.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "Lioness" },
 };
+
+export const viewport: Viewport = { themeColor: "#b45309" };
 
 export default async function RootLayout({
   children,
@@ -39,12 +45,14 @@ export default async function RootLayout({
         })
       ).map((m) => ({ slug: m.board.slug, name: m.board.name }))
     : [];
+  const inboxPending = user ? await pendingCount(user.id) : 0;
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       </head>
       <body className="flex h-full flex-col">
+        <RegisterSW />
         <header className="border-b border-line bg-surface">
           <div className="mx-auto flex h-12 max-w-6xl items-center gap-4 px-4">
             <Link
@@ -63,6 +71,19 @@ export default async function RootLayout({
               <ThemeToggle />
               {user ? (
                 <>
+                  <Link
+                    href="/inbox"
+                    className="relative flex items-center gap-1 text-muted hover:text-accent"
+                    title="Your capture inbox"
+                  >
+                    <span aria-hidden>▤</span>
+                    <span className="hidden sm:inline">Inbox</span>
+                    {inboxPending > 0 && (
+                      <span className="ml-0.5 rounded-full bg-accent px-1.5 text-[10px] font-semibold leading-4 text-white">
+                        {inboxPending}
+                      </span>
+                    )}
+                  </Link>
                   <span className="text-muted">{user.username}</span>
                   <form action={logout}>
                     <button

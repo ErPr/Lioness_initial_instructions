@@ -30,6 +30,43 @@ model User {
   nodeLinks    NodeLink[]
   nodeEditLogs NodeEditLog[]
   memberships  Membership[]
+  captures     CapturedItem[]
+}
+
+// Crowd-powered capture: a member shares anything from their phone; the item
+// lands here privately (pending), gets enriched with metadata, AI-routed onto
+// a movement's goal tree, and — only on the member's confirm — is published as
+// a Post attached to a node (createdPostId). Nothing here is public until
+// confirmed.
+model CapturedItem {
+  id               String   @id @default(cuid())
+  userId           String
+  url              String?
+  title            String?
+  rawText          String?
+  imagePath        String?
+  metaTitle        String?
+  metaDescription  String?
+  metaImage        String?
+  status           String   @default("pending") // pending | enriched | routed | confirmed | rejected
+  boardId          String? // chosen/target board once routed
+  nodeId           String? // chosen/target node once routed
+  contributionType String?
+  aiConfidence     Float?
+  aiCandidates     String? // JSON: top-3 [{boardId, nodeId, contributionType, confidence, ...}]
+  aiSource         String? // "mock" | "claude" — how it was routed
+  dedupeOf         String? // id of the canonical item this is a re-share of
+  shareCount       Int      @default(1) // on canonical items
+  enrichAttempts   Int      @default(0)
+  createdPostId    String? // the Post created on confirm
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([status])
+  @@index([nodeId])
 }
 
 model Board {

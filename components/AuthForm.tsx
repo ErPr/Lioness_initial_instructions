@@ -7,9 +7,11 @@ import type { AuthState } from "@/lib/actions/auth";
 export default function AuthForm({
   mode,
   action,
+  next,
 }: {
   mode: "login" | "register";
   action: (prev: AuthState, formData: FormData) => Promise<AuthState>;
+  next?: string;
 }) {
   const [state, formAction, pending] = useActionState(action, {});
 
@@ -19,6 +21,7 @@ export default function AuthForm({
         {mode === "login" ? "Log in" : "Create an account"}
       </h1>
       <form action={formAction} className="flex flex-col gap-3">
+        {next && <input type="hidden" name="next" value={next} />}
         <label className="text-sm">
           <span className="mb-1 block text-muted">Username</span>
           <input

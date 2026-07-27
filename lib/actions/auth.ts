@@ -56,7 +56,13 @@ export async function login(
   session.userId = user.id;
   session.username = user.username;
   await session.save();
-  redirect("/");
+  redirect(safeNext(formData.get("next")));
+}
+
+/** Only allow same-site relative redirects from an untrusted `next` param. */
+function safeNext(v: FormDataEntryValue | null): string {
+  const s = typeof v === "string" ? v : "";
+  return s.startsWith("/") && !s.startsWith("//") ? s : "/";
 }
 
 export async function logout() {
