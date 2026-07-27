@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import { enrichUrl } from "@/lib/enrich";
+import { routeEnrichedItem } from "@/lib/route";
 
 // Background pipeline: enrich pending items, then AI-route enriched ones.
 // Runs in-process (instrumentation.ts) and also as a standalone script
@@ -71,7 +72,19 @@ async function enrichStep() {
 }
 
 async function routeStep() {
-  // Filled in by Phase 3 (AI routing + dedupe). Enriched items wait here.
+  const enriched = await prisma.capturedItem.findMany({
+    where: { status: "enriched" },
+    orderBy: { createdAt: "asc" },
+    take: BATCH,
+    select: { id: true },
+  });
+  if (enriched.length === 0) return;
+
+  // Route serially-ish (CONCURRENCY) — each may call the AI, and the cost
+  // guard + dedupe both read shared state, so we keep the fan-out modest.
+  await pool(enriched, CONCURRENCY, async (item) => {
+    await routeEnrichedItem(item.id);
+  });
 }
 
 export async function tick() {

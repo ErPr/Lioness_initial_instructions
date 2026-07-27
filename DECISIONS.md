@@ -63,6 +63,39 @@ things to flag for review. Newest phase last.
   share-sheet title only. On a normal network (the reviewer's machine) metadata
   populates. This is the designed graceful-degradation path, not a bug.
 
+## Phase 3 — AI routing + dedupe
+
+- **Two routers, one output shape.** `lib/route.ts` produces up-to-3
+  `{boardId, nodeId, contributionType, confidence}` candidates either from the
+  real model (`claude-sonnet-4-6`, JSON-schema structured output) or a
+  deterministic **mock keyword-overlap scorer**. The mock is the tested default
+  (no `ANTHROPIC_API_KEY` in the sandbox) and also the fallback whenever the
+  model errors, refuses, or returns nothing — so the pipeline can never stall on
+  routing. Verified: a Citizens United article routes to *Overturn Citizens
+  United* in Money Out of Politics at 0.9.
+- **`getTreeDump()` is the model's world.** A 60s-cached compact catalogue of
+  every board's nodes (id, tier, title, parent titles). Small trees keep the
+  prompt cheap; the model may only choose node ids that appear in it, and any id
+  it invents is dropped on validation.
+- **Cost guard, not a queue.** A per-process sliding-window counter caps real AI
+  calls at 40/hour; overflow silently uses the mock router rather than blocking.
+  Simple and good enough for a demo; a durable rate limit would move this to the
+  DB.
+- **Dedupe = fold the re-share into the first share.** Matching is by
+  `normalizeUrl` (done in JS — SQLite has no URL function), cross-user, and only
+  against items shared *strictly earlier*, so the canonical is deterministically
+  the first share even when a burst routes in one batch. The re-share gets
+  `dedupeOf` set and the canonical's `shareCount` increments in a transaction.
+  Screenshots/text with no URL don't URL-dedupe (a future content-hash pass
+  could). Verified: same URL from two accounts → one canonical, `shareCount` 2.
+- **A user's inbox shows what they contributed to.** `getInboxItems` now unions
+  the canonical items a user shared first with the canonicals they re-shared
+  (their folded copy), so a re-share still appears — with the shared-by count —
+  instead of vanishing.
+- **Contribution type defaults to RESOURCE.** A shared link is a reference; the
+  model may override to PROBLEM/SOLUTION/etc. when the item argues rather than
+  informs.
+
 ## To flag for review
 
 - Icons are a plain amber "L", not brand art — swap when real assets exist.
