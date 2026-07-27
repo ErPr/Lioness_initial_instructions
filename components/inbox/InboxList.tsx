@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { InboxItemView } from "@/lib/inboxQuery";
-import InboxActions from "@/components/inbox/InboxActions";
+import InboxActions, { type PickerBoard } from "@/components/inbox/InboxActions";
 
 const STATUS_LABEL: Record<string, string> = {
   pending: "finding metadata…",
@@ -12,7 +12,13 @@ const STATUS_LABEL: Record<string, string> = {
   confirmed: "on the tree",
 };
 
-export default function InboxList({ items }: { items: InboxItemView[] }) {
+export default function InboxList({
+  items,
+  boards,
+}: {
+  items: InboxItemView[];
+  boards: PickerBoard[];
+}) {
   if (items.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-line bg-surface p-10 text-center text-sm text-muted">
@@ -98,7 +104,7 @@ export default function InboxList({ items }: { items: InboxItemView[] }) {
           )}
 
           {it.status === "routed" && (
-            <InboxActions item={it} />
+            <InboxActions item={it} boards={boards} />
           )}
         </li>
       ))}

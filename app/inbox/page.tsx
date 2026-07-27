@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/session";
 import { getInboxItems } from "@/lib/inboxQuery";
+import { getTreeDump } from "@/lib/treeDump";
 import InboxList from "@/components/inbox/InboxList";
 import TestShareForm from "@/components/inbox/TestShareForm";
 
@@ -11,7 +12,12 @@ export default async function InboxPage() {
   const user = await getCurrentUser();
   if (!user) redirect("/login?next=/inbox");
 
-  const items = await getInboxItems(user.id);
+  const [items, dump] = await Promise.all([getInboxItems(user.id), getTreeDump()]);
+  const boards = dump.map((b) => ({
+    boardId: b.boardId,
+    name: b.name,
+    nodes: b.nodes.map((n) => ({ id: n.id, title: n.title, tier: n.tier })),
+  }));
   const active = items.filter(
     (i) => i.status === "pending" || i.status === "enriched" || i.status === "routed"
   ).length;
@@ -29,7 +35,7 @@ export default async function InboxPage() {
 
       <TestShareForm />
 
-      <InboxList items={items} />
+      <InboxList items={items} boards={boards} />
 
       <p className="text-center text-[11px] text-muted">
         On your phone, install Lioness (Add to Home Screen) and share links or

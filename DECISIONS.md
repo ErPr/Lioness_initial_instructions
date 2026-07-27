@@ -96,6 +96,28 @@ things to flag for review. Newest phase last.
   model may override to PROBLEM/SOLUTION/etc. when the item argues rather than
   informs.
 
+## Phase 4 — Confirm loop + tree integration
+
+- **Confirm creates an ordinary Post** (`contributionType` default RESOURCE,
+  `treeNodeId` set) via the identical shape `createPost` uses, so a placed
+  capture is indistinguishable from a hand-added link: it appears in the node's
+  Top Links flyout tab, is votable, and participates in ratify/contest. Verified
+  a routed Citizens United item confirms into *Overturn Citizens United*'s Top
+  Links next to the seeded Brennan Center link.
+- **Private until the tap.** Nothing is public until Confirm; `rejectItem` sets
+  status `rejected` and it simply leaves the inbox. Both actions are owner-only,
+  and ownership includes a user whose re-share folded into the canonical.
+- **Placement is editable before confirming.** The item shows the AI's top pick
+  inline with a one-tap Confirm; "Pick different node" opens a grouped select of
+  every board's nodes, the runner-up candidates appear as quick chips, and the
+  contribution type can be changed. The canonical is always the item placed, so
+  the shared-by count carries onto the Post's node.
+- **Audit trail.** Each confirm writes a `NodeEditLog` `LINK` entry naming the
+  shared item, so the node's history shows where captured evidence came from.
+- **Placement always targets the canonical.** Confirming a re-share is blocked
+  with a pointer to the original, so one link becomes one Post no matter how many
+  people shared it.
+
 ## To flag for review
 
 - Icons are a plain amber "L", not brand art — swap when real assets exist.
