@@ -184,22 +184,27 @@ async function main() {
         title: "Why this is surging right now",
         body: m.whyNow,
         type: "DISCUSSION",
-        age: 8 + (i % 20),
+        age: 1 + (i % 26), // spread across the window, some within the last week
         score: 2,
+        // Leave a third of these unattached so the heatmap's "to place" signal
+        // has something to point human curators at.
+        attach: i % 3 !== 0,
       },
       {
         title: `Who's driving it: key actors and organizations`,
         body: m.actors,
         type: "RESOURCE",
-        age: 12 + (i % 20),
+        age: 4 + (i % 24),
         score: 3,
+        attach: true,
       },
       {
         title: "Where this effort organizes online",
         body: m.hubs,
         type: "RESOURCE",
-        age: 15 + (i % 20),
+        age: 7 + (i % 22),
         score: 1,
+        attach: true,
       },
     ];
     let p = 0;
@@ -211,7 +216,7 @@ async function main() {
           title: pd.title,
           body: pd.body,
           contributionType: pd.type,
-          treeNodeId: purpose.id,
+          treeNodeId: pd.attach ? purpose.id : null,
           createdAt: daysAgo(pd.age),
         },
       });

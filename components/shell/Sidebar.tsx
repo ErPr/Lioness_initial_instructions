@@ -85,6 +85,14 @@ export default function Sidebar({
         >
           ⌕ Explore all movements
         </Link>
+        <Link
+          href="/activity"
+          className={`rounded px-2 py-1.5 text-sm hover:bg-background ${
+            pathname === "/activity" ? "font-semibold text-accent" : ""
+          }`}
+        >
+          ▦ Activity heatmap
+        </Link>
       </div>
 
       <div className="px-3 pt-2 text-[10.5px] font-semibold uppercase tracking-widest text-muted">
